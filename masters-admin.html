@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanaNidhi | Masters & Administration</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/app.css"/>
+<script src="assets/map-data.js"></script>
+</head>
+<body data-page="masters-admin.html">
+<div class="scrim" id="scrim"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-scroll">
+      <div class="brand">
+        <img src="assets/vananidhi-mark.svg" alt="VanaNidhi">
+        <h1 class="serif gold-text">VanaNidhi</h1>
+        <p class="malayalam">വനനിധി</p>
+        <p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Forest Finance & Budget Management</p>
+      </div>
+      <nav class="nav"><a href="index.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<a href="sitemap.html" class=""><i class="fa-solid fa-diagram-project"></i><span>Sitemap & Trace</span></a>
+<a href="apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
+<a href="budget.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>Budget Estimates</span></a>
+<a href="forestry-works.html" class=""><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class=""><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<a href="funds-bills.html" class=""><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="reports.html" class=""><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
+<a href="masters-admin.html" class="active"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a></nav>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+      <div style="flex:1">
+        <h2 class="serif gold-text"><i class="fa-solid fa-gears"></i> Masters & Administration</h2>
+        <small>Master data, roles, offices and configuration.</small>
+      </div>
+      <button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
+      <span class="pill"><i class="fa-solid fa-building-columns"></i> CDIPD Demo</span>
+    </div>
+    
+<h1 class="serif page-title gold-text">Masters, Users & Administration</h1>
+<p class="page-sub">The master-data backbone for standardisation: offices, budget heads, work categories, SoR items, delegation powers, users, roles and report templates.</p>
+<section class="grid grid-3">
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Office Hierarchy</h3><button class="expand-card">⛶</button></div><div class="timeline"><div class="step"><div class="num">1</div><div><h4>Forest Headquarters</h4><p>CCO and final approval views.</p></div></div><div class="step"><div class="num">2</div><div><h4>Circle Office</h4><p>SCO scrutiny and consolidation.</p></div></div><div class="step"><div class="num">3</div><div><h4>Division Office</h4><p>DDO data entry and execution responsibility.</p></div></div><div class="step"><div class="num">4</div><div><h4>Range Office</h4><p>Range-level work details and implementation points.</p></div></div></div></div>
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Budget Head Master</h3><button class="expand-card">⛶</button></div><table class="data-table"><thead><tr><th>Code</th><th>Name</th><th>Type</th></tr></thead><tbody><tr><td>2406-01-101-81</td><td>Forest Protection</td><td>Plan</td></tr><tr><td>4406-01-070-99</td><td>Roads</td><td>Capital</td></tr><tr><td>2406-02-110-35</td><td>Project Elephant</td><td>CSS</td></tr></tbody></table></div>
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Role Matrix</h3><button class="expand-card">⛶</button></div><table class="data-table"><thead><tr><th>Role</th><th>Primary Actions</th></tr></thead><tbody><tr><td>Range User</td><td>Enter APO works, create estimates</td></tr><tr><td>DDO</td><td>Scrutiny, consolidate, submit</td></tr><tr><td>SCO</td><td>Circle scrutiny, approve/forward</td></tr><tr><td>CCO/HQ</td><td>Final approval and reports</td></tr></tbody></table></div>
+</section>
+<section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Master Data Governance</h3><button class="expand-card">⛶</button></div><div class="grid grid-4"><div class="panel-soft"><h4>Work Categories</h4><p style="color:var(--muted)">Forest Works, Civil Works, Live-stock, Stores/Tools/Plant.</p></div><div class="panel-soft"><h4>SoR Library</h4><p style="color:var(--muted)">Forest Schedule of Rates item master for estimate preparation.</p></div><div class="panel-soft"><h4>Delegation Powers</h4><p style="color:var(--muted)">Configurable sanction limits and routing levels.</p></div><div class="panel-soft"><h4>Report Templates</h4><p style="color:var(--muted)">BAMS, Revenue, APO, Budget and Progress output formats.</p></div></div></section>
+
+    <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

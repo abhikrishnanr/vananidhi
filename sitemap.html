@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanaNidhi | Sitemap & Requirement Trace</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/app.css"/>
+<script src="assets/map-data.js"></script>
+</head>
+<body data-page="sitemap.html">
+<div class="scrim" id="scrim"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-scroll">
+      <div class="brand">
+        <img src="assets/vananidhi-mark.svg" alt="VanaNidhi">
+        <h1 class="serif gold-text">VanaNidhi</h1>
+        <p class="malayalam">വനനിധി</p>
+        <p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Forest Finance & Budget Management</p>
+      </div>
+      <nav class="nav"><a href="index.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<a href="sitemap.html" class="active"><i class="fa-solid fa-diagram-project"></i><span>Sitemap & Trace</span></a>
+<a href="apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
+<a href="budget.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>Budget Estimates</span></a>
+<a href="forestry-works.html" class=""><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class=""><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<a href="funds-bills.html" class=""><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="reports.html" class=""><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
+<a href="masters-admin.html" class=""><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a></nav>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+      <div style="flex:1">
+        <h2 class="serif gold-text"><i class="fa-solid fa-diagram-project"></i> Sitemap & Requirement Trace</h2>
+        <small>Client-facing map of URS requirement to demo screen.</small>
+      </div>
+      <button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
+      <span class="pill"><i class="fa-solid fa-building-columns"></i> CDIPD Demo</span>
+    </div>
+    
+<h1 class="serif page-title gold-text">Requirement to Solution Sitemap</h1>
+<p class="page-sub">This page is the client walkthrough map: each Forest Department requirement is linked to a demo screen and an operational solution concept.</p>
+<section class="grid grid-2">
+  <div class="panel requirement-card"><div><h4>1. Preparation of APO, Budget Estimate and submission to BMS/PlanSpace</h4><p>APO data capture, approval, budget-head grouping, estimate preparation and final submission readiness.</p></div><a class="btn" href="apo.html">Open APO</a></div>
+  <div class="panel requirement-card"><div><h4>2. Forestry Works estimate preparation</h4><p>PRICE-equivalent estimate builder using forest SoR, approval routing and APO validation.</p></div><a class="btn" href="forestry-works.html">Open Works</a></div>
+  <div class="panel requirement-card"><div><h4>3. Revenue monitoring with eTreasury</h4><p>Revenue target distribution, receipt capture, budget-head reporting and DDO/SCO/CCO reports.</p></div><a class="btn" href="revenue.html">Open Revenue</a></div>
+  <div class="panel requirement-card"><div><h4>4. Additional fund requirement, surrender, pending bills and wage bills</h4><p>BH-wise data entry by DDO/SCO with CCO consolidation and report views.</p></div><a class="btn" href="funds-bills.html">Open Funds</a></div>
+  <div class="panel requirement-card"><div><h4>5. Plan / Non-Plan progress monitoring</h4><p>Physical and financial progress dashboard with scheme-wise achievements.</p></div><a class="btn" href="progress.html">Open Progress</a></div>
+  <div class="panel requirement-card"><div><h4>6. Output reports and annexure formats</h4><p>BAMS-style, revenue receipt, APO sample and HQ consolidated report views.</p></div><a class="btn" href="reports.html">Open Reports</a></div>
+</section>
+<section class="panel" style="margin-top:14px">
+  <div class="card-head"><h3>Traceability Matrix</h3><button class="expand-card">⛶</button></div>
+  <div class="table-wrap"><table class="data-table"><thead><tr><th>Requirement Area</th><th>Solution Page</th><th>Key Demo Controls</th><th>Client Explanation</th></tr></thead><tbody>
+    <tr><td>APO</td><td><a href="apo.html">APO Workspace</a></td><td>Work entry, category master, workflow, revision guardrail</td><td>Shows how range/division data becomes circle and HQ-approved APO.</td></tr>
+    <tr><td>Budget Estimates</td><td><a href="budget.html">Budget Estimates</a></td><td>Head-wise estimate, Plan/Non-Plan timelines, PlanSpace readiness</td><td>Converts APO data into budget formats and financial summaries.</td></tr>
+    <tr><td>Works Estimate</td><td><a href="forestry-works.html">Forestry Works</a></td><td>SoR item builder, file movement, PEN history, sanction route</td><td>Checks that estimate can only be made against approved APO works.</td></tr>
+    <tr><td>Revenue</td><td><a href="revenue.html">Revenue / eTreasury</a></td><td>Receipt entry, remittance types, target distribution, reports</td><td>Brings fortnightly revenue reporting into one dashboard.</td></tr>
+    <tr><td>Additional Funds</td><td><a href="funds-bills.html">Funds & Pending Bills</a></td><td>Additional requirement, surrender, pending bills, wages</td><td>Moves manual BH-wise consolidation into a controlled workflow.</td></tr>
+    <tr><td>Reports</td><td><a href="reports.html">Reports & Annexures</a></td><td>DDO/SCO/CCO reports, BH-wise, month-wise, circle-wise reports</td><td>Maps annexure-style output formats into the software screens.</td></tr>
+  </tbody></table></div>
+</section>
+
+    <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanaNidhi | Progress Monitoring</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/app.css"/>
+<script src="assets/map-data.js"></script>
+</head>
+<body data-page="progress.html">
+<div class="scrim" id="scrim"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-scroll">
+      <div class="brand">
+        <img src="assets/vananidhi-mark.svg" alt="VanaNidhi">
+        <h1 class="serif gold-text">VanaNidhi</h1>
+        <p class="malayalam">വനനിധി</p>
+        <p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Forest Finance & Budget Management</p>
+      </div>
+      <nav class="nav"><a href="index.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<a href="sitemap.html" class=""><i class="fa-solid fa-diagram-project"></i><span>Sitemap & Trace</span></a>
+<a href="apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
+<a href="budget.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>Budget Estimates</span></a>
+<a href="forestry-works.html" class=""><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class=""><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<a href="funds-bills.html" class=""><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="progress.html" class="active"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="reports.html" class=""><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
+<a href="masters-admin.html" class=""><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a></nav>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+      <div style="flex:1">
+        <h2 class="serif gold-text"><i class="fa-solid fa-chart-line"></i> Progress Monitoring</h2>
+        <small>Plan and Non-Plan physical and financial progress monitoring.</small>
+      </div>
+      <button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
+      <span class="pill"><i class="fa-solid fa-building-columns"></i> CDIPD Demo</span>
+    </div>
+    
+<h1 class="serif page-title gold-text">Plan / Non-Plan Progress Monitoring</h1>
+<p class="page-sub">Physical and financial progress monitoring, designed as a KFD-specific extension of PlanSpace-style reporting.</p>
+<section class="grid grid-4">
+  <div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-percent"></i></div><div><b>71.59%</b><br><small>Overall utilization</small></div></div></div>
+  <div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-list-check"></i></div><div><b>3,418</b><br><small>Physical deliverables</small></div></div></div>
+  <div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-helmet-safety"></i></div><div><b>284</b><br><small>Works in progress</small></div></div></div>
+  <div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-flag-checkered"></i></div><div><b>68%</b><br><small>Physical achievement</small></div></div></div>
+</section>
+<section class="grid grid-2" style="margin-top:14px"><div class="panel card-fullscreen"><div class="card-head"><h3>Physical vs Financial Progress</h3><button class="expand-card">⛶</button></div><div class="chart-box"><canvas id="progressChart"></canvas></div></div><div class="panel card-fullscreen"><div class="card-head"><h3>Scheme Deliverables</h3><button class="expand-card">⛶</button></div><table class="data-table"><thead><tr><th>Scheme</th><th>Physical Item</th><th>Target</th><th>Achievement</th><th>Status</th></tr></thead><tbody><tr><td>Forest Protection</td><td>Anti-poaching mazdoors</td><td>14,349 MM</td><td>13,810 MM</td><td><span class="status">On Track</span></td></tr><tr><td>Forest Protection</td><td>Fire awareness programmes</td><td>2 Nos</td><td>2 Nos</td><td><span class="status">Completed</span></td></tr><tr><td>Roads</td><td>Forest road maintenance</td><td>84 km</td><td>51 km</td><td><span class="status warn">Watch</span></td></tr></tbody></table></div></section>
+
+    <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

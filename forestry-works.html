@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanaNidhi | Forestry Works</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/app.css"/>
+<script src="assets/map-data.js"></script>
+</head>
+<body data-page="forestry-works.html">
+<div class="scrim" id="scrim"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-scroll">
+      <div class="brand">
+        <img src="assets/vananidhi-mark.svg" alt="VanaNidhi">
+        <h1 class="serif gold-text">VanaNidhi</h1>
+        <p class="malayalam">വനനിധി</p>
+        <p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Forest Finance & Budget Management</p>
+      </div>
+      <nav class="nav"><a href="index.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<a href="sitemap.html" class=""><i class="fa-solid fa-diagram-project"></i><span>Sitemap & Trace</span></a>
+<a href="apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
+<a href="budget.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>Budget Estimates</span></a>
+<a href="forestry-works.html" class="active"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class=""><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<a href="funds-bills.html" class=""><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="reports.html" class=""><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
+<a href="masters-admin.html" class=""><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a></nav>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+      <div style="flex:1">
+        <h2 class="serif gold-text"><i class="fa-solid fa-helmet-safety"></i> Forestry Works</h2>
+        <small>PRICE-equivalent estimate and bill preparation for forestry works.</small>
+      </div>
+      <button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
+      <span class="pill"><i class="fa-solid fa-building-columns"></i> CDIPD Demo</span>
+    </div>
+    
+<h1 class="serif page-title gold-text">Forestry Works Estimate & Bill Preparation</h1>
+<p class="page-sub">PRICE-equivalent workflow customized for Forest Schedule of Rates, with APO approval check, delegation-based sanctioning, revision and full file history.</p>
+<section class="grid grid-2">
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Estimate Builder</h3><button class="expand-card">⛶</button></div><div class="form-grid">
+    <div class="field"><label>APO Work</label><select><option>APO-2406-001 Fire line maintenance</option><option>APO-4406-018 Access road improvement</option></select></div>
+    <div class="field"><label>APO Check</label><input value="Approved in APO / Revised APO"></div>
+    <div class="field"><label>SoR Item</label><select><option>Creation of fire line</option><option>Maintenance of forest road</option><option>Anti-poaching camp support</option></select></div>
+    <div class="field"><label>Quantity</label><input value="14.00 km"></div>
+    <div class="field"><label>Rate</label><input value="₹ 0.82 lakh / km"></div>
+    <div class="field"><label>Estimate Amount</label><input value="₹ 11.48 lakh"></div>
+  </div><div style="margin-top:12px"><button class="btn"><i class="fa-solid fa-calculator"></i> Calculate Estimate</button> <button class="btn secondary"><i class="fa-solid fa-route"></i> Send for Sanction</button></div></div>
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Delegation Workflow</h3><button class="expand-card">⛶</button></div><div class="timeline">
+    <div class="step"><div class="num">R</div><div><h4>Range Officer</h4><p>Prepares forestry estimate using approved SoR and APO reference.</p></div></div>
+    <div class="step"><div class="num">D</div><div><h4>Division Level Officer</h4><p>Scrutiny, modification, sanction or upward submission based on powers.</p></div></div>
+    <div class="step"><div class="num">C</div><div><h4>Circle Level Officer</h4><p>Sanction or onward submission to PCCF/APCCF based on delegation.</p></div></div>
+    <div class="step"><div class="num">H</div><div><h4>PCCF / APCCF / Government</h4><p>Final sanction or Government submission for higher-value estimates.</p></div></div>
+  </div></div>
+</section>
+<section class="grid grid-2" style="margin-top:14px">
+  <div class="panel card-fullscreen"><div class="card-head"><h3>File History with PEN</h3><button class="expand-card">⛶</button></div><table class="data-table"><thead><tr><th>Date</th><th>Officer</th><th>PEN</th><th>Action</th></tr></thead><tbody><tr><td>12 May</td><td>Range Forest Officer</td><td>180818</td><td>Drafted estimate</td></tr><tr><td>13 May</td><td>DFO Office</td><td>221122</td><td>Scrutiny note added</td></tr><tr><td>15 May</td><td>Circle Office</td><td>192730</td><td>Forwarded for sanction</td></tr></tbody></table></div>
+  <div class="panel card-fullscreen"><div class="card-head"><h3>Internal Vigilance Copy Tracker</h3><button class="expand-card">⛶</button></div><div class="kpi"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><div><b>98%</b><br><small>Sanctioned estimates copied to vigilance register</small></div></div><p style="color:var(--muted);line-height:1.6">The demo keeps a searchable repository of estimates and records whether a sanctioned copy has been sent to the internal vigilance wing.</p></div>
+</section>
+
+    <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

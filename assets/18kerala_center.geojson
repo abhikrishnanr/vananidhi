@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1,  "District": "Alappuzha",           "covid_stat": 5, "covid_statcured": 5, "covid_statactive": 0, "covid_statdeath": 0 }, "geometry": { "type": "Point", "coordinates": [ 76.448290815371664, 9.426570172285365 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2,  "District": "Ernakulam",           "covid_stat": 24, "covid_statcured": 20, "covid_statactive": 3, "covid_statdeath": 1 }, "geometry": { "type": "Point", "coordinates": [ 76.546519230308135, 10.083077845392515 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3,  "District": "Idukki",              "covid_stat": 10, "covid_statcured": 10, "covid_statactive": 0, "covid_statdeath": 0  }, "geometry": { "type": "Point", "coordinates": [ 77.057926503779299, 9.838265188569551 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4,  "District": "Kannur",              "covid_stat": 102, "covid_statcured": 48, "covid_statactive": 54, "covid_statdeath": 0  }, "geometry": { "type": "Point", "coordinates": [ 75.524654235570964, 11.999964707351928 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5,  "District": "Kasargod",            "covid_stat": 172, "covid_statcured": 146, "covid_statactive": 26, "covid_statdeath": 0 }, "geometry": { "type": "Point", "coordinates": [ 75.152213006452016, 12.461062940095308 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6,  "District": "Kollam",              "covid_stat": 10, "covid_statcured": 4, "covid_statactive": 6, "covid_statdeath": 0   }, "geometry": { "type": "Point", "coordinates": [ 76.872535468109675, 8.960851665267953 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 7,  "District": "Kottayam",            "covid_stat": 3, "covid_statcured": 3, "covid_statactive": 0, "covid_statdeath": 0   }, "geometry": { "type": "Point", "coordinates": [ 76.651165365177306, 9.636813016328095 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 8,  "District": "Kozhikkode",          "covid_stat": 20, "covid_statcured": 13, "covid_statactive": 7, "covid_statdeath": 0   }, "geometry": { "type": "Point", "coordinates": [ 75.834241277731081, 11.484284020230813 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 10, "District": "Malappuram",          "covid_stat": 21, "covid_statcured": 14, "covid_statactive":7, "covid_statdeath": 0  }, "geometry": { "type": "Point", "coordinates": [ 76.155402009828109, 11.132142215897273 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 11, "District": "Palakkad",            "covid_stat": 12, "covid_statcured": 6, "covid_statactive": 6, "covid_statdeath": 0   }, "geometry": { "type": "Point", "coordinates": [ 76.557430808023, 10.794313807853216 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 12, "District": "Pathanamthitta",      "covid_stat": 17, "covid_statcured": 11, "covid_statactive": 6, "covid_statdeath": 0  }, "geometry": { "type": "Point", "coordinates": [ 76.927598846246894, 9.28351946398768 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 13, "District": "Thrissur",            "covid_stat": 13, "covid_statcured": 13, "covid_statactive": 0, "covid_statdeath": 0  }, "geometry": { "type": "Point", "coordinates": [ 76.315417943582617, 10.470769789430145 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 14, "District": "Thiruvananthapuram",  "covid_stat": 14, "covid_statcured": 12, "covid_statactive": 1, "covid_statdeath": 1  }, "geometry": { "type": "Point", "coordinates": [ 77.013212679556318, 8.60811013031644 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 15, "District": "Wayanad",             "covid_stat": 3, "covid_statcured": 2, "covid_statactive": 1, "covid_statdeath": 0   }, "geometry": { "type": "Point", "coordinates": [ 76.098711247771107, 11.711238409977756 ] } }
+]
+}
