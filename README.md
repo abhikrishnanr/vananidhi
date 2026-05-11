@@ -39,3 +39,12 @@ Budget Heads / Performance Budget update:
 - Updated reports.html with infographic icon cards, report catalogue, charts and annexure previews.
 - Updated masters-admin.html to use Budget Head Master values and Non-Plan add/edit.
 - Updated Budget Overview and Sitemap traceability.
+
+
+Navigation/workflow update:
+- Dashboard label changed to "Integrated Forest Budget & Finance Management System".
+- Added separate Hierarchy View menu/page with workflow graph.
+- Grouped sidebar menu with headings:
+  Main, Pre-Budget Activities, Budget Allocation Activities, Post-Budget Tracking Activities, Administration.
+- Dashboard now highlights three major activity blocks.
+- Sitemap rewritten as a story-driven workflow guide with categorization and page-purpose explanation.
