@@ -59,3 +59,13 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1280px){.layout{grid-template-columns:1fr}.sidebar{position:fixed;inset:0 auto 0 0;width:min(88vw,340px);height:100vh;max-height:100vh;z-index:60;transform:translateX(-105%);transition:transform .25s ease;border-radius:0 22px 22px 0}.sidebar.open{transform:translateX(0)}.scrim.open{opacity:1;pointer-events:auto}.menu-btn{display:grid}.grid-4,.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.layout{padding:8px}.topbar h2{font-size:20px}.page-title{font-size:30px}.grid-4,.grid-3,.grid-2,.form-grid{grid-template-columns:1fr}.chart-box{height:260px}.map-box{height:340px}}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:50;opacity:0;pointer-events:none;transition:.2s}
+
+/* Flow update additions */
+.requirement-card .btn{white-space:nowrap}
+@media(max-width:760px){.requirement-card{grid-template-columns:1fr}.requirement-card .btn{justify-content:center}}
+
+/* Budget format update */
+.data-table th{position:sticky;top:0;z-index:1}
+.filter-table tbody tr.hide{display:none}
+.requirement-card .btn{white-space:nowrap}
+@media(max-width:760px){.requirement-card{grid-template-columns:1fr}.requirement-card .btn{justify-content:center}.data-table{font-size:12px}}

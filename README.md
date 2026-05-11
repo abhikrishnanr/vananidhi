@@ -24,3 +24,18 @@ CDNs used:
 - Google Fonts
 
 Footer: CDIPD, Digital University Kerala.
+
+
+Flow document update:
+- Added role-wise Budget Estimate screens: Range, Division, Circle and HQ.
+- Modified Masters & Administration as per new Flow requirements.
+- Updated Budget Overview and Sitemap traceability page.
+- Added forms for Plan/Non Plan, beneficiary components, prior AS, wage distribution, pending bill, surrender, resumption, revenue target and progress update.
+
+
+Budget Heads / Performance Budget update:
+- Added budget-heads.html using uploaded Plan and Non-Plan Budget Head spreadsheets.
+- Added performance-budget.html using Annexure-style Performance Budget format.
+- Updated reports.html with infographic icon cards, report catalogue, charts and annexure previews.
+- Updated masters-admin.html to use Budget Head Master values and Non-Plan add/edit.
+- Updated Budget Overview and Sitemap traceability.

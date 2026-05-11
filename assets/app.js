@@ -34,3 +34,20 @@
   }
   initMap();
 })();
+
+// Budget format update
+
+(function(){
+  function moneyL(x){return '₹ '+Number(x||0).toLocaleString('en-IN',{maximumFractionDigits:2})+' L';}
+  document.querySelectorAll('.filter-table').forEach(tbl=>{const id=tbl.dataset.search; const inp=document.getElementById(id); if(inp) inp.addEventListener('input',()=>{const q=inp.value.toLowerCase(); tbl.querySelectorAll('tbody tr').forEach(tr=>tr.classList.toggle('hide', !tr.textContent.toLowerCase().includes(q)));});});
+  if(!window.Chart) return;
+  const plan=window.PLAN_BUDGET_HEADS||[], non=window.NON_PLAN_BUDGET_HEADS||[];
+  const gold='rgba(241,211,122,.88)', moss='rgba(121,166,77,.88)', green='rgba(47,209,124,.82)', amber='rgba(239,184,77,.85)';
+  function c(id,cfg){const el=document.getElementById(id); if(el) new Chart(el,cfg);}
+  const planTotal=plan.reduce((a,b)=>a+(+b.budget||0),0), nonTotal=non.reduce((a,b)=>a+(+b.budget||0),0);
+  c('planNonPlanChart',{type:'doughnut',data:{labels:['Plan','Non-Plan'],datasets:[{data:[planTotal,nonTotal],backgroundColor:[moss,gold],borderWidth:1}]},options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}});
+  const top=plan.slice().sort((a,b)=>(b.budget||0)-(a.budget||0)).slice(0,8);
+  c('topPlanHeadsChart',{type:'bar',data:{labels:top.map(x=>x.code),datasets:[{label:'Provision (Rs in lakhs)',data:top.map(x=>x.budget),backgroundColor:gold,borderRadius:8}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true},x:{ticks:{maxRotation:70,minRotation:45}}}}});
+  c('performanceFinancialChart',{type:'bar',data:{labels:['Forest Protection','Boundary Survey','Regeneration','NWFP','Roads','Buildings','Eco Tourism','HRD'],datasets:[{label:'Target Fixed',data:[771.317,26.947,3.29,25.516,19.96,71.877,112.038,26.03],backgroundColor:moss,borderRadius:8},{label:'Target Achieved',data:[771.317,26.947,3.29,25.516,19.96,71.877,112.038,26.03],backgroundColor:gold,borderRadius:8}]},options:{maintainAspectRatio:false,scales:{y:{beginAtZero:true}}}});
+  c('performanceCategoryChart',{type:'polarArea',data:{labels:['Protection','Infrastructure','Eco Restoration','Livelihood','Capacity'],datasets:[{data:[38,24,16,12,10],backgroundColor:[gold,moss,green,amber,'rgba(155,199,105,.55)']}]},options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}});
+})();
