@@ -54,3 +54,11 @@ Role-based portal update:
 - Added separate login screens for State/HQ, Range, Division and Circle.
 - State/HQ remains the current full version.
 - Range, Division and Circle have restricted dashboards and menus only.
+
+
+Login fix update:
+- index.html is now the default login / role selection page.
+- Former full dashboard moved to state-dashboard.html.
+- Financial Year selector removed from all login pages.
+- Login buttons are now direct links, so they work without JS.
+- Added floating Back to Login button on all portal pages.
