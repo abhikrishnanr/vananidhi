@@ -128,3 +128,6 @@
   window.addEventListener('resize',()=>setTimeout(render,150));
   render();
 })();
+
+// Role login buttons
+(function(){document.querySelectorAll('[data-demo-login]').forEach(b=>b.addEventListener('click',()=>{window.location.href=b.dataset.demoLogin;}));})();

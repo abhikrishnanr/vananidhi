@@ -16,8 +16,6 @@ Pages:
 - Reports & Annexures
 - Masters & Administration
 
-//
-
 CDNs used:
 - Chart.js
 - D3.js
@@ -50,3 +48,9 @@ Navigation/workflow update:
   Main, Pre-Budget Activities, Budget Allocation Activities, Post-Budget Tracking Activities, Administration.
 - Dashboard now highlights three major activity blocks.
 - Sitemap rewritten as a story-driven workflow guide with categorization and page-purpose explanation.
+
+
+Role-based portal update:
+- Added separate login screens for State/HQ, Range, Division and Circle.
+- State/HQ remains the current full version.
+- Range, Division and Circle have restricted dashboards and menus only.
