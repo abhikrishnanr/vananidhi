@@ -272,3 +272,55 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
 .upload-box{border:1px dashed rgba(230,195,93,.55);border-radius:18px;padding:20px;text-align:center;background:rgba(255,255,255,.05)}.upload-box i{font-size:36px;color:#ffe7a1}.upload-box p{color:rgba(255,249,232,.70)}
 .float-login-btn{position:fixed;right:18px;top:18px;z-index:120;display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border-radius:999px;border:1px solid rgba(214,173,69,.55);background:linear-gradient(145deg,rgba(9,45,31,.96),rgba(5,24,16,.96));color:#ffe7a1;box-shadow:0 14px 40px rgba(0,0,0,.26);font-size:13px;font-weight:800}.float-login-btn:hover{background:rgba(214,173,69,.22)}
 @media(max-width:900px){.status-grid{grid-template-columns:1fr}.fy-bar{align-items:flex-start;flex-direction:column}.float-login-btn{top:auto;bottom:12px;right:12px}}
+
+
+/* v-next fixes: non-overlapping login button + cleaner HQ/sub-office responsibilities */
+.float-login-btn{
+  position:fixed!important;
+  top:88px!important;
+  right:18px!important;
+  bottom:auto!important;
+  z-index:75!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  padding:9px 12px!important;
+  border-radius:999px!important;
+  border:1px solid rgba(214,173,69,.55)!important;
+  background:linear-gradient(145deg,rgba(9,45,31,.98),rgba(5,24,16,.98))!important;
+  color:#ffe7a1!important;
+  box-shadow:0 10px 26px rgba(0,0,0,.30)!important;
+  font-size:12px!important;
+  font-weight:800!important;
+}
+.float-login-btn:hover{background:rgba(214,173,69,.22)!important}
+@media(max-width:760px){
+  .float-login-btn{
+    top:auto!important;
+    right:12px!important;
+    bottom:12px!important;
+    padding:9px 11px!important;
+    font-size:11px!important;
+  }
+}
+.hq-only-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border-radius:999px;
+  padding:5px 9px;
+  color:#ffe7a1;
+  background:rgba(214,173,69,.14);
+  border:1px solid rgba(214,173,69,.38);
+  font-size:11px;
+  font-weight:800;
+}
+.info-note{
+  border-left:3px solid rgba(241,211,122,.8);
+  background:rgba(214,173,69,.08);
+  color:rgba(247,237,207,.75);
+  padding:10px 12px;
+  border-radius:12px;
+  line-height:1.55;
+  font-size:13px;
+}

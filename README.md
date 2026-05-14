@@ -75,3 +75,11 @@ Requirement update package:
 - Range dashboard rebuilt with APO Summary, Progress Details and Revenue Target.
 - Prior AS, Action Plan Request, APO filtered lists and Allocation Details pages added.
 - Division APO Submissions and Wage Excel Upload added.
+
+
+HQ / PO responsibility fix:
+- Removed PO Component and Subcomponent approval treatment from sub-office dashboard logic.
+- Range dashboard now shows APO status only plus progress and revenue sections.
+- HQ dashboard restored with previous command-centre sections, maps, charts, approval inbox and rankings.
+- HQ now explicitly owns PO Components and Subcomponents management.
+- Floating Back to Login button repositioned to avoid overlapping dashboard cards.
