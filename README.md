@@ -114,3 +114,11 @@ AS / attachments / collapsible menu update:
 - Supporting Attachments are placed last before submit and support multiple attachment rows/files.
 - Added beneficiary component blocks to APO entry/builder pages before submit.
 - Sidebar menu group headings are now collapsible.
+
+
+APO action rule update:
+- Added Delete action to APO list pages.
+- Removed APO listing panels from APO builder/form pages.
+- Removed Forward action from Range level.
+- Division level keeps Forward action.
+- Circle and HQ action areas are approval-focused only.

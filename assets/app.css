@@ -480,3 +480,10 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
 .beneficiary-block{margin-top:14px}
 .beneficiary-block .panel-soft{padding:16px}
 @media(max-width:760px){.attachment-row{grid-template-columns:1fr}}
+
+
+/* APO action rule fixes */
+.action-link .fa-trash,
+.action-link:has(.fa-trash){
+  color:#ffb0a8;
+}
