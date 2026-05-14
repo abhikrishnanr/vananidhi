@@ -131,3 +131,20 @@
 
 // Role login buttons
 (function(){document.querySelectorAll('[data-demo-login]').forEach(b=>b.addEventListener('click',()=>{window.location.href=b.dataset.demoLogin;}));})();
+
+
+// Requirement update helpers: WYSIWYG toolbar + Plan/Non-Plan toggles
+(function(){
+  document.querySelectorAll('.wysiwyg-toolbar button').forEach(btn=>{
+    btn.addEventListener('click',e=>{e.preventDefault(); const cmd=btn.dataset.cmd; if(cmd){document.execCommand(cmd,false,null);}});
+  });
+  document.querySelectorAll('[data-nonplan-toggle]').forEach(sel=>{
+    const apply=()=>{
+      const form=sel.closest('.plan-nonplan-form') || document;
+      const isNon=String(sel.value).toLowerCase().includes('non');
+      form.querySelectorAll('[data-plan-only]').forEach(el=>el.classList.toggle('hidden-field',isNon));
+      form.querySelectorAll('[data-nonplan-only]').forEach(el=>el.classList.toggle('hidden-field',!isNon));
+    };
+    sel.addEventListener('change',apply); apply();
+  });
+})();

@@ -62,3 +62,16 @@ Login fix update:
 - Financial Year selector removed from all login pages.
 - Login buttons are now direct links, so they work without JS.
 - Added floating Back to Login button on all portal pages.
+
+
+Requirement update package:
+- Brighter UI theme.
+- Financial Year selector added to major pages.
+- HQ dashboard login cards removed.
+- Range/Division/Circle labels use APO; HQ uses Budget Estimate.
+- HQ APO period management page added.
+- GO if available field added to APO workflows.
+- Notes fields updated with WYSIWYG editor.
+- Range dashboard rebuilt with APO Summary, Progress Details and Revenue Target.
+- Prior AS, Action Plan Request, APO filtered lists and Allocation Details pages added.
+- Division APO Submissions and Wage Excel Upload added.
