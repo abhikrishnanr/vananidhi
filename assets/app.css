@@ -1205,3 +1205,123 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
 }
 
 @media print{.no-print{display:none!important}}
+
+
+/* Range allocation full-width layout fix */
+body[data-page="range-allocation.html"] .main{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+}
+body[data-page="range-allocation.html"] .topbar,
+body[data-page="range-allocation.html"] .fy-bar,
+body[data-page="range-allocation.html"] .range-allocation-page,
+body[data-page="range-allocation.html"] .footer{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+body[data-page="range-allocation.html"] .range-allocation-page{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  clear:both!important;
+}
+body[data-page="range-allocation.html"] .page-title,
+body[data-page="range-allocation.html"] .page-sub{
+  max-width:none!important;
+  width:100%!important;
+}
+body[data-page="range-allocation.html"] .grid{
+  width:100%!important;
+  max-width:none!important;
+}
+body[data-page="range-allocation.html"] .grid.grid-4{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+body[data-page="range-allocation.html"] .alloc-strip{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  width:100%!important;
+}
+body[data-page="range-allocation.html"] .footer{
+  position:static!important;
+  display:block!important;
+  text-align:center!important;
+  margin-top:22px!important;
+  float:none!important;
+  clear:both!important;
+}
+@media(max-width:1200px){
+  body[data-page="range-allocation.html"] .grid.grid-4{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:760px){
+  body[data-page="range-allocation.html"] .grid.grid-4,
+  body[data-page="range-allocation.html"] .alloc-strip{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* Allocation component pages printable/full-width alignment */
+body[data-page^="range-allocation-head-"] .main,
+body[data-page^="range-allocation-component-"] .main{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+}
+body[data-page^="range-allocation-head-"] .range-allocation-page,
+body[data-page^="range-allocation-component-"] .range-allocation-page,
+body[data-page^="range-allocation-head-"] .footer,
+body[data-page^="range-allocation-component-"] .footer{
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+body[data-page^="range-allocation-head-"] .footer,
+body[data-page^="range-allocation-component-"] .footer{
+  position:static!important;
+  display:block!important;
+  clear:both!important;
+  text-align:center!important;
+}
+
+
+/* Allotment cleanup and full-width component-page fix */
+.range-allocation-page{
+  width:100%!important;
+  max-width:none!important;
+}
+.range-allocation-page .alloc-strip{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  width:100%!important;
+}
+.range-allocation-page .alloc-head-card{
+  min-width:0!important;
+  max-width:none!important;
+}
+.range-allocation-page .alloc-meta-grid.two{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.range-allocation-page .component-card.clean-component{
+  min-height:170px;
+}
+.range-allocation-page .component-card.clean-component .action-link{
+  margin-top:auto;
+  width:max-content;
+}
+.range-allocation-page .component-card.clean-component .accurate-graph{
+  margin-top:6px;
+}
+@media(max-width:900px){
+  .range-allocation-page .alloc-strip{
+    grid-template-columns:1fr!important;
+  }
+  .range-allocation-page .alloc-meta-grid.two{
+    grid-template-columns:1fr;
+  }
+}

@@ -161,3 +161,18 @@ Budget head card and component print update:
 - Changed range-allocation.html budget head cards to a 2-column layout.
 - Replaced spark-style mini graph with calculated Allocation / Expenditure / Balance bars.
 - Realigned budget-head component pages with printable header, print button and printable component register.
+
+
+Range allocation full-width alignment fix:
+- Made range-allocation.html main content full width.
+- Reconstructed FY bar placement after topbar.
+- Forced footer into normal bottom flow.
+- Added page-scoped CSS to avoid left/right broken layout.
+
+
+Allotment terminology and card cleanup:
+- Renamed Allocation to Allotment in visible content.
+- Head cards now show Budget, Allotment and Components only; removed Entered and Allocated By details from head cards.
+- Allotment is lower than Budget to represent release/disbursement.
+- Component cards simplified to avoid repeated stats and status badges; primary action is View Details.
+- Removed developer-style labels such as Card View.
