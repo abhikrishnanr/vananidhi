@@ -107,3 +107,10 @@ Final APO list alignment and Plan/Non-Plan field fix:
 - Reconstructed headers so topbar and FY selector are always in the correct order.
 - Added CSS hardening for list/table alignment.
 - Ensured Plan/Non-Plan hide logic hides labels and fields together.
+
+
+AS / attachments / collapsible menu update:
+- Administrative Sanction question is now Plan-only.
+- Supporting Attachments are placed last before submit and support multiple attachment rows/files.
+- Added beneficiary component blocks to APO entry/builder pages before submit.
+- Sidebar menu group headings are now collapsible.

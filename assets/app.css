@@ -437,3 +437,46 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
   .topbar .top-login-btn{margin-left:0}
   .fy-bar{flex-direction:column;align-items:flex-start}
 }
+
+
+/* Collapsible menu + Plan-only AS + multiple attachments */
+.nav-group-title{
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  user-select:none;
+}
+.nav-group-title::after{
+  content:"▾";
+  font-size:10px;
+  color:rgba(255,231,161,.75);
+  transition:transform .18s ease;
+}
+.nav-group-title.collapsed::after{transform:rotate(-90deg)}
+.nav a.menu-collapsed{display:none!important}
+.field.hidden-field,.form-grid > .hidden-field{display:none!important}
+.attachment-box{margin-top:12px}
+.attachment-list{display:grid;gap:8px;margin-top:10px}
+.attachment-row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end}
+.attachment-row input,.attachment-row select{
+  width:100%;
+  border:1px solid rgba(214,173,69,.35);
+  border-radius:12px;
+  background:rgba(4,18,12,.55);
+  color:var(--cream);
+  padding:10px 12px;
+  outline:none;
+}
+.attachment-remove{
+  border:1px solid rgba(214,173,69,.35);
+  background:rgba(214,173,69,.10);
+  color:#ffe7a1;
+  border-radius:12px;
+  padding:10px 12px;
+  cursor:pointer;
+}
+.beneficiary-block{margin-top:14px}
+.beneficiary-block .panel-soft{padding:16px}
+@media(max-width:760px){.attachment-row{grid-template-columns:1fr}}

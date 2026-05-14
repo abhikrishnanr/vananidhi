@@ -192,3 +192,42 @@
     apply();
   });
 })();
+
+
+// Collapsible sidebar menu groups
+(function(){
+  document.querySelectorAll('.nav').forEach(nav=>{
+    const children = Array.from(nav.children);
+    children.forEach((el, idx)=>{
+      if(!el.classList.contains('nav-group-title')) return;
+      const groupItems = [];
+      for(let i=idx+1; i<children.length; i++){
+        if(children[i].classList.contains('nav-group-title')) break;
+        if(children[i].tagName && children[i].tagName.toLowerCase()==='a') groupItems.push(children[i]);
+      }
+      el.addEventListener('click',()=>{
+        el.classList.toggle('collapsed');
+        groupItems.forEach(a=>a.classList.toggle('menu-collapsed'));
+      });
+    });
+  });
+})();
+
+// Multiple supporting attachment rows
+(function(){
+  document.querySelectorAll('.attachment-box').forEach(box=>{
+    const list = box.querySelector('.attachment-list');
+    const addBtn = box.querySelector('.add-attachment-btn');
+    if(!list || !addBtn || box.dataset.multiReady === '1') return;
+    box.dataset.multiReady = '1';
+    function row(){
+      const wrap = document.createElement('div');
+      wrap.className = 'attachment-row';
+      wrap.innerHTML = `<select><option>Estimate</option><option>Sketch / Map</option><option>Previous Approval</option><option>Photo Evidence</option><option>Other Supporting Document</option></select><input type="file" multiple><button type="button" class="attachment-remove">Remove</button>`;
+      wrap.querySelector('.attachment-remove').addEventListener('click',()=>wrap.remove());
+      return wrap;
+    }
+    box.querySelectorAll('.attachment-remove').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.attachment-row')?.remove()));
+    addBtn.addEventListener('click',()=>list.appendChild(row()));
+  });
+})();
