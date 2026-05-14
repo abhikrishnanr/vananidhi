@@ -100,3 +100,10 @@ Plan/Non-Plan and APO list fix:
 - Plan remains the default selection.
 - Removed the repeated APO Builder form from APO list pages.
 - Proposed, Approved and Returned APO list pages are now list-only with 10 searchable/filterable/sortable rows and actions.
+
+
+Final APO list alignment and Plan/Non-Plan field fix:
+- Rebuilt Proposed/Approved/Returned APO list pages as list-only pages.
+- Reconstructed headers so topbar and FY selector are always in the correct order.
+- Added CSS hardening for list/table alignment.
+- Ensured Plan/Non-Plan hide logic hides labels and fields together.

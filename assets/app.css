@@ -423,3 +423,17 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
 .form-grid > .hidden-field{
   display:none!important;
 }
+
+
+/* Final listing and header alignment fix */
+.field.hidden-field,
+.form-grid > .hidden-field{display:none!important}
+.main > .fy-bar{margin-top:0;margin-bottom:14px;width:100%}
+.topbar{flex-wrap:wrap}
+.topbar .top-login-btn{margin-left:auto}
+.record-list-panel{overflow:hidden}
+.record-list-panel .table-wrap{max-width:100%}
+@media(max-width:900px){
+  .topbar .top-login-btn{margin-left:0}
+  .fy-bar{flex-direction:column;align-items:flex-start}
+}
