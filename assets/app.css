@@ -416,3 +416,10 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
   .record-toolbar{grid-template-columns:1fr}
   .top-login-btn span{display:none}
 }
+
+
+/* Plan / Non-Plan visibility fix */
+.field.hidden-field,
+.form-grid > .hidden-field{
+  display:none!important;
+}

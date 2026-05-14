@@ -92,3 +92,11 @@ Alignment/list/attachment fix:
 - Added searchable/filterable/sortable 10-row record lists with actions to form pages.
 - Added record-details.html and placeholder pages for any missing internal links.
 - Reinforced Plan default and Non-Plan classification guidance.
+
+
+Plan/Non-Plan and APO list fix:
+- Fixed Plan/Non-Plan field visibility by hiding the full field wrapper, including labels.
+- Classification now appears only for Non-Plan selection.
+- Plan remains the default selection.
+- Removed the repeated APO Builder form from APO list pages.
+- Proposed, Approved and Returned APO list pages are now list-only with 10 searchable/filterable/sortable rows and actions.

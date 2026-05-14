@@ -1,1 +1,216 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Returned APOs</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="range-apo-returned.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><div class="nav-group-title">Pre-Budget Activities</div><a href="range-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Range Dashboard</span></a><a href="range-apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Entry</span></a><a href="budget-range.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Builder</span></a><a href="range-prior-as.html" class=""><i class="fa-solid fa-file-signature"></i><span>Prior AS Request</span></a><a href="range-action-plan.html" class=""><i class="fa-solid fa-route"></i><span>Action Plan Request</span></a><a href="range-apo-proposed.html" class=""><i class="fa-solid fa-hourglass-half"></i><span>Proposed APOs</span></a><a href="range-apo-approved.html" class=""><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a><a href="range-apo-returned.html" class="active"><i class="fa-solid fa-rotate-left"></i><span>Returned APOs</span></a><div class="nav-group-title">Budget Allocation Activities</div><a href="range-allocation.html" class=""><i class="fa-solid fa-coins"></i><span>Allocation Details</span></a><a href="range-revenue.html" class=""><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a><div class="nav-group-title">Post-Budget Activities</div><a href="range-progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Updation</span></a><a href="range-wages.html" class=""><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a><div class="nav-group-title">Account</div><a href="login-range.html" class=""><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-rotate-left"></i> Returned APOs</h2><small>Filtered APO Pipeline: Returned.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><label>Financial Year <select><option>2026-27</option><option>2025-26</option><option>2024-25</option></select></label></div><h1 class="serif page-title gold-text">Range Returned APOs</h1><p class="page-sub">Filtered APO Pipeline list for returned items. Each status card in the dashboard opens the corresponding filtered view.</p><section class="grid grid-3"><a class="status-card returned" href="#"><div class="sicon"><i class="fa-solid fa-list-check"></i></div><div><b>5</b><span>Returned</span></div></a><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-coins"></i></div><div><b>₹ 74.2 L</b><br><small>Total value</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div><div><b>2026-27</b><br><small>Financial year</small></div></div></div></section><section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Returned APO List</h3><button class="expand-card">⛶</button></div><div class="table-wrap"><table class="data-table"><thead><tr><th>APO ID</th><th>Head</th><th>Activity</th><th>GO</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>APO-R-001</td><td>2406-01-101-81</td><td>Fire line maintenance</td><td>GO(Rt) 102/2026</td><td><span class="badge red">Returned</span></td><td><a class="btn secondary" href="range-apo.html">View</a></td></tr><tr><td>APO-R-002</td><td>2406-01-800-56</td><td>Habitat improvement</td><td>Not available</td><td><span class="badge red">Returned</span></td><td><a class="btn secondary" href="range-apo.html">View</a></td></tr></tbody></table></div></section><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Returned APOs</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="range-apo-returned.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><div class="nav-group-title">Pre-Budget Activities</div><a href="range-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Range Dashboard</span></a><a href="range-apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Entry</span></a><a href="budget-range.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Builder</span></a><a href="range-prior-as.html" class=""><i class="fa-solid fa-file-signature"></i><span>Prior AS Request</span></a><a href="range-action-plan.html" class=""><i class="fa-solid fa-route"></i><span>Action Plan Request</span></a><a href="range-apo-proposed.html" class=""><i class="fa-solid fa-hourglass-half"></i><span>Proposed APOs</span></a><a href="range-apo-approved.html" class=""><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a><a href="range-apo-returned.html" class="active"><i class="fa-solid fa-rotate-left"></i><span>Returned APOs</span></a><div class="nav-group-title">Budget Allocation Activities</div><a href="range-allocation.html" class=""><i class="fa-solid fa-coins"></i><span>Allocation Details</span></a><a href="range-revenue.html" class=""><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a><div class="nav-group-title">Post-Budget Activities</div><a href="range-progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Updation</span></a><a href="range-wages.html" class=""><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a><div class="nav-group-title">Account</div><a href="login-range.html" class=""><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-rotate-left"></i> Returned APOs</h2><small>Filtered APO Pipeline: Returned.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<h1 class="serif page-title gold-text">Range Returned APOs</h1>
+<p class="page-sub">Filtered APO Pipeline list for returned items. This page is list-only; APO creation and editing of Plan/Non-Plan fields are handled only in the APO Builder page.</p>
+
+<section class="grid grid-4">
+  <div class="panel">
+    <div class="kpi"><div class="icon"><i class="fa-solid fa-rotate-left"></i></div><div><b>5</b><br><small>Returned APOs</small></div></div>
+  </div>
+  <div class="panel">
+    <div class="kpi"><div class="icon"><i class="fa-solid fa-indian-rupee-sign"></i></div><div><b>₹ 74.2 L</b><br><small>Total value</small></div></div>
+  </div>
+  <div class="panel">
+    <div class="kpi"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div><div><b>2026-27</b><br><small>Financial year</small></div></div>
+  </div>
+  <div class="panel">
+    <div class="kpi"><div class="icon"><i class="fa-solid fa-file-pen"></i></div><div><b>Builder</b><br><small><a href="budget-range.html">Open APO Builder</a></small></div></div>
+  </div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Returned APO List</h3><button class="expand-card">⛶</button></div>
+  <p class="info-note" style="margin-bottom:12px">These APOs were returned with remarks and need correction before resubmission. Supporting Attachments and AS status are shown as a separate column. No APO Builder form is repeated here.</p>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search APO ID, head, activity, attachment or amount">
+    <select class="record-status-filter"><option>All</option><option selected>Returned</option><option>Proposed</option><option>Approved</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="record-details.html?src=range-apo-returned.html&id=APO-001"><i class="fa-solid fa-eye"></i> Open Sample Detail</a>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>APO ID</th>
+          <th>Budget Head</th>
+          <th>Activity</th>
+          <th>Supporting Attachments / AS</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr data-status="Returned">
+  <td>APO-001</td>
+  <td>2406-01-101-81</td>
+  <td>Fire line maintenance</td>
+  <td>Estimate + AS not required</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>10-06-2026</td>
+  <td>₹ 9.00 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-001"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-002</td>
+  <td>2406-01-800-56</td>
+  <td>Habitat improvement</td>
+  <td>Sketch + AS obtained</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>11-06-2026</td>
+  <td>₹ 14.50 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-002"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-003</td>
+  <td>4406-01-070-99</td>
+  <td>Forest road repair</td>
+  <td>Estimate + AS pending</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>12-06-2026</td>
+  <td>₹ 22.70 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-003"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-004</td>
+  <td>2406-02-110-35</td>
+  <td>Camp support</td>
+  <td>Photo evidence attached</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>13-06-2026</td>
+  <td>₹ 6.40 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-004"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-005</td>
+  <td>2406-02-110-74</td>
+  <td>Water hole renovation</td>
+  <td>AS not required</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>14-06-2026</td>
+  <td>₹ 8.80 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-005"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-006</td>
+  <td>2406-02-110-68</td>
+  <td>Eco-restoration work</td>
+  <td>Map + estimate attached</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>15-06-2026</td>
+  <td>₹ 7.25 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-006"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-007</td>
+  <td>2406-01-101-78</td>
+  <td>Nursery maintenance</td>
+  <td>Estimate attached</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>16-06-2026</td>
+  <td>₹ 5.90 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-007"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-008</td>
+  <td>4406-01-101-99</td>
+  <td>Boundary demarcation</td>
+  <td>Survey sketch attached</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>17-06-2026</td>
+  <td>₹ 12.10 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-008"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-009</td>
+  <td>2406-02-110-52</td>
+  <td>Wildlife habitat support</td>
+  <td>AS obtained</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>18-06-2026</td>
+  <td>₹ 18.60 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-009"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr>
+
+<tr data-status="Returned">
+  <td>APO-010</td>
+  <td>2406-01-800-56</td>
+  <td>Man-animal conflict mitigation</td>
+  <td>Supporting note attached</td>
+  <td><span class="status returned">Returned</span></td>
+  <td>19-06-2026</td>
+  <td>₹ 3.90 L</td>
+  <td>
+    <div class="action-row">
+      <a class="action-link" href="record-details.html?src=range-apo-returned.html&id=APO-010"><i class="fa-solid fa-eye"></i> View</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a>
+      <a class="action-link" href="#"><i class="fa-solid fa-file-arrow-down"></i> Print</a>
+    </div>
+  </td>
+</tr></tbody>
+    </table>
+  </div>
+</section>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

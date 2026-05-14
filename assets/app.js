@@ -140,12 +140,18 @@
   });
   document.querySelectorAll('[data-nonplan-toggle]').forEach(sel=>{
     const apply=()=>{
-      const form=sel.closest('.plan-nonplan-form') || document;
-      const isNon=String(sel.value).toLowerCase().includes('non');
-      form.querySelectorAll('[data-plan-only]').forEach(el=>el.classList.toggle('hidden-field',isNon));
-      form.querySelectorAll('[data-nonplan-only]').forEach(el=>el.classList.toggle('hidden-field',!isNon));
+      const scope = sel.closest('.plan-nonplan-form') || sel.closest('.panel') || document;
+      const isNon = String(sel.value).toLowerCase().includes('non');
+      const setHidden = (el, hide) => {
+        const wrap = el.closest('.field') || el;
+        wrap.classList.toggle('hidden-field', hide);
+        if ('disabled' in el) el.disabled = hide;
+      };
+      scope.querySelectorAll('[data-plan-only]').forEach(el=>setHidden(el, isNon));
+      scope.querySelectorAll('[data-nonplan-only]').forEach(el=>setHidden(el, !isNon));
     };
-    sel.addEventListener('change',apply); apply();
+    sel.addEventListener('change',apply);
+    apply();
   });
 })();
 
