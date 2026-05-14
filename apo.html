@@ -33,7 +33,7 @@
         <h2 class="serif gold-text"><i class="fa-solid fa-clipboard-list"></i> APO Workspace</h2>
         <small>Annual Plan of Operation preparation, approval and revision.</small>
       </div>
-      <button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
+      <a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn" title="Full screen">⛶</button>
       <span class="pill"><i class="fa-solid fa-building-columns"></i> CDIPD Demo</span>
     </div>
     <div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><label>Financial Year <select><option>2026-27</option><option>2025-26</option><option>2024-25</option></select></label></div>
@@ -69,10 +69,43 @@
 <tr><td>APO-2406-103</td><td>Southern</td><td>Thenmala</td><td>Shendurney</td><td>Live-stock</td><td>2406-02-110-35</td><td>3 units</td><td>₹ 14.25 L</td><td><span class="status">HQ Approved</span></td></tr>
 </tbody></table></div></section>
 
-    <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
+    
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Search, Filter & Action List</h3><button class="expand-card">⛶</button></div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search by ID, activity, status or amount">
+    <select class="record-status-filter"><option>All</option><option>Proposed</option><option>Approved</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="record-details.html?src=apo.html&id=VN-001"><i class="fa-solid fa-eye"></i> Open Sample Detail</a>
+  </div>
+  <div class="table-wrap"><table class="data-table">
+    <thead><tr><th>ID</th><th>Activity / Item</th><th>Status</th><th>Date</th><th>Amount</th><th>Actions</th></tr></thead>
+    <tbody><tr data-status="Proposed">
+<td>VN-001</td><td>Fire line maintenance</td><td><span class="status proposed">Proposed</span></td><td>10-06-2026</td><td>₹ 9.00 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-001"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Approved">
+<td>VN-002</td><td>Anti-poaching camp support</td><td><span class="status approved">Approved</span></td><td>11-06-2026</td><td>₹ 14.50 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-002"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Returned">
+<td>VN-003</td><td>Habitat improvement</td><td><span class="status returned">Returned</span></td><td>12-06-2026</td><td>₹ 4.20 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-003"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Proposed">
+<td>VN-004</td><td>Forest road repair</td><td><span class="status proposed">Proposed</span></td><td>13-06-2026</td><td>₹ 22.70 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-004"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Approved">
+<td>VN-005</td><td>Nursery maintenance</td><td><span class="status approved">Approved</span></td><td>14-06-2026</td><td>₹ 6.40 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-005"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Returned">
+<td>VN-006</td><td>Boundary demarcation</td><td><span class="status returned">Returned</span></td><td>15-06-2026</td><td>₹ 12.10 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-006"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Proposed">
+<td>VN-007</td><td>Water hole renovation</td><td><span class="status proposed">Proposed</span></td><td>16-06-2026</td><td>₹ 8.80 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-007"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Approved">
+<td>VN-008</td><td>Camp building repair</td><td><span class="status approved">Approved</span></td><td>17-06-2026</td><td>₹ 18.60 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-008"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Returned">
+<td>VN-009</td><td>Eco-restoration work</td><td><span class="status returned">Returned</span></td><td>18-06-2026</td><td>₹ 7.25 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-009"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr><tr data-status="Approved">
+<td>VN-010</td><td>Revenue target update</td><td><span class="status approved">Approved</span></td><td>19-06-2026</td><td>₹ 3.90 L</td>
+<td><div class="action-row"><a class="action-link" href="record-details.html?src=apo.html&id=VN-010"><i class="fa-solid fa-eye"></i> View</a><a class="action-link" href="#"><i class="fa-solid fa-pen"></i> Edit</a><a class="action-link" href="#"><i class="fa-solid fa-paper-plane"></i> Forward</a></div></td></tr></tbody>
+  </table></div>
+</section>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div>
   </main>
 </div>
-<a href="index.html" class="float-login-btn"><i class="fa-solid fa-right-to-bracket"></i> Back to Login</a>
 <script src="assets/app.js"></script>
 </body>
 </html>

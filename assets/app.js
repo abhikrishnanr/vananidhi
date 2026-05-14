@@ -148,3 +148,41 @@
     sel.addEventListener('change',apply); apply();
   });
 })();
+
+
+// Search / filter / sort support for demo record lists
+(function(){
+  document.querySelectorAll('.record-list-panel').forEach(panel=>{
+    const search = panel.querySelector('.record-search');
+    const filter = panel.querySelector('.record-status-filter');
+    const sort = panel.querySelector('.record-sort');
+    const tbody = panel.querySelector('tbody');
+    if(!tbody) return;
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    function apply(){
+      const q = (search?.value || '').toLowerCase();
+      const st = filter?.value || 'All';
+      let visible = rows.filter(row=>{
+        const text = row.textContent.toLowerCase();
+        const status = row.getAttribute('data-status') || 'All';
+        return text.includes(q) && (st === 'All' || status === st);
+      });
+      if(sort){
+        const mode = sort.value;
+        visible.sort((a,b)=>{
+          const ta=a.children[1]?.textContent || '';
+          const tb=b.children[1]?.textContent || '';
+          const da=a.children[3]?.textContent || '';
+          const db=b.children[3]?.textContent || '';
+          if(mode === 'Name') return ta.localeCompare(tb);
+          if(mode === 'Date') return db.localeCompare(da);
+          return (a.children[0]?.textContent || '').localeCompare(b.children[0]?.textContent || '');
+        });
+      }
+      rows.forEach(r=>r.style.display='none');
+      visible.forEach(r=>{r.style.display=''; tbody.appendChild(r);});
+    }
+    [search,filter,sort].forEach(el=>el && el.addEventListener('input', apply));
+    apply();
+  });
+})();

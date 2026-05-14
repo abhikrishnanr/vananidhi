@@ -324,3 +324,95 @@ body{background:radial-gradient(circle at 20% 0%,rgba(230,195,93,.20),transparen
   line-height:1.55;
   font-size:13px;
 }
+
+
+/* v-next: layout, top login, list/action and attachment fixes */
+.float-login-btn{display:none!important}
+.top-login-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border:1px solid rgba(214,173,69,.45);
+  background:rgba(214,173,69,.12);
+  color:#ffe7a1;
+  border-radius:999px;
+  padding:9px 12px;
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.top-login-btn:hover{background:rgba(214,173,69,.22)}
+.record-toolbar{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr auto;
+  gap:10px;
+  margin-bottom:12px;
+}
+.record-toolbar input,.record-toolbar select{
+  width:100%;
+  border:1px solid rgba(214,173,69,.35);
+  border-radius:12px;
+  background:rgba(4,18,12,.55);
+  color:var(--cream);
+  padding:10px 12px;
+  outline:none;
+}
+.action-row{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.action-link{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:800;
+  border:1px solid rgba(214,173,69,.35);
+  color:#ffe7a1;
+  background:rgba(214,173,69,.10);
+}
+.action-link:hover{background:rgba(214,173,69,.20)}
+.status.proposed{background:rgba(241,211,122,.16);color:#ffe7a1;border-color:rgba(241,211,122,.42)}
+.status.approved{background:rgba(121,166,77,.18);color:#bff28d;border-color:rgba(121,166,77,.40)}
+.status.returned{background:rgba(239,82,82,.16);color:#ffb0a8;border-color:rgba(239,82,82,.35)}
+.attachment-box{
+  grid-column:1/-1;
+  border:1px dashed rgba(214,173,69,.45);
+  background:rgba(214,173,69,.08);
+  border-radius:14px;
+  padding:12px;
+}
+.radio-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.radio-row label{
+  display:inline-flex!important;
+  align-items:center;
+  gap:7px;
+  margin:0!important;
+  color:rgba(247,237,207,.78)!important;
+}
+.radio-row input{width:auto!important}
+.plan-nonplan-note{
+  grid-column:1/-1;
+  border-left:3px solid rgba(241,211,122,.8);
+  background:rgba(214,173,69,.08);
+  color:rgba(247,237,207,.75);
+  padding:10px 12px;
+  border-radius:12px;
+  line-height:1.55;
+  font-size:13px;
+}
+.field.nonplan-only-note{
+  grid-column:1/-1;
+}
+@media(max-width:900px){
+  .record-toolbar{grid-template-columns:1fr}
+  .top-login-btn span{display:none}
+}

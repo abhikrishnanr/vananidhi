@@ -83,3 +83,12 @@ HQ / PO responsibility fix:
 - HQ dashboard restored with previous command-centre sections, maps, charts, approval inbox and rankings.
 - HQ now explicitly owns PO Components and Subcomponents management.
 - Floating Back to Login button repositioned to avoid overlapping dashboard cards.
+
+
+Alignment/list/attachment fix:
+- Fixed Range Dashboard misalignment caused by content being placed inside topbar.
+- Replaced floating Back to Login with a topbar button to avoid overlap.
+- Removed GO field from forms and replaced with Supporting Attachments + AS required/obtained radio question.
+- Added searchable/filterable/sortable 10-row record lists with actions to form pages.
+- Added record-details.html and placeholder pages for any missing internal links.
+- Reinforced Plan default and Non-Plan classification guidance.
