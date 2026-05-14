@@ -1,1 +1,144 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Allocation Details</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="range-allocation.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><div class="nav-group-title">Pre-Budget Activities</div><a href="range-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Range Dashboard</span></a><a href="range-apo.html" class=""><i class="fa-solid fa-clipboard-list"></i><span>APO Entry</span></a><a href="budget-range.html" class=""><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Builder</span></a><a href="range-prior-as.html" class=""><i class="fa-solid fa-file-signature"></i><span>Prior AS Request</span></a><a href="range-action-plan.html" class=""><i class="fa-solid fa-route"></i><span>Action Plan Request</span></a><a href="range-apo-proposed.html" class=""><i class="fa-solid fa-hourglass-half"></i><span>Proposed APOs</span></a><a href="range-apo-approved.html" class=""><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a><a href="range-apo-returned.html" class=""><i class="fa-solid fa-rotate-left"></i><span>Returned APOs</span></a><div class="nav-group-title">Budget Allocation Activities</div><a href="range-allocation.html" class="active"><i class="fa-solid fa-coins"></i><span>Allocation Details</span></a><a href="range-revenue.html" class=""><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a><div class="nav-group-title">Post-Budget Activities</div><a href="range-progress.html" class=""><i class="fa-solid fa-chart-line"></i><span>Progress Updation</span></a><a href="range-wages.html" class=""><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a><div class="nav-group-title">Account</div><a href="login-range.html" class=""><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-coins"></i> Allocation Details</h2><small>Range allocation details after budget distribution.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><label>Financial Year <select><option>2026-27</option><option>2025-26</option><option>2024-25</option></select></label></div><h1 class="serif page-title gold-text">Range Allocation Details</h1><p class="page-sub">Allocation details visible to Range users after budget provision is distributed.</p><section class="grid grid-4"><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-coins"></i></div><div><b>₹ 74.2 L</b><br><small>Total allocation</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div><b>₹ 48.7 L</b><br><small>Expenditure</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-wallet"></i></div><div><b>₹ 25.5 L</b><br><small>Balance</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-percent"></i></div><div><b>65.6%</b><br><small>Utilization</small></div></div></div></section><section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Head-wise Allocation</h3><button class="expand-card">⛶</button></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Head</th><th>Component</th><th>Allocation</th><th>Expenditure</th><th>Balance</th></tr></thead><tbody><tr><td>2406-01-101-81</td><td>Forest Protection</td><td>₹ 42.5 L</td><td>₹ 28.4 L</td><td>₹ 14.1 L</td></tr><tr><td>4406-01-070-99</td><td>Roads</td><td>₹ 18.2 L</td><td>₹ 11.7 L</td><td>₹ 6.5 L</td></tr></tbody></table></div></section><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Range Allocation Details</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="range-allocation-details.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><a href="range-dashboard.html" class=""><i class="fa-solid fa-tree"></i><span>Range Dashboard</span></a>
+<div class="nav-group-title collapsed">Pre-Budget Activities</div>
+
+<a href="range-budget.html" class="menu-collapsed"><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Entry</span></a>
+<a href="range-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-file-circle-plus"></i><span>Action Plan Request</span></a>
+<div class="nav-group-title collapsed">Post-Budget Activities</div>
+<a href="range-allocation.html" class="active menu-collapsed"><i class="fa-solid fa-sack-dollar"></i><span>Allocation Details</span></a><a href="range-wages.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a>
+<a href="range-progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Update</span></a>
+<a href="range-revenue.html" class="menu-collapsed"><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a>
+<div class="nav-group-title collapsed">Prior AS Request</div>
+<a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
+<div class="nav-group-title collapsed">Account</div>
+<a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-sack-dollar"></i> Range Allocation Details</h2><small>Head-wise allocation cards and component drill-down.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+
+<div class="range-allocation-page">
+<h1 class="serif page-title gold-text">Range Allocation Details</h1>
+<p class="page-sub">Head-wise allocation overview for the Range Office. Each budget head card is shown in a 2-column layout with allocation, expenditure and balance bars calculated from the component values. Click a card to open that head’s component listing page.</p>
+
+<section class="grid grid-4">
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-book"></i></span><span class="kpi-count">4</span></div><h3>Budget Heads</h3><p>Heads received by Range Office.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-layer-group"></i></span><span class="kpi-count">15</span></div><h3>Components</h3><p>Components mapped under heads.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-sack-dollar"></i></span><span class="kpi-count">₹74.2L</span></div><h3>Total Allocation</h3><p>Allocation issued from higher offices.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-invoice"></i></span><span class="kpi-count">₹36.9L</span></div><h3>Expenditure</h3><p>Expenditure entered so far.</p></div>
+</section>
+
+<section class="panel card-fullscreen" style="margin-top:14px">
+  <div class="card-head"><h3>Budget Heads</h3><button class="expand-card">⛶</button></div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search budget head, component, officer or amount">
+    <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="range-dashboard.html"><i class="fa-solid fa-arrow-left"></i> Back to Range Dashboard</a>
+  </div>
+  <div class="alloc-strip">
+
+<a class="alloc-head-card" href="range-allocation-head-2406-01-101-81.html">
+  <div class="alloc-head-top">
+    <div>
+      <div class="alloc-head-code">2406-01-101-81</div>
+      <div class="alloc-head-name">Forest Protection - Fire line and field protection</div>
+    </div>
+    <div class="alloc-head-amount">₹ 24.50 L</div>
+  </div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 24.50 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:51.0%"></div></div><div class="graph-value">₹ 12.50 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:49.0%"></div></div><div class="graph-value">₹ 12.00 L</div></div>
+</div>
+  <div class="alloc-meta-grid">
+    <div class="alloc-meta"><b>4</b><small>Components</small></div>
+    <div class="alloc-meta"><b>2/4</b><small>Entered</small></div>
+    <div class="alloc-meta"><b>DFO Kannur</b><small>Allocated By</small></div>
+  </div>
+  <span class="action-link" style="width:max-content"><i class="fa-solid fa-arrow-right"></i> View Components</span>
+</a>
+<a class="alloc-head-card" href="range-allocation-head-4406-01-070-99.html">
+  <div class="alloc-head-top">
+    <div>
+      <div class="alloc-head-code">4406-01-070-99</div>
+      <div class="alloc-head-name">Forest Roads - Maintenance and access improvement</div>
+    </div>
+    <div class="alloc-head-amount">₹ 18.60 L</div>
+  </div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 18.60 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:38.7%"></div></div><div class="graph-value">₹ 7.20 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:61.3%"></div></div><div class="graph-value">₹ 11.40 L</div></div>
+</div>
+  <div class="alloc-meta-grid">
+    <div class="alloc-meta"><b>3</b><small>Components</small></div>
+    <div class="alloc-meta"><b>1/3</b><small>Entered</small></div>
+    <div class="alloc-meta"><b>Circle Office</b><small>Allocated By</small></div>
+  </div>
+  <span class="action-link" style="width:max-content"><i class="fa-solid fa-arrow-right"></i> View Components</span>
+</a>
+<a class="alloc-head-card" href="range-allocation-head-2406-01-800-56.html">
+  <div class="alloc-head-top">
+    <div>
+      <div class="alloc-head-code">2406-01-800-56</div>
+      <div class="alloc-head-name">Man-animal conflict mitigation</div>
+    </div>
+    <div class="alloc-head-amount">₹ 11.40 L</div>
+  </div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 11.40 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:36.0%"></div></div><div class="graph-value">₹ 4.10 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:64.0%"></div></div><div class="graph-value">₹ 7.30 L</div></div>
+</div>
+  <div class="alloc-meta-grid">
+    <div class="alloc-meta"><b>4</b><small>Components</small></div>
+    <div class="alloc-meta"><b>2/4</b><small>Entered</small></div>
+    <div class="alloc-meta"><b>DFO Kannur</b><small>Allocated By</small></div>
+  </div>
+  <span class="action-link" style="width:max-content"><i class="fa-solid fa-arrow-right"></i> View Components</span>
+</a>
+<a class="alloc-head-card" href="range-allocation-head-2406-02-110-68.html">
+  <div class="alloc-head-top">
+    <div>
+      <div class="alloc-head-code">2406-02-110-68</div>
+      <div class="alloc-head-name">Eco-restoration and habitat support</div>
+    </div>
+    <div class="alloc-head-amount">₹ 19.70 L</div>
+  </div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 19.70 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:57.4%"></div></div><div class="graph-value">₹ 11.30 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:42.6%"></div></div><div class="graph-value">₹ 8.40 L</div></div>
+</div>
+  <div class="alloc-meta-grid">
+    <div class="alloc-meta"><b>4</b><small>Components</small></div>
+    <div class="alloc-meta"><b>3/4</b><small>Entered</small></div>
+    <div class="alloc-meta"><b>HQ</b><small>Allocated By</small></div>
+  </div>
+  <span class="action-link" style="width:max-content"><i class="fa-solid fa-arrow-right"></i> View Components</span>
+</a>
+</div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Head-wise Allocation Summary</h3><button class="expand-card">⛶</button></div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search head, officer, status...">
+    <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="#"><i class="fa-solid fa-download"></i> Export</a>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Budget Head</th><th>Name</th><th>Allocated By</th><th>Allocation</th><th>Components</th><th>Status</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr data-status="Approved"><td>2406-01-101-81</td><td>Forest Protection - Fire line and field protection</td><td>DFO Kannur</td><td>₹ 24.50 L</td><td>4</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="range-allocation-head-2406-01-101-81.html">Open Components</a></td></tr><tr data-status="Approved"><td>4406-01-070-99</td><td>Forest Roads - Maintenance and access improvement</td><td>Circle Office</td><td>₹ 18.60 L</td><td>3</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="range-allocation-head-4406-01-070-99.html">Open Components</a></td></tr><tr data-status="Approved"><td>2406-01-800-56</td><td>Man-animal conflict mitigation</td><td>DFO Kannur</td><td>₹ 11.40 L</td><td>4</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="range-allocation-head-2406-01-800-56.html">Open Components</a></td></tr><tr data-status="Approved"><td>2406-02-110-68</td><td>Eco-restoration and habitat support</td><td>HQ</td><td>₹ 19.70 L</td><td>4</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="range-allocation-head-2406-02-110-68.html">Open Components</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

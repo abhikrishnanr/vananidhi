@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Master Menu</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="master-menu.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<div class="nav-group-title collapsed">Menu Explorer</div>
+<a href="master-menu.html" class="active menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<div class="nav-group-title collapsed">Pre-Budget Activities</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-route"></i><span>Workflow Sitemap</span></a>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
+<a href="apo.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
+<a href="budget.html" class="menu-collapsed"><i class="fa-solid fa-file-invoice-dollar"></i><span>Budget Overview</span></a>
+<a href="budget-range.html" class="menu-collapsed"><i class="fa-solid fa-tree"></i><span>APO Entry</span></a>
+<a href="budget-division.html" class="menu-collapsed"><i class="fa-solid fa-building"></i><span>Division APO</span></a>
+<a href="budget-circle.html" class="menu-collapsed"><i class="fa-solid fa-circle-nodes"></i><span>Circle APO</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>HQ Budget Estimate</span></a>
+<div class="nav-group-title collapsed">Budget Allocation Activities</div>
+<a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Post-Budget Tracking Activities</div>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration</div>
+<a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Prior AS Request</div>
+<a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-grip"></i> Master Menu</h2><small>Searchable icon-grid menu explorer.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<h1 class="serif page-title gold-text">Master Menu</h1>
+<p class="page-sub">Control-panel style menu explorer. Search and open any page from one place.</p>
+<section class="master-search">
+  <input id="masterMenuSearch" placeholder="Search menus, workflows, reports, budget, APO, revenue, prior AS...">
+  <a href="state-dashboard.html" class="btn secondary"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+<a class="master-tile" href="range-allocation.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-sack-dollar"></i></span><b>Range Allocation Details</b><small>Role Dashboards</small></div>
+</a><a class="master-tile" href="range-allocation-head-2406-01-101-81.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-layer-group"></i></span><b>2406-01-101-81</b><small>Allocation Components</small></div>
+</a>
+<a class="master-tile" href="range-allocation-head-4406-01-070-99.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-layer-group"></i></span><b>4406-01-070-99</b><small>Allocation Components</small></div>
+</a>
+<a class="master-tile" href="range-allocation-head-2406-01-800-56.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-layer-group"></i></span><b>2406-01-800-56</b><small>Allocation Components</small></div>
+</a>
+<a class="master-tile" href="range-allocation-head-2406-02-110-68.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-layer-group"></i></span><b>2406-02-110-68</b><small>Allocation Components</small></div>
+</a></section>
+<section class="master-grid"><a class="master-tile" href="state-dashboard.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-gauge-high"></i></span><b>Dashboard</b><small>Main</small></div>
+</a>
+<a class="master-tile" href="master-menu.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-grip"></i></span><b>Master Menu</b><small>Menu Explorer</small></div>
+</a>
+<a class="master-tile" href="sitemap.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-route"></i></span><b>Workflow Sitemap</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="hierarchy.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-sitemap"></i></span><b>Hierarchy View</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="apo.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-clipboard-list"></i></span><b>APO Workspace</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span><b>Budget Overview</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget-range.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-tree"></i></span><b>APO Entry</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget-division.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-building"></i></span><b>Division APO</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget-circle.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-circle-nodes"></i></span><b>Circle APO</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget-hq.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-landmark"></i></span><b>HQ Budget Estimate</b><small>Pre-Budget Activities</small></div>
+</a>
+<a class="master-tile" href="budget-heads.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-book"></i></span><b>Budget Heads</b><small>Budget Allocation Activities</small></div>
+</a>
+<a class="master-tile" href="performance-budget.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-chart-pie"></i></span><b>Performance Budget</b><small>Budget Allocation Activities</small></div>
+</a>
+<a class="master-tile" href="funds-bills.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-vault"></i></span><b>Funds & Pending Bills</b><small>Budget Allocation Activities</small></div>
+</a>
+<a class="master-tile" href="revenue.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-receipt"></i></span><b>Revenue / eTreasury</b><small>Budget Allocation Activities</small></div>
+</a>
+<a class="master-tile" href="forestry-works.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-helmet-safety"></i></span><b>Forestry Works</b><small>Post-Budget Tracking Activities</small></div>
+</a>
+<a class="master-tile" href="progress.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span><b>Progress Monitoring</b><small>Post-Budget Tracking Activities</small></div>
+</a>
+<a class="master-tile" href="reports.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-table-list"></i></span><b>Reports & Annexures</b><small>Post-Budget Tracking Activities</small></div>
+</a>
+<a class="master-tile" href="masters-admin.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-gears"></i></span><b>Masters & Admin</b><small>Administration</small></div>
+</a>
+<a class="master-tile" href="role-login.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-right-to-bracket"></i></span><b>Office Login</b><small>Administration</small></div>
+</a>
+<a class="master-tile" href="prior-as-request.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-file-signature"></i></span><b>New Prior AS Request</b><small>Prior AS Request</small></div>
+</a>
+<a class="master-tile" href="prior-as-list.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-list-check"></i></span><b>Prior AS Request List</b><small>Prior AS Request</small></div>
+</a>
+<a class="master-tile" href="index.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-right-to-bracket"></i></span><b>Office Login</b><small>Login Views</small></div>
+</a>
+<a class="master-tile" href="range-dashboard.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-tree"></i></span><b>Range Dashboard</b><small>Role Dashboards</small></div>
+</a>
+<a class="master-tile" href="division-dashboard.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-building"></i></span><b>Division Dashboard</b><small>Role Dashboards</small></div>
+</a>
+<a class="master-tile" href="circle-dashboard.html">
+  <div><span class="tile-icon"><i class="fa-solid fa-circle-nodes"></i></span><b>Circle Dashboard</b><small>Role Dashboards</small></div>
+</a></section>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

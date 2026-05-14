@@ -194,25 +194,6 @@
 })();
 
 
-// Collapsible sidebar menu groups
-(function(){
-  document.querySelectorAll('.nav').forEach(nav=>{
-    const children = Array.from(nav.children);
-    children.forEach((el, idx)=>{
-      if(!el.classList.contains('nav-group-title')) return;
-      const groupItems = [];
-      for(let i=idx+1; i<children.length; i++){
-        if(children[i].classList.contains('nav-group-title')) break;
-        if(children[i].tagName && children[i].tagName.toLowerCase()==='a') groupItems.push(children[i]);
-      }
-      el.addEventListener('click',()=>{
-        el.classList.toggle('collapsed');
-        groupItems.forEach(a=>a.classList.toggle('menu-collapsed'));
-      });
-    });
-  });
-})();
-
 // Multiple supporting attachment rows
 (function(){
   document.querySelectorAll('.attachment-box').forEach(box=>{
@@ -229,5 +210,49 @@
     }
     box.querySelectorAll('.attachment-remove').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.attachment-row')?.remove()));
     addBtn.addEventListener('click',()=>list.appendChild(row()));
+  });
+})();
+
+
+// Sidebar menu groups are collapsed by default; clicking heading toggles the group.
+(function(){
+  document.querySelectorAll('.nav').forEach(nav=>{
+    const children = Array.from(nav.children);
+    children.forEach((el, idx)=>{
+      if(!el.classList.contains('nav-group-title')) return;
+      const items = [];
+      for(let i=idx+1;i<children.length;i++){
+        if(children[i].classList.contains('nav-group-title')) break;
+        if(children[i].tagName && children[i].tagName.toLowerCase()==='a') items.push(children[i]);
+      }
+      el.classList.add('collapsed');
+      items.forEach(a=>a.classList.add('menu-collapsed'));
+      el.addEventListener('click',()=>{
+        el.classList.toggle('collapsed');
+        items.forEach(a=>a.classList.toggle('menu-collapsed'));
+      });
+    });
+  });
+})();
+
+// Master Menu search/filter
+(function(){
+  const input = document.getElementById('masterMenuSearch');
+  if(!input) return;
+  const tiles = Array.from(document.querySelectorAll('.master-tile'));
+  input.addEventListener('input',()=>{
+    const q = input.value.toLowerCase();
+    tiles.forEach(tile=>{ tile.style.display = tile.textContent.toLowerCase().includes(q) ? '' : 'none'; });
+  });
+})();
+
+
+// Range allocation drill-down tab highlight
+(function(){
+  document.querySelectorAll('.drill-tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      btn.closest('.drill-tabs')?.querySelectorAll('.drill-tab').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+    });
   });
 })();

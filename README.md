@@ -122,3 +122,42 @@ APO action rule update:
 - Removed Forward action from Range level.
 - Division level keeps Forward action.
 - Circle and HQ action areas are approval-focused only.
+
+
+Prior AS / Master Menu / Collapsible Navigation update:
+- Dashboard is outside all collapsible menu groups.
+- All menu groups are collapsed initially.
+- Prior AS Request is a separate menu category at the end.
+- Added Prior AS Request and Prior AS Request List pages.
+- Added Master Menu page with searchable control-panel style icon grid.
+
+
+Range Allocation drill-down update:
+- Added range-allocation.html.
+- Added Range Allocation Details menu item under Range Post-Budget Activities.
+- Added head-wise drill-down cards, component table, color-coded timeline, higher officer details and expenditure entry register.
+
+
+Range alignment fix:
+- Rebuilt range-allocation.html with stable wrapper, aligned KPI cards, drill-down cards, component table and timeline.
+- Rebuilt Range Dashboard top infographics to remove repeated count/noise and show one clear count per card.
+
+
+Range allocation final page fix:
+- Rebuilt range-allocation.html from the clean Range Dashboard shell.
+- Fixed malformed Financial Year bar that was swallowing the page content.
+- Rechecked Range Dashboard clean KPI cards and internal links.
+
+
+Allocation head/component workflow update:
+- Removed timeline from range-allocation.html.
+- Reworked range-allocation.html into horizontal head cards with mini graphs and summary details.
+- Added separate component-list pages for each budget head.
+- Added component detail pages with allocation and expenditure tables/flow details.
+- Removed APO Builder duplicate label and standardized Range menu label as APO Entry.
+
+
+Budget head card and component print update:
+- Changed range-allocation.html budget head cards to a 2-column layout.
+- Replaced spark-style mini graph with calculated Allocation / Expenditure / Balance bars.
+- Realigned budget-head component pages with printable header, print button and printable component register.

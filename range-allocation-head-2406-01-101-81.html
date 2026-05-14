@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Components - 2406-01-101-81</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="components---2406-01-101-81.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><a href="range-dashboard.html" class=""><i class="fa-solid fa-tree"></i><span>Range Dashboard</span></a>
+<div class="nav-group-title collapsed">Pre-Budget Activities</div>
+
+<a href="range-budget.html" class="menu-collapsed"><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Entry</span></a>
+<a href="range-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-file-circle-plus"></i><span>Action Plan Request</span></a>
+<div class="nav-group-title collapsed">Post-Budget Activities</div>
+<a href="range-allocation.html" class="active menu-collapsed"><i class="fa-solid fa-sack-dollar"></i><span>Allocation Details</span></a><a href="range-wages.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a>
+<a href="range-progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Update</span></a>
+<a href="range-revenue.html" class="menu-collapsed"><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a>
+<div class="nav-group-title collapsed">Prior AS Request</div>
+<a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
+<div class="nav-group-title collapsed">Account</div>
+<a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-layer-group"></i> Components - 2406-01-101-81</h2><small>Forest Protection - Fire line and field protection</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="range-allocation-page component-print-page">
+<div class="print-header">
+  <h1>VanaNidhi - Component Listing</h1>
+  <p>Budget Head: 2406-01-101-81 | Forest Protection - Fire line and field protection</p>
+  <p>Allocated By: DFO Kannur | Financial Year: 2026-27</p>
+</div>
+
+<h1 class="serif page-title gold-text">2406-01-101-81</h1>
+<p class="page-sub">Forest Protection - Fire line and field protection. Printable listing of all components under this budget head.</p>
+
+<section class="grid grid-4">
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-layer-group"></i></span><span class="kpi-count">4</span></div><h3>Components</h3><p>Mapped under this head.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-sack-dollar"></i></span><span class="kpi-count">₹ 24.50 L</span></div><h3>Allocation</h3><p>Total allocation.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-invoice"></i></span><span class="kpi-count">₹ 12.50 L</span></div><h3>Expenditure</h3><p>Entered expenditure.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-wallet"></i></span><span class="kpi-count">₹ 12.00 L</span></div><h3>Balance</h3><p>Available balance.</p></div>
+</section>
+
+<section class="panel card-fullscreen" style="margin-top:14px">
+  <div class="card-head"><h3>Components - Card View</h3><button class="expand-card">⛶</button></div>
+  <div class="print-actions">
+    <button class="btn secondary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Component List</button>
+    <a class="btn secondary" href="range-allocation.html"><i class="fa-solid fa-arrow-left"></i> Back to Heads</a>
+  </div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search component, allocation, expenditure or status">
+    <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="#" onclick="window.print();return false;"><i class="fa-solid fa-print"></i> Print</a>
+  </div>
+  <div class="component-grid">
+<a class="component-card" href="range-allocation-component-fire-line.html">
+  <div class="component-title">Fire line maintenance</div>
+  <div class="component-sub">Mapped under 2406-01-101-81. Click to see allocation, expenditure entries, vouchers and full details.</div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 9.00 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:75.6%"></div></div><div class="graph-value">₹ 6.80 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:24.4%"></div></div><div class="graph-value">₹ 2.20 L</div></div>
+</div>
+  <div class="component-stats">
+    <div class="component-stat"><b>120 ha</b><small>Physical</small></div>
+    <div class="component-stat"><b>₹ 9.00 L</b><small>Allocation</small></div>
+    <div class="component-stat"><b>₹ 6.80 L</b><small>Expenditure</small></div>
+  </div>
+  <span class="status approved" style="width:max-content">Entered</span>
+</a>
+<a class="component-card" href="range-allocation-component-anti-poaching.html">
+  <div class="component-title">Anti-poaching camp support</div>
+  <div class="component-sub">Mapped under 2406-01-101-81. Click to see allocation, expenditure entries, vouchers and full details.</div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 5.50 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:61.8%"></div></div><div class="graph-value">₹ 3.40 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:38.2%"></div></div><div class="graph-value">₹ 2.10 L</div></div>
+</div>
+  <div class="component-stats">
+    <div class="component-stat"><b>18 camps</b><small>Physical</small></div>
+    <div class="component-stat"><b>₹ 5.50 L</b><small>Allocation</small></div>
+    <div class="component-stat"><b>₹ 3.40 L</b><small>Expenditure</small></div>
+  </div>
+  <span class="status approved" style="width:max-content">Entered</span>
+</a>
+<a class="component-card" href="range-allocation-component-protection-equipment.html">
+  <div class="component-title">Protection equipment</div>
+  <div class="component-sub">Mapped under 2406-01-101-81. Click to see allocation, expenditure entries, vouchers and full details.</div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 4.20 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:0.0%"></div></div><div class="graph-value">₹ 0.00 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:100.0%"></div></div><div class="graph-value">₹ 4.20 L</div></div>
+</div>
+  <div class="component-stats">
+    <div class="component-stat"><b>42 kits</b><small>Physical</small></div>
+    <div class="component-stat"><b>₹ 4.20 L</b><small>Allocation</small></div>
+    <div class="component-stat"><b>₹ 0.00 L</b><small>Expenditure</small></div>
+  </div>
+  <span class="status proposed" style="width:max-content">Pending Entry</span>
+</a>
+<a class="component-card" href="range-allocation-component-watch-tower-repair.html">
+  <div class="component-title">Watch tower minor repair</div>
+  <div class="component-sub">Mapped under 2406-01-101-81. Click to see allocation, expenditure entries, vouchers and full details.</div>
+  
+<div class="accurate-graph">
+  <div class="graph-row"><small>Allocation</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 5.80 L</div></div>
+  <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill exp" style="width:39.7%"></div></div><div class="graph-value">₹ 2.30 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill bal" style="width:60.3%"></div></div><div class="graph-value">₹ 3.50 L</div></div>
+</div>
+  <div class="component-stats">
+    <div class="component-stat"><b>3 towers</b><small>Physical</small></div>
+    <div class="component-stat"><b>₹ 5.80 L</b><small>Allocation</small></div>
+    <div class="component-stat"><b>₹ 2.30 L</b><small>Expenditure</small></div>
+  </div>
+  <span class="status returned" style="width:max-content">Returned</span>
+</a></div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel printable-register">
+  <div class="card-head"><h3>Printable Component Register</h3><button class="expand-card">⛶</button></div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Component</th><th>Physical Target</th><th>Allocation</th><th>Expenditure</th><th>Balance</th><th>Status</th><th class="no-print">Action</th></tr></thead>
+      <tbody>
+<tr data-status="Approved">
+  <td>Fire line maintenance</td><td>120 ha</td><td>₹ 9.00 L</td><td>₹ 6.80 L</td><td>₹ 2.20 L</td><td><span class="status approved">Entered</span></td>
+  <td class="no-print"><a class="action-link" href="range-allocation-component-fire-line.html"><i class="fa-solid fa-eye"></i> View Details</a></td>
+</tr>
+<tr data-status="Approved">
+  <td>Anti-poaching camp support</td><td>18 camps</td><td>₹ 5.50 L</td><td>₹ 3.40 L</td><td>₹ 2.10 L</td><td><span class="status approved">Entered</span></td>
+  <td class="no-print"><a class="action-link" href="range-allocation-component-anti-poaching.html"><i class="fa-solid fa-eye"></i> View Details</a></td>
+</tr>
+<tr data-status="Proposed">
+  <td>Protection equipment</td><td>42 kits</td><td>₹ 4.20 L</td><td>₹ 0.00 L</td><td>₹ 4.20 L</td><td><span class="status proposed">Pending Entry</span></td>
+  <td class="no-print"><a class="action-link" href="range-allocation-component-protection-equipment.html"><i class="fa-solid fa-eye"></i> View Details</a></td>
+</tr>
+<tr data-status="Returned">
+  <td>Watch tower minor repair</td><td>3 towers</td><td>₹ 5.80 L</td><td>₹ 2.30 L</td><td>₹ 3.50 L</td><td><span class="status returned">Returned</span></td>
+  <td class="no-print"><a class="action-link" href="range-allocation-component-watch-tower-repair.html"><i class="fa-solid fa-eye"></i> View Details</a></td>
+</tr></tbody>
+    </table>
+  </div>
+</section>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
