@@ -256,3 +256,51 @@
     });
   });
 })();
+
+
+// Wage Distribution Fund Request preview demo
+(function(){
+  const upload = document.getElementById('wageExcelUpload');
+  const preview = document.getElementById('wagePreviewArea');
+  const empty = document.getElementById('wageUploadEmpty');
+  if(!upload || !preview) return;
+  upload.addEventListener('change',()=>{
+    if(empty) empty.style.display = 'none';
+    preview.style.display = '';
+    preview.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+
+
+// Surrender amount calculation
+(function(){
+  const input = document.getElementById('surrenderAmountInput');
+  const available = document.getElementById('availableBalanceInput');
+  const remaining = document.getElementById('remainingBalanceInput');
+  const status = document.getElementById('surrenderCalcStatus');
+  if(!input || !available || !remaining) return;
+  function parseVal(v){
+    const n = String(v || '').replace(/[^\d.]/g,'');
+    return Number(n || 0);
+  }
+  function fmt(n){
+    return '₹ ' + n.toFixed(2) + ' L';
+  }
+  function calc(){
+    const bal = parseVal(available.value);
+    const surrender = parseVal(input.value);
+    const rem = Math.max(bal - surrender, 0);
+    remaining.value = fmt(rem);
+    if(status){
+      if(surrender <= 0){
+        status.innerHTML = '<b>Status:</b> Enter surrender amount to calculate remaining balance.';
+      }else if(surrender > bal){
+        status.innerHTML = '<b>Status:</b> Surrender amount exceeds available balance. Please reduce the amount.';
+      }else{
+        status.innerHTML = '<b>Status:</b> Remaining balance calculated. Request is ready for verification and submission.';
+      }
+    }
+  }
+  input.addEventListener('input', calc);
+  calc();
+})();

@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VanaNidhi | Wage Distribution Fund Request</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<title>VanaNidhi | Wage Fund Request Details</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/app.css"/><script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script><script src="assets/map-data.js"></script></head><body data-page="range-wages.html">
+<link rel="stylesheet" href="assets/app.css"/><script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script><script src="assets/map-data.js"></script></head><body data-page="wage-request-details.html">
 <div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><a href="range-dashboard.html" class=""><i class="fa-solid fa-tree"></i><span>Range Dashboard</span></a>
 <div class="nav-group-title collapsed">Pre-Budget Activities</div>
 
@@ -17,108 +17,56 @@
 <a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
 <div class="nav-group-title collapsed">Account</div>
 <a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside>
-<main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-file-invoice-dollar"></i> Wage Distribution Fund Request</h2><small>Excel upload, preview and fund request submission.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
-<h1 class="serif page-title gold-text">Wage Distribution Fund Request</h1>
-<p class="page-sub">Upload wage details through Excel, preview the records, verify totals, select month/year, and submit the fund request. The preview is clearly marked as not submitted until the Submit Wage Fund Request button is clicked.</p>
+<main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-eye"></i> Wage Fund Request Details</h2><small>View submitted wage fund request details.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<h1 class="serif page-title gold-text">Wage Fund Request Details</h1>
+<p class="page-sub">Detailed view of a submitted Wage Distribution Fund Request, including worker list, fund request status and review notes.</p>
 
-<section class="grid grid-3">
-  <div class="panel clean-kpi-card">
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-excel"></i></span><span class="kpi-count">Excel</span></div>
-    <h3>Upload Mode</h3>
-    <p>Use the sample template to prepare wage fund request data.</p>
-  </div>
-  <div class="panel clean-kpi-card">
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-eye"></i></span><span class="kpi-count">Preview</span></div>
-    <h3>Before Submit</h3>
-    <p>Infographics appear only after Excel upload preview.</p>
-  </div>
-  <div class="panel clean-kpi-card">
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-paper-plane"></i></span><span class="kpi-count">Submit</span></div>
-    <h3>Fund Request</h3>
-    <p>Submit after verifying month, year and row details.</p>
-  </div>
+<section class="grid grid-4">
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-hashtag"></i></span><span class="kpi-count">WFR-001</span></div><h3>Request ID</h3><p>Submitted wage fund request.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-users"></i></span><span class="kpi-count">10</span></div><h3>Workers</h3><p>Total worker records.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-calendar-check"></i></span><span class="kpi-count">148</span></div><h3>Total Days</h3><p>Total days claimed.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="kpi-count">₹1.29L</span></div><h3>Amount</h3><p>Total wage request.</p></div>
 </section>
 
-<section class="panel card-fullscreen" style="margin-top:14px">
-  <div class="card-head"><h3>Excel Upload</h3><button class="expand-card">⛶</button></div>
-  <div class="preview-alert">
-    <i class="fa-solid fa-circle-info"></i>
-    <div><b>Preview workflow:</b> Uploading the Excel file only creates a preview. The wage request is <b>not submitted</b> until you verify the preview and click <b>Submit Wage Fund Request</b>.</div>
-  </div>
-  <div class="form-grid" style="margin-top:14px">
-    <div class="field"><label>Upload Wage Excel</label><input type="file" id="wageExcelUpload" accept=".xlsx,.xls"></div>
-    <div class="field"><label>Sample Excel Template</label><a class="btn secondary" href="assets/templates/range_wage_fund_request_template.xlsx"><i class="fa-solid fa-download"></i> Download Template</a></div>
-    <div class="field"><label>Request Type</label><select><option>Wage Distribution Fund Request</option><option>Additional Wage Fund Request</option><option>Correction Request</option></select></div>
-  </div>
-</section>
-
-<section class="panel card-fullscreen" id="wageUploadEmpty" style="margin-top:14px">
-  <div class="card-head"><h3>Preview Waiting</h3><button class="expand-card">⛶</button></div>
-  <div class="preview-alert">
-    <i class="fa-solid fa-hourglass-half"></i>
-    <div><b>No Excel uploaded yet.</b> Upload a wage Excel file to see preview rows, calculated infographics, month/year selection and submit action.</div>
-  </div>
-</section>
-
-<section id="wagePreviewArea" style="display:none">
-  <div class="wage-preview-infographics">
-    <div class="panel clean-kpi-card preview-panel-not-submitted">
-      <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-users"></i></span><span class="kpi-count">10</span></div>
-      <h3>Total Workers</h3><p>Calculated from uploaded preview rows.</p>
-    </div>
-    <div class="panel clean-kpi-card preview-panel-not-submitted">
-      <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-calendar-check"></i></span><span class="kpi-count">148</span></div>
-      <h3>Total Days</h3><p>Sum of days worked in Excel preview.</p>
-    </div>
-    <div class="panel clean-kpi-card preview-panel-not-submitted">
-      <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="kpi-count">₹1.29L</span></div>
-      <h3>Total Wage</h3><p>Calculated fund request value.</p>
-    </div>
-    <div class="panel clean-kpi-card preview-panel-not-submitted">
-      <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-triangle-exclamation"></i></span><span class="kpi-count">0</span></div>
-      <h3>Validation Errors</h3><p>Rows requiring correction before submit.</p>
-    </div>
-  </div>
-
-  <section class="panel card-fullscreen preview-panel-not-submitted" style="margin-top:14px">
-    <div class="card-head"><h3>Excel Preview - Not Submitted</h3><button class="expand-card">⛶</button></div>
-    <div class="preview-alert">
-      <i class="fa-solid fa-eye"></i>
-      <div><b>Status: Not Submitted.</b> The records below are only a preview from the uploaded Excel. Verify color-coded rows, choose month/year, then submit the fund request.</div>
-    </div>
-    <div class="record-toolbar" style="margin-top:12px">
-      <input class="record-search" placeholder="Search worker, APO, component or amount">
-      <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
-      <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
-      <span class="badge-preview"><i class="fa-solid fa-circle-info"></i> Preview Only</span>
-    </div>
+<section class="grid grid-2" style="margin-top:14px">
+  <div class="panel card-fullscreen">
+    <div class="card-head"><h3>Request Summary</h3><button class="expand-card">⛶</button></div>
     <div class="table-wrap">
       <table class="data-table">
-        <thead><tr><th>Row</th><th>APO / Work ID</th><th>Worker</th><th>Category</th><th>Days</th><th>Rate</th><th>Total Wage</th><th>Preview Status</th></tr></thead>
         <tbody>
-          <tr class="preview-row-ok" data-status="Approved"><td>1</td><td>APO-R-014</td><td>Balan K</td><td>Watcher</td><td>18</td><td>₹ 850</td><td>₹ 15,300</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>2</td><td>APO-R-014</td><td>Mini P</td><td>Watcher</td><td>12</td><td>₹ 850</td><td>₹ 10,200</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-warning" data-status="Proposed"><td>3</td><td>APO-R-019</td><td>Suresh M</td><td>Skilled Worker</td><td>9</td><td>₹ 950</td><td>₹ 8,550</td><td><span class="status proposed">Check bank ref</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>4</td><td>APO-R-021</td><td>Rajan V</td><td>Watcher</td><td>16</td><td>₹ 850</td><td>₹ 13,600</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>5</td><td>APO-R-021</td><td>Shyni T</td><td>Watcher</td><td>15</td><td>₹ 850</td><td>₹ 12,750</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>6</td><td>APO-R-026</td><td>Manoj P</td><td>Driver</td><td>11</td><td>₹ 900</td><td>₹ 9,900</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-warning" data-status="Proposed"><td>7</td><td>APO-R-026</td><td>Leela K</td><td>Watcher</td><td>14</td><td>₹ 850</td><td>₹ 11,900</td><td><span class="status proposed">Check remarks</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>8</td><td>APO-R-030</td><td>Aneesh R</td><td>Skilled Worker</td><td>10</td><td>₹ 950</td><td>₹ 9,500</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>9</td><td>APO-R-031</td><td>Bindu S</td><td>Watcher</td><td>19</td><td>₹ 850</td><td>₹ 16,150</td><td><span class="status approved">Ready</span></td></tr>
-          <tr class="preview-row-ok" data-status="Approved"><td>10</td><td>APO-R-031</td><td>Rahim A</td><td>Watcher</td><td>24</td><td>₹ 850</td><td>₹ 20,400</td><td><span class="status approved">Ready</span></td></tr>
+          <tr><th>Request ID</th><td>WFR-2026-001</td></tr>
+          <tr><th>Month / Year</th><td>June 2026</td></tr>
+          <tr><th>Status</th><td><span class="status proposed">Submitted</span></td></tr>
+          <tr><th>Submitted By</th><td>Range Office</td></tr>
+          <tr><th>Submitted On</th><td>14-06-2026</td></tr>
+          <tr><th>Remarks</th><td>Submitted after Excel preview verification.</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div class="form-grid" style="margin-top:14px">
-      <div class="field"><label>Request Month</label><select><option>June</option><option>July</option><option>August</option><option>September</option></select></div>
-      <div class="field"><label>Request Year</label><select><option>2026</option><option>2025</option></select></div>
-      <div class="field"><label>Preview Status</label><input value="Not Submitted" readonly></div>
-      <div class="field"><label>Submission Remarks</label><input value="Verified from Excel preview. Ready for fund request submission."></div>
+  </div>
+  <div class="panel card-fullscreen">
+    <div class="card-head"><h3>Status Trail</h3><button class="expand-card">⛶</button></div>
+    <div class="timeline">
+      <div class="step"><div class="num">1</div><div><h4>Excel Uploaded</h4><p>Preview generated and verified by Range Office.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Request Submitted</h4><p>Fund request submitted for higher office review.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Under Review</h4><p>Pending verification by Division Office.</p></div></div>
     </div>
-    <button class="btn" style="margin-top:12px"><i class="fa-solid fa-paper-plane"></i> Submit Wage Fund Request</button>
-    <a class="btn secondary" href="range-wage-requests.html" style="margin-top:12px"><i class="fa-solid fa-list-check"></i> View Submitted Requests</a>
-  </section>
+  </div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Worker Wage Details</h3><button class="expand-card">⛶</button></div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Worker</th><th>Category</th><th>APO / Work</th><th>Days</th><th>Rate</th><th>Total Wage</th></tr></thead>
+      <tbody>
+        <tr><td>Balan K</td><td>Watcher</td><td>APO-R-014</td><td>18</td><td>₹ 850</td><td>₹ 15,300</td></tr>
+        <tr><td>Mini P</td><td>Watcher</td><td>APO-R-014</td><td>12</td><td>₹ 850</td><td>₹ 10,200</td></tr>
+        <tr><td>Suresh M</td><td>Skilled Worker</td><td>APO-R-019</td><td>9</td><td>₹ 950</td><td>₹ 8,550</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="story-links" style="margin-top:12px"><a href="range-wage-requests.html">Back to Submitted Requests</a><a href="range-wages.html">New Wage Request</a></div>
 </section>
 <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div>
 <script>

@@ -4,7 +4,7 @@
 <a href="range-budget.html" class="menu-collapsed"><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Entry</span></a>
 <a href="range-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-file-circle-plus"></i><span>Action Plan Request</span></a>
 <div class="nav-group-title collapsed">Post-Budget Activities</div>
-<a href="range-allocation.html" class="active menu-collapsed"><i class="fa-solid fa-sack-dollar"></i><span>Allotment Details</span></a><a href="range-wages.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Distribution</span></a>
+<a href="range-allocation.html" class="active menu-collapsed"><i class="fa-solid fa-sack-dollar"></i><span>Allotment Details</span></a><a href="range-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Wage Requests Submitted</span></a><a href="range-surrender.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Amount</span></a><a href="range-wages.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Distribution Fund Request</span></a>
 <a href="range-progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Update</span></a>
 <a href="range-revenue.html" class="menu-collapsed"><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a>
 <div class="nav-group-title collapsed">Prior AS Request</div>
@@ -13,6 +13,7 @@
 <div class="nav-group-title collapsed">Account</div>
 <a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-layer-group"></i> Components - 2406-01-101-81</h2><small>Forest Protection - Fire line and field protection</small></div>
 <a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+
 <div class="range-allocation-page component-print-page">
 <div class="print-header">
   <h1>VanaNidhi - Component Listing</h1>
@@ -27,7 +28,7 @@
   <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-layer-group"></i></span><span class="kpi-count">4</span></div><h3>Components</h3><p>Mapped under this head.</p></div>
   <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-sack-dollar"></i></span><span class="kpi-count">₹ 24.50 L</span></div><h3>Budget</h3><p>Total budget provision.</p></div>
   <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-wallet"></i></span><span class="kpi-count">₹ 20.00 L</span></div><h3>Allotment</h3><p>Released/disbursed amount.</p></div>
-  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-invoice"></i></span><span class="kpi-count">₹ 12.50 L</span></div><h3>Expenditure</h3><p>Entered expenditure.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-scale-balanced"></i></span><span class="kpi-count">₹ 7.50 L</span></div><h3>Balance</h3><p>Allotment balance after expenditure.</p></div>
 </section>
 
 <section class="panel card-fullscreen" style="margin-top:14px">
@@ -51,6 +52,7 @@
   <div class="graph-row"><small>Budget</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 9.00 L</div></div>
   <div class="graph-row"><small>Allotment</small><div class="graph-track"><div class="graph-fill exp" style="width:80.6%"></div></div><div class="graph-value">₹ 7.25 L</div></div>
   <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill bal" style="width:93.8%"></div></div><div class="graph-value">₹ 6.80 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill balance" style="width:6.2%"></div></div><div class="graph-value">₹ 0.45 L</div></div>
 </div>
   <span class="action-link"><i class="fa-solid fa-eye"></i> View Details</span>
 </a>
@@ -62,6 +64,7 @@
   <div class="graph-row"><small>Budget</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 5.50 L</div></div>
   <div class="graph-row"><small>Allotment</small><div class="graph-track"><div class="graph-fill exp" style="width:76.4%"></div></div><div class="graph-value">₹ 4.20 L</div></div>
   <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill bal" style="width:81.0%"></div></div><div class="graph-value">₹ 3.40 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill balance" style="width:19.0%"></div></div><div class="graph-value">₹ 0.80 L</div></div>
 </div>
   <span class="action-link"><i class="fa-solid fa-eye"></i> View Details</span>
 </a>
@@ -73,6 +76,7 @@
   <div class="graph-row"><small>Budget</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 4.20 L</div></div>
   <div class="graph-row"><small>Allotment</small><div class="graph-track"><div class="graph-fill exp" style="width:73.8%"></div></div><div class="graph-value">₹ 3.10 L</div></div>
   <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill bal" style="width:0.0%"></div></div><div class="graph-value">₹ 0.00 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill balance" style="width:100.0%"></div></div><div class="graph-value">₹ 3.10 L</div></div>
 </div>
   <span class="action-link"><i class="fa-solid fa-eye"></i> View Details</span>
 </a>
@@ -84,6 +88,7 @@
   <div class="graph-row"><small>Budget</small><div class="graph-track"><div class="graph-fill" style="width:100%"></div></div><div class="graph-value">₹ 5.80 L</div></div>
   <div class="graph-row"><small>Allotment</small><div class="graph-track"><div class="graph-fill exp" style="width:94.0%"></div></div><div class="graph-value">₹ 5.45 L</div></div>
   <div class="graph-row"><small>Expenditure</small><div class="graph-track"><div class="graph-fill bal" style="width:42.2%"></div></div><div class="graph-value">₹ 2.30 L</div></div>
+  <div class="graph-row"><small>Balance</small><div class="graph-track"><div class="graph-fill balance" style="width:57.8%"></div></div><div class="graph-value">₹ 3.15 L</div></div>
 </div>
   <span class="action-link"><i class="fa-solid fa-eye"></i> View Details</span>
 </a></div>
@@ -115,4 +120,5 @@
   </div>
 </section>
 </div>
+
 <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

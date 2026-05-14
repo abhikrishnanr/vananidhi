@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanaNidhi | Wage Requests Submitted</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/app.css"/><script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script><script src="assets/map-data.js"></script></head><body data-page="range-wage-requests.html">
+<div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Range Office User</p></div><nav class="nav"><a href="range-dashboard.html" class=""><i class="fa-solid fa-tree"></i><span>Range Dashboard</span></a>
+<div class="nav-group-title collapsed">Pre-Budget Activities</div>
+
+<a href="range-budget.html" class="menu-collapsed"><i class="fa-solid fa-file-invoice-dollar"></i><span>APO Entry</span></a>
+<a href="range-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-file-circle-plus"></i><span>Action Plan Request</span></a>
+<div class="nav-group-title collapsed">Post-Budget Activities</div>
+<a href="range-allocation.html" class="menu-collapsed"><i class="fa-solid fa-sack-dollar"></i><span>Allotment Details</span></a><a href="range-wage-requests.html" class="active menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Wage Requests Submitted</span></a><a href="range-surrender.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Amount</span></a><a href="range-wages.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Distribution Fund Request</span></a>
+<a href="range-progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Update</span></a>
+<a href="range-revenue.html" class="menu-collapsed"><i class="fa-solid fa-bullseye"></i><span>Revenue Target</span></a>
+<div class="nav-group-title collapsed">Prior AS Request</div>
+<a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
+<div class="nav-group-title collapsed">Account</div>
+<a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside>
+<main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-list-check"></i> Wage Requests Submitted</h2><small>Submitted wage fund requests with status and view links.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Range Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<h1 class="serif page-title gold-text">Wage Requests Submitted</h1>
+<p class="page-sub">Submitted Wage Distribution Fund Requests with status, totals and view links. Preview-only uploads are not listed here until submitted.</p>
+
+<section class="grid grid-4">
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-paper-plane"></i></span><span class="kpi-count">12</span></div><h3>Submitted</h3><p>Requests submitted by Range.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-hourglass-half"></i></span><span class="kpi-count">5</span></div><h3>Pending</h3><p>Waiting for higher office action.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-circle-check"></i></span><span class="kpi-count">6</span></div><h3>Approved</h3><p>Approved wage requests.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="kpi-count">₹8.74L</span></div><h3>Total Value</h3><p>Submitted request value.</p></div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Submitted Wage Fund Requests</h3><button class="expand-card">⛶</button></div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search request ID, month, amount or status">
+    <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="range-wages.html"><i class="fa-solid fa-plus"></i> New Wage Request</a>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Request ID</th><th>Month / Year</th><th>Workers</th><th>Total Days</th><th>Amount</th><th>Submitted On</th><th>Status</th><th>View</th></tr></thead>
+      <tbody>
+        <tr data-status="Proposed"><td>WFR-2026-001</td><td>June 2026</td><td>10</td><td>148</td><td>₹ 1.29 L</td><td>14-06-2026</td><td><span class="status proposed">Submitted</span></td><td><a class="action-link" href="wage-request-details.html?id=WFR-2026-001"><i class="fa-solid fa-eye"></i> View</a></td></tr>
+        <tr data-status="Approved"><td>WFR-2026-002</td><td>May 2026</td><td>22</td><td>310</td><td>₹ 2.64 L</td><td>14-05-2026</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="wage-request-details.html?id=WFR-2026-002"><i class="fa-solid fa-eye"></i> View</a></td></tr>
+        <tr data-status="Returned"><td>WFR-2026-003</td><td>April 2026</td><td>8</td><td>104</td><td>₹ 0.88 L</td><td>18-04-2026</td><td><span class="status returned">Returned</span></td><td><a class="action-link" href="wage-request-details.html?id=WFR-2026-003"><i class="fa-solid fa-eye"></i> View</a></td></tr>
+        <tr data-status="Approved"><td>WFR-2026-004</td><td>March 2026</td><td>18</td><td>246</td><td>₹ 2.08 L</td><td>11-03-2026</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="wage-request-details.html?id=WFR-2026-004"><i class="fa-solid fa-eye"></i> View</a></td></tr>
+        <tr data-status="Proposed"><td>WFR-2026-005</td><td>February 2026</td><td>16</td><td>211</td><td>₹ 1.85 L</td><td>16-02-2026</td><td><span class="status proposed">Under Review</span></td><td><a class="action-link" href="wage-request-details.html?id=WFR-2026-005"><i class="fa-solid fa-eye"></i> View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div>
+<script>
+(function(){
+  const sampleRows = [
+    {workId:"APO-R-014", component:"Anti-poaching camp support", worker:"Balan K", category:"Watcher", days:18, rate:850, total:15300, month:"June", year:2026},
+    {workId:"APO-R-014", component:"Anti-poaching camp support", worker:"Mini P", category:"Watcher", days:12, rate:850, total:10200, month:"June", year:2026},
+    {workId:"APO-R-021", component:"Fire line maintenance", worker:"Rajesh M", category:"Fire Watcher", days:16, rate:900, total:14400, month:"June", year:2026},
+    {workId:"APO-R-021", component:"Fire line maintenance", worker:"Sajitha V", category:"Labourer", days:10, rate:750, total:7500, month:"June", year:2026},
+    {workId:"APO-R-019", component:"Watch tower repair", worker:"Unnikrishnan N", category:"Skilled Labour", days:8, rate:1100, total:8800, month:"June", year:2026},
+    {workId:"APO-R-019", component:"Watch tower repair", worker:"Shibu K", category:"Mason", days:6, rate:1200, total:7200, month:"June", year:2026},
+    {workId:"APO-R-027", component:"Boundary patrol", worker:"Leela P", category:"Watcher", days:14, rate:850, total:11900, month:"June", year:2026},
+    {workId:"APO-R-027", component:"Boundary patrol", worker:"Haridas T", category:"Watcher", days:14, rate:850, total:11900, month:"June", year:2026},
+    {workId:"APO-R-033", component:"Nursery maintenance", worker:"Bindu R", category:"Labourer", days:9, rate:750, total:6750, month:"June", year:2026},
+    {workId:"APO-R-033", component:"Nursery maintenance", worker:"Anoop C", category:"Labourer", days:9, rate:750, total:6750, month:"June", year:2026}
+  ];
+  let currentRows = sampleRows.slice();
+
+  function money(v){ return "₹ " + Math.round(Number(v || 0)).toLocaleString("en-IN"); }
+  function numberFrom(v){ return Number(String(v ?? "").replace(/[^0-9.-]/g,"")) || 0; }
+  function normalizeRow(row){
+    const days = numberFrom(row["Days Worked"] ?? row["Days"] ?? row.days);
+    const rate = numberFrom(row["Wage Rate"] ?? row["Rate"] ?? row.rate);
+    const totalRaw = row["Total Wage"] ?? row["Total"] ?? row.total;
+    const total = numberFrom(totalRaw) || (days * rate);
+    return {
+      workId: row["APO / Work ID"] ?? row["Work ID"] ?? row.workId ?? "",
+      component: row["Component / Work Name"] ?? row["Component / Work"] ?? row.component ?? "",
+      worker: row["Worker Name"] ?? row["Worker"] ?? row.worker ?? "",
+      category: row["Worker Category"] ?? row["Category"] ?? row.category ?? "",
+      days, rate, total,
+      month: row["Month"] ?? row.month ?? document.getElementById("wageSubmitMonth")?.value ?? "June",
+      year: row["Year"] ?? row.year ?? document.getElementById("wageSubmitYear")?.value ?? "2026"
+    };
+  }
+  function render(rows){
+    currentRows = rows.map(normalizeRow).filter(r => r.worker || r.workId || r.component);
+    const tbody = document.querySelector("#wagePreviewTable tbody");
+    if(!tbody) return;
+    tbody.innerHTML = currentRows.map((r,i)=>`
+      <tr data-status="Approved">
+        <td>${i+1}</td><td>${r.workId}</td><td>${r.component}</td><td>${r.worker}</td><td>${r.category}</td>
+        <td>${r.days}</td><td>${money(r.rate)}</td><td>${money(r.total)}</td><td>${r.month} ${r.year}</td>
+        <td><span class="status approved">Ready</span></td>
+      </tr>`).join("");
+    updateInfographics();
+  }
+  function updateInfographics(){
+    const workers = new Set(currentRows.map(r=>r.worker).filter(Boolean)).size;
+    const days = currentRows.reduce((s,r)=>s+numberFrom(r.days),0);
+    const total = currentRows.reduce((s,r)=>s+numberFrom(r.total),0);
+    const avgRate = currentRows.length ? currentRows.reduce((s,r)=>s+numberFrom(r.rate),0)/currentRows.length : 0;
+    const cats = new Set(currentRows.map(r=>r.category).filter(Boolean)).size;
+    document.getElementById("wageWorkers").textContent = workers;
+    document.getElementById("wageDays").textContent = days;
+    document.getElementById("wageAmount").textContent = money(total);
+    document.getElementById("wageRows").textContent = currentRows.length;
+    document.getElementById("wageAvgRate").textContent = money(avgRate);
+    document.getElementById("wageCategories").textContent = cats;
+    const max = Math.max(...currentRows.map(r=>numberFrom(r.total)), 1);
+    const chart = document.getElementById("wageMiniChart");
+    if(chart){
+      chart.innerHTML = currentRows.slice(0,12).map(r => `<span title="${r.worker}: ${money(r.total)}" style="height:${Math.max(12, (numberFrom(r.total)/max)*88)}%"></span>`).join("");
+    }
+  }
+  document.getElementById("loadSampleWage")?.addEventListener("click", ()=>{
+    render(sampleRows);
+    document.getElementById("wagePreviewStatus").innerHTML = '<i class="fa-solid fa-circle-check"></i> Sample preview loaded';
+  });
+  document.getElementById("clearWagePreview")?.addEventListener("click", ()=>{
+    render([]);
+    document.getElementById("wagePreviewStatus").innerHTML = '<i class="fa-solid fa-circle-info"></i> Preview cleared';
+  });
+  document.getElementById("wageExcelInput")?.addEventListener("change", async (e)=>{
+    const file = e.target.files?.[0];
+    if(!file) return;
+    if(!window.XLSX){
+      document.getElementById("wagePreviewStatus").innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Excel parser not loaded';
+      return;
+    }
+    const buffer = await file.arrayBuffer();
+    const workbook = XLSX.read(buffer, {type:"array"});
+    const firstSheet = workbook.SheetNames[0];
+    const rows = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet], {defval:""});
+    render(rows);
+    document.getElementById("wagePreviewStatus").innerHTML = `<i class="fa-solid fa-file-excel"></i> ${file.name} previewed`;
+  });
+  document.getElementById("submitWageUpload")?.addEventListener("click", ()=>{
+    const month = document.getElementById("wageSubmitMonth")?.value || "";
+    const year = document.getElementById("wageSubmitYear")?.value || "";
+    document.getElementById("wageSubmitNote").innerHTML = `<b>Submitted for ${month} ${year}:</b> ${currentRows.length} wage rows, ${document.getElementById("wageWorkers").textContent} workers, total wage ${document.getElementById("wageAmount").textContent}.`;
+    document.getElementById("wageSubmitNote").scrollIntoView({behavior:"smooth", block:"center"});
+  });
+  render(sampleRows);
+})();
+</script>
+
+<script src="assets/app.js"></script></body></html>

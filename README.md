@@ -176,3 +176,27 @@ Allotment terminology and card cleanup:
 - Allotment is lower than Budget to represent release/disbursement.
 - Component cards simplified to avoid repeated stats and status badges; primary action is View Details.
 - Removed developer-style labels such as Card View.
+
+
+Head/component alignment and balance graph fix:
+- Removed top-right allotment amount from Budget Head cards.
+- Added Balance row to Budget/Allotment/Expenditure graphs.
+- Rebuilt head and component pages from the clean Range shell to fix heading/footer side-by-side misalignment.
+- Ensured footer is full-width and bottom-aligned on head/component pages.
+
+
+Wage Distribution Fund Request update:
+- Renamed Range Wage Distribution to Wage Distribution Fund Request.
+- Infographics now appear only after Excel upload preview.
+- Preview is clearly marked Not Submitted with color-coded rows.
+- Added range-wage-requests.html for submitted wage requests with status and view links.
+- Added wage-request-details.html for viewing submitted request details.
+- Added updated Excel template for wage fund request upload.
+
+
+Range Surrender Amount module:
+- Added range-surrender.html as a separate Range module.
+- Added component/head charts showing Budget, Allotment, Expenditure and Balance.
+- Added surrender request form with balance to be surrendered and automatic remaining balance calculation.
+- Added Surrender Request Register with status and view/correct links.
+- Added Range menu and Master Menu links.
