@@ -215,3 +215,10 @@ Surrender modal validation and global layout fix:
 - Modal submit button remains disabled until a valid surrender amount is entered.
 - Rebuilt FY bar placement across all pages so content is not trapped inside the FY row.
 - Added global layout hardening so headings, page content and footer stay full-width and bottom-aligned.
+
+
+Component card and label corrections:
+- Surrender component cards now use a maximum of 3 cards per row, with responsive 2/1 columns.
+- Added a prominent New Surrender Entry CTA above the submitted surrender request list.
+- Renamed Action Plan Request to Submit Action Plan across page/menu labels.
+- Renamed Range Progress Update / Progress Update to Progress Updation across page/menu labels.
