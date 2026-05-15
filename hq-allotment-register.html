@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Allotment Register</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="hq-allotment-register.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<div class="nav-group-title collapsed">APO Submissions</div>
+<a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate - HQ</span></a>
+<a href="hq-action-plan-submissions.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Action Plan Submissions</span></a>
+<a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
+<a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
+<a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Estimator</div>
+<a href="hq-estimator.html" class="menu-collapsed"><i class="fa-solid fa-calculator"></i><span>Forest Work Estimator</span></a>
+<a href="hq-estimator-rate-library.html" class="menu-collapsed"><i class="fa-solid fa-list-ul"></i><span>Rate Library</span></a>
+<a href="hq-estimator-register.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Estimate Register</span></a>
+<div class="nav-group-title collapsed">Budget Allocations</div>
+<a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
+<a href="hq-allotment-register.html" class="active menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
+<a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Lower Office Requests</div>
+<a href="hq-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Fund Requests</span></a>
+<a href="hq-surrender-requests.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Requests</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
+<div class="nav-group-title collapsed">Finance Control</div>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
+<a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Monitoring & Reports</div>
+<a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-file-lines"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration & Masters</div>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
+<a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
+<a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Help</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-table-list"></i> Allotment Register</h2><small>Consolidated allotment tracking.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="hq-page">
+<h1 class="serif page-title gold-text">Allotment Register</h1>
+<p class="page-sub">Consolidated register of allocations/allotments released from HQ and downstream offices.</p>
+<section class="hq-kpi-grid">
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-table-list"></i></span><span class="hq-kpi-value">286</span></div><h3>Entries</h3><p>Total allotment entries.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-wallet"></i></span><span class="hq-kpi-value">₹62.8Cr</span></div><h3>Allotted</h3><p>Total released value.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-file-invoice"></i></span><span class="hq-kpi-value">₹37.9Cr</span></div><h3>Expenditure</h3><p>Reported expenditure.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-scale-balanced"></i></span><span class="hq-kpi-value">₹24.9Cr</span></div><h3>Balance</h3><p>Balance across allotments.</p></div>
+</section>
+<section class="hq-panel record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Allotment Register</h3><button class="expand-card">⛶</button></div>
+  <div class="record-toolbar">
+    <input class="record-search" placeholder="Search allotment, office, head or amount">
+    <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+    <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+    <a class="btn secondary" href="#"><i class="fa-solid fa-download"></i> Export</a>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Allotment ID</th><th>Office</th><th>Head</th><th>Allotment</th><th>Expenditure</th><th>Balance</th><th>View</th></tr></thead>
+      <tbody>
+        <tr><td>ALT-001</td><td>Kannur Range</td><td>2406-01-101-81</td><td>₹ 20.00 L</td><td>₹ 14.20 L</td><td>₹ 5.80 L</td><td><a class="action-link" href="record-details.html?src=hq-allotment-register.html&id=ALT-001">View</a></td></tr>
+        <tr><td>ALT-002</td><td>Northern Circle</td><td>2406-01-101-81</td><td>₹ 14.20 Cr</td><td>₹ 11.15 Cr</td><td>₹ 3.05 Cr</td><td><a class="action-link" href="record-details.html?src=hq-allotment-register.html&id=ALT-002">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

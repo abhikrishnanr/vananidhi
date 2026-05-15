@@ -250,3 +250,21 @@ HQ menu/dashboard/help rework:
 - Redesigned HQ dashboard into a richer but concise graph-led command centre with icons, KPI cards, Kerala circle overview and action centre.
 - Completely redesigned Master Menu by workflow category.
 - Redesigned sitemap as Help with project-wide categorized explanations for HQ, Range, Division and Circle modules.
+
+
+HQ Estimator module:
+- Added a separate Estimator category in HQ menu.
+- Added Forest Work Estimator page with office/head/work selections, rate, quantity, terrain/access loading, labour/material split and live estimate preview.
+- Added Estimator Rate Library page.
+- Added Estimate Register page.
+- Updated HQ dashboard, Master Menu and Help page to include Estimator modules.
+
+
+Full workflow recheck update:
+- Added lower-office approval pages for Action Plan, Wage Fund Request and Surrender Request in Division, Circle and HQ.
+- Updated Division and Circle menus to separate Own Submissions from Approvals from Lower Offices.
+- Updated Division and Circle dashboards with lower-office approval snapshot cards.
+- Reworked HQ APO Inbox with tabs for Forwarded from Circles and Entered from HQ.
+- Reworked budget-hq.html as Budget Estimate - HQ, the HQ direct budget estimate entry/register page.
+- Restored the Kerala district GeoJSON/Leaflet map in HQ Dashboard with district-wise financial demo data.
+- Added HQ menu items for lower-office requests and updated Master Menu / Help.

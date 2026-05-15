@@ -452,3 +452,66 @@
   modal.querySelectorAll('[data-close-resumption-modal]').forEach(btn=>btn.addEventListener('click',()=>modal.classList.remove('open')));
   modal.addEventListener('click',e=>{if(e.target===modal) modal.classList.remove('open');});
 })();
+
+
+// HQ forest work estimator demo calculations
+(function(){
+  const page = document.querySelector('.estimator-page');
+  if(!page) return;
+  const qty = document.getElementById('estQty');
+  const rate = document.getElementById('estRate');
+  const complexity = document.getElementById('estComplexity');
+  const transport = document.getElementById('estTransport');
+  const labour = document.getElementById('estLabourPct');
+  const material = document.getElementById('estMaterialPct');
+  const contingency = document.getElementById('estContingencyPct');
+  const baseOut = document.getElementById('estBaseAmount');
+  const addOut = document.getElementById('estAdditions');
+  const totalOut = document.getElementById('estTotalAmount');
+  const labourOut = document.getElementById('estLabourAmount');
+  const materialOut = document.getElementById('estMaterialAmount');
+  const otherOut = document.getElementById('estOtherAmount');
+  const barLabour = document.getElementById('barLabour');
+  const barMaterial = document.getElementById('barMaterial');
+  const barOther = document.getElementById('barOther');
+  function num(el){ return Number(String(el?.value || '0').replace(/[^\d.]/g,'') || 0); }
+  function fmt(n){ return '₹ ' + n.toLocaleString('en-IN', {maximumFractionDigits:0}); }
+  function calc(){
+    const base = num(qty) * num(rate);
+    const complexAdd = base * (num(complexity)/100);
+    const transportAdd = base * (num(transport)/100);
+    const contAdd = base * (num(contingency)/100);
+    const total = base + complexAdd + transportAdd + contAdd;
+    const lab = total * (num(labour)/100);
+    const mat = total * (num(material)/100);
+    const oth = Math.max(total - lab - mat, 0);
+    if(baseOut) baseOut.textContent = fmt(base);
+    if(addOut) addOut.textContent = fmt(complexAdd + transportAdd + contAdd);
+    if(totalOut) totalOut.textContent = fmt(total);
+    if(labourOut) labourOut.textContent = fmt(lab);
+    if(materialOut) materialOut.textContent = fmt(mat);
+    if(otherOut) otherOut.textContent = fmt(oth);
+    if(barLabour) barLabour.style.width = total ? (lab/total*100)+'%' : '0%';
+    if(barMaterial) barMaterial.style.width = total ? (mat/total*100)+'%' : '0%';
+    if(barOther) barOther.style.width = total ? (oth/total*100)+'%' : '0%';
+  }
+  [qty,rate,complexity,transport,labour,material,contingency].forEach(el=>el && el.addEventListener('input', calc));
+  calc();
+})();
+
+
+// Workflow tabs for HQ and approval screens
+(function(){
+  document.querySelectorAll('[data-workflow-tabs]').forEach(scope=>{
+    const tabs = Array.from(scope.querySelectorAll('[data-workflow-tab]'));
+    const panels = Array.from(scope.querySelectorAll('[data-workflow-panel]'));
+    tabs.forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        const key = tab.dataset.workflowTab;
+        tabs.forEach(t=>t.classList.toggle('active', t === tab));
+        panels.forEach(p=>p.classList.toggle('active', p.dataset.workflowPanel === key));
+        if(window._keralaMap) setTimeout(()=>window._keralaMap.invalidateSize(),120);
+      });
+    });
+  });
+})();

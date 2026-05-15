@@ -2849,3 +2849,392 @@ body[data-page^="range-surrender-head-"] .component-surrender-card .action-row{
     text-align:left;
   }
 }
+
+
+/* HQ Estimator module */
+.estimator-page{
+  width:100%;
+  max-width:none;
+}
+.estimator-hero{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:16px;
+  align-items:stretch;
+}
+.estimator-hero-main{
+  border:1px solid rgba(214,173,69,.42);
+  background:
+    radial-gradient(circle at 12% 12%,rgba(255,231,161,.18),transparent 28%),
+    linear-gradient(145deg,rgba(13,60,41,.88),rgba(5,22,15,.94));
+  border-radius:26px;
+  padding:24px;
+}
+.estimator-hero-main h1{
+  margin:0;
+  color:#ffe7a1;
+  font-family:"Noto Serif",serif;
+  font-size:clamp(30px,4vw,52px);
+  line-height:1.05;
+}
+.estimator-hero-main p{
+  color:rgba(247,237,207,.74);
+  line-height:1.58;
+  margin:12px 0 0;
+}
+.estimator-flow-card{
+  border:1px solid rgba(214,173,69,.34);
+  background:linear-gradient(145deg,rgba(13,60,41,.74),rgba(5,22,15,.92));
+  border-radius:22px;
+  padding:16px;
+}
+.estimator-flow-card h3{
+  margin:0 0 8px;
+  color:#ffe7a1;
+}
+.estimator-flow-card ol{
+  margin:0;
+  padding-left:20px;
+  color:rgba(247,237,207,.68);
+  line-height:1.6;
+}
+.estimator-step-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.estimator-step{
+  border:1px solid rgba(214,173,69,.28);
+  background:rgba(4,18,12,.30);
+  border-radius:18px;
+  padding:13px;
+}
+.estimator-step b{
+  color:#ffe7a1;
+  display:block;
+  margin-bottom:5px;
+}
+.estimator-step small{
+  color:rgba(247,237,207,.62);
+  line-height:1.42;
+}
+.estimator-layout{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:14px;
+  margin-top:14px;
+  align-items:start;
+}
+.estimator-panel{
+  border:1px solid rgba(214,173,69,.36);
+  background:linear-gradient(145deg,rgba(13,60,41,.72),rgba(5,22,15,.94));
+  border-radius:22px;
+  padding:16px;
+  min-width:0;
+}
+.estimator-panel h3{
+  margin:0 0 6px;
+  color:#ffe7a1;
+}
+.estimator-panel p{
+  margin:0 0 12px;
+  color:rgba(247,237,207,.62);
+  line-height:1.45;
+  font-size:13px;
+}
+.estimator-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.estimate-summary-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+.estimate-summary-box{
+  border:1px solid rgba(214,173,69,.26);
+  background:rgba(214,173,69,.08);
+  border-radius:14px;
+  padding:12px;
+}
+.estimate-summary-box b{
+  color:#ffe7a1;
+  display:block;
+  font-family:"Noto Serif",serif;
+  font-size:24px;
+  line-height:1.1;
+}
+.estimate-summary-box small{
+  color:rgba(247,237,207,.62);
+  font-size:11px;
+}
+.estimator-item-row{
+  display:grid;
+  grid-template-columns:1.3fr .7fr .7fr .7fr auto;
+  gap:8px;
+  align-items:end;
+}
+.estimator-item-row input,
+.estimator-item-row select{
+  width:100%;
+}
+.estimate-cost-bars{
+  display:grid;
+  gap:10px;
+  margin-top:10px;
+}
+.estimate-cost-row{
+  display:grid;
+  grid-template-columns:110px 1fr 90px;
+  gap:8px;
+  align-items:center;
+}
+.estimate-cost-row small{
+  color:rgba(247,237,207,.70);
+  font-weight:800;
+}
+.estimate-cost-track{
+  height:12px;
+  border-radius:999px;
+  background:rgba(247,237,207,.12);
+  overflow:hidden;
+}
+.estimate-cost-fill{
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#f1d37a,#79a64d);
+}
+.estimate-cost-fill.labour{background:linear-gradient(90deg,#64d2ff,#79a64d)}
+.estimate-cost-fill.material{background:linear-gradient(90deg,#c6a7ff,#64d2ff)}
+.estimate-cost-fill.other{background:linear-gradient(90deg,#ff9a8a,#f1d37a)}
+.estimate-cost-value{
+  color:#ffe7a1;
+  font-size:12px;
+  font-weight:900;
+  text-align:right;
+}
+.estimator-tag-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.estimator-tag{
+  border:1px solid rgba(214,173,69,.32);
+  background:rgba(214,173,69,.10);
+  color:#ffe7a1;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:11px;
+  font-weight:900;
+}
+.estimator-rate-card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:12px;
+}
+.estimator-rate-card{
+  border:1px solid rgba(214,173,69,.28);
+  background:rgba(4,18,12,.30);
+  border-radius:18px;
+  padding:14px;
+}
+.estimator-rate-card b{
+  color:#ffe7a1;
+  display:block;
+  margin-bottom:4px;
+}
+.estimator-rate-card small{
+  color:rgba(247,237,207,.62);
+  display:block;
+  line-height:1.42;
+}
+.estimator-rate-card .rate{
+  color:#ffe7a1;
+  font-family:"Noto Serif",serif;
+  font-size:24px;
+  font-weight:900;
+  margin-top:10px;
+}
+@media(max-width:1200px){
+  .estimator-hero,.estimator-layout{
+    grid-template-columns:1fr;
+  }
+  .estimator-step-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:800px){
+  .estimator-form-grid,.estimate-summary-grid,.estimator-step-grid,.estimator-item-row{
+    grid-template-columns:1fr;
+  }
+  .estimate-cost-row{
+    grid-template-columns:1fr;
+  }
+  .estimate-cost-value{
+    text-align:left;
+  }
+}
+
+
+/* Full workflow recheck: HQ tabs, lower office approvals and rich maps */
+.workflow-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:14px 0;
+}
+.workflow-tab{
+  border:1px solid rgba(214,173,69,.38);
+  background:rgba(214,173,69,.10);
+  color:#ffe7a1;
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:900;
+  cursor:pointer;
+}
+.workflow-tab.active{
+  border-color:rgba(255,231,161,.72);
+  background:linear-gradient(90deg,rgba(214,173,69,.30),rgba(255,231,161,.14));
+}
+.workflow-tab-panel{display:none}
+.workflow-tab-panel.active{display:block}
+.workflow-review-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+.workflow-review-card{
+  border:1px solid rgba(214,173,69,.34);
+  background:linear-gradient(145deg,rgba(13,60,41,.72),rgba(5,22,15,.92));
+  border-radius:20px;
+  padding:15px;
+}
+.workflow-review-card .icon{
+  width:44px;
+  height:44px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  color:#ffe7a1;
+  background:rgba(214,173,69,.14);
+  border:1px solid rgba(214,173,69,.30);
+  font-size:19px;
+}
+.workflow-review-card b{
+  display:block;
+  color:#ffe7a1;
+  font-family:"Noto Serif",serif;
+  font-size:28px;
+  line-height:1;
+  margin-top:10px;
+}
+.workflow-review-card small{
+  color:rgba(247,237,207,.62);
+  line-height:1.4;
+}
+.approval-action-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.approval-action-row a,
+.approval-action-row button{
+  border:1px solid rgba(214,173,69,.30);
+  background:rgba(214,173,69,.10);
+  color:#ffe7a1;
+  border-radius:999px;
+  padding:6px 9px;
+  font-size:11px;
+  font-weight:900;
+  cursor:pointer;
+}
+.approval-action-row .approve{background:rgba(121,166,77,.18)}
+.approval-action-row .reject{background:rgba(255,154,138,.14)}
+.approval-action-row .return{background:rgba(241,211,122,.14)}
+.budget-estimate-shell{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:14px;
+  align-items:start;
+}
+.budget-estimate-panel{
+  border:1px solid rgba(214,173,69,.36);
+  background:linear-gradient(145deg,rgba(13,60,41,.74),rgba(5,22,15,.94));
+  border-radius:22px;
+  padding:16px;
+  min-width:0;
+}
+.budget-estimate-panel h3{
+  margin:0 0 6px;
+  color:#ffe7a1;
+}
+.budget-estimate-panel p{
+  margin:0 0 12px;
+  color:rgba(247,237,207,.62);
+  line-height:1.45;
+  font-size:13px;
+}
+.hq-district-map-wrap{
+  min-height:430px;
+}
+.hq-district-map-wrap .map-box{
+  height:430px;
+  width:100%;
+}
+.district-summary-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+}
+.district-summary-card{
+  border:1px solid rgba(214,173,69,.24);
+  background:rgba(214,173,69,.08);
+  border-radius:14px;
+  padding:10px;
+}
+.district-summary-card b{
+  color:#ffe7a1;
+  display:block;
+}
+.district-summary-card small{
+  color:rgba(247,237,207,.62);
+  line-height:1.4;
+}
+.office-dashboard-band{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.office-band-card{
+  border:1px solid rgba(214,173,69,.34);
+  background:rgba(4,18,12,.30);
+  border-radius:18px;
+  padding:14px;
+}
+.office-band-card b{
+  display:block;
+  color:#ffe7a1;
+  font-size:22px;
+  font-family:"Noto Serif",serif;
+}
+.office-band-card small{
+  color:rgba(247,237,207,.62);
+  line-height:1.4;
+}
+@media(max-width:1200px){
+  .workflow-review-grid,.office-dashboard-band{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .budget-estimate-shell{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:760px){
+  .workflow-review-grid,.office-dashboard-band,.district-summary-grid{
+    grid-template-columns:1fr;
+  }
+}

@@ -1,16 +1,25 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | HQ Dashboard</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="state-dashboard.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class="active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
 <div class="nav-group-title collapsed">APO Submissions</div>
 <a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
-<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate - HQ</span></a>
+<a href="hq-action-plan-submissions.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Action Plan Submissions</span></a>
 <a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
 <a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
 <a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Estimator</div>
+<a href="hq-estimator.html" class="menu-collapsed"><i class="fa-solid fa-calculator"></i><span>Forest Work Estimator</span></a>
+<a href="hq-estimator-rate-library.html" class="menu-collapsed"><i class="fa-solid fa-list-ul"></i><span>Rate Library</span></a>
+<a href="hq-estimator-register.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Estimate Register</span></a>
 <div class="nav-group-title collapsed">Budget Allocations</div>
 <a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
 <a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
 <a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
 <a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
 <a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Lower Office Requests</div>
+<a href="hq-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Fund Requests</span></a>
+<a href="hq-surrender-requests.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Requests</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
 <div class="nav-group-title collapsed">Finance Control</div>
 <a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
 <a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
@@ -104,25 +113,17 @@
   </div>
 
   <div class="hq-panel">
-    <h3>Kerala Circle Overview</h3>
-    <p>Circle-wise budget signal and geographic monitoring view.</p>
+    <h3>Kerala District Financial Map</h3>
+    <p>District-wise demo view using budget, allotment, expenditure and utilization values. Map popups show district details.</p>
     <div class="hq-map-grid">
-      <div class="kerala-svg-box">
-        <svg viewBox="0 0 170 320" aria-label="Kerala map overview">
-          <path d="M78 12 C105 44 111 72 101 101 C92 126 113 143 104 171 C98 190 115 210 104 238 C95 264 95 292 78 309 C56 276 55 252 61 230 C68 205 47 188 56 162 C65 136 47 113 58 86 C66 63 55 36 78 12 Z" fill="rgba(121,166,77,.32)" stroke="#ffe7a1" stroke-width="2"/>
-          <circle cx="78" cy="55" r="9" fill="#f1d37a"/><text x="95" y="59" fill="#ffe7a1" font-size="10">Northern</text>
-          <circle cx="74" cy="112" r="9" fill="#64d2ff"/><text x="91" y="116" fill="#ffe7a1" font-size="10">Olavakode</text>
-          <circle cx="78" cy="165" r="9" fill="#c6a7ff"/><text x="96" y="169" fill="#ffe7a1" font-size="10">Central</text>
-          <circle cx="77" cy="221" r="9" fill="#79a64d"/><text x="95" y="225" fill="#ffe7a1" font-size="10">High Range</text>
-          <circle cx="75" cy="275" r="9" fill="#ff9a8a"/><text x="93" y="279" fill="#ffe7a1" font-size="10">Southern</text>
-        </svg>
-      </div>
-      <div class="circle-stat-list">
-        <div class="circle-stat"><div><b>Northern Circle</b><small>APO 86 • Allocation ₹18.4Cr</small></div><span class="status approved">74%</span></div>
-        <div class="circle-stat"><div><b>Olavakode Circle</b><small>APO 92 • Allocation ₹16.2Cr</small></div><span class="status approved">68%</span></div>
-        <div class="circle-stat"><div><b>Central Circle</b><small>APO 74 • Allocation ₹11.9Cr</small></div><span class="status proposed">58%</span></div>
-        <div class="circle-stat"><div><b>High Range Circle</b><small>APO 81 • Allocation ₹13.1Cr</small></div><span class="status approved">71%</span></div>
-        <div class="circle-stat"><div><b>Southern Circle</b><small>APO 95 • Allocation ₹10.6Cr</small></div><span class="status returned">49%</span></div>
+      <div class="hq-district-map-wrap"><div id="keralaMap" class="map-box"></div></div>
+      <div class="district-summary-grid">
+        <div class="district-summary-card"><b>Kannur</b><small>Budget ₹80.8Cr • Utilization 69%</small></div>
+        <div class="district-summary-card"><b>Idukki</b><small>Budget ₹72.2Cr • Utilization 66%</small></div>
+        <div class="district-summary-card"><b>Ernakulam</b><small>Budget ₹63.6Cr • Utilization 62%</small></div>
+        <div class="district-summary-card"><b>Thiruvananthapuram</b><small>Budget ₹58.4Cr • Utilization 71%</small></div>
+        <div class="district-summary-card"><b>Wayanad</b><small>Budget ₹84.1Cr • Utilization 74%</small></div>
+        <div class="district-summary-card"><b>Palakkad</b><small>Budget ₹76.2Cr • Utilization 68%</small></div>
       </div>
     </div>
   </div>
@@ -147,6 +148,9 @@
   <a class="hq-action-card" href="hq-apo-submissions.html"><span class="tile-icon"><i class="fa-solid fa-inbox"></i></span><b>APO Submission Inbox</b><small>View, approve, reject or return APO submissions.</small></a>
   <a class="hq-action-card" href="hq-budget-allocations.html"><span class="tile-icon"><i class="fa-solid fa-wallet"></i></span><b>Budget Allocation</b><small>Release approved budget to target offices.</small></a>
   <a class="hq-action-card" href="hq-resumption.html"><span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span><b>Direct Resumption</b><small>Pull back balance from ranges, divisions or circles.</small></a>
+  <a class="hq-action-card" href="hq-action-plan-submissions.html"><span class="tile-icon"><i class="fa-solid fa-clipboard-check"></i></span><b>Action Plan Submissions</b><small>Review action plans forwarded from lower offices.</small></a>
+  <a class="hq-action-card" href="hq-wage-requests.html"><span class="tile-icon"><i class="fa-solid fa-users-gear"></i></span><b>Wage Fund Requests</b><small>Review forwarded wage distribution fund requests.</small></a>
+  <a class="hq-action-card" href="hq-surrender-requests.html"><span class="tile-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></span><b>Surrender Requests</b><small>Review lower office surrender requests before finance action.</small></a>
   <a class="hq-action-card" href="progress.html"><span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span><b>Progress Monitoring</b><small>Track physical and financial progress.</small></a>
   <a class="hq-action-card" href="reports.html"><span class="tile-icon"><i class="fa-solid fa-file-lines"></i></span><b>Reports & Annexures</b><small>View formats, annexures and summaries.</small></a>
   <a class="hq-action-card" href="sitemap.html"><span class="tile-icon"><i class="fa-solid fa-circle-question"></i></span><b>Help</b><small>Understand every module and workflow.</small></a>

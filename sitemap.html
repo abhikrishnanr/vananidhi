@@ -1,16 +1,25 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Help</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="sitemap.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
 <div class="nav-group-title collapsed">APO Submissions</div>
 <a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
-<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate - HQ</span></a>
+<a href="hq-action-plan-submissions.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Action Plan Submissions</span></a>
 <a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
 <a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
 <a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Estimator</div>
+<a href="hq-estimator.html" class="menu-collapsed"><i class="fa-solid fa-calculator"></i><span>Forest Work Estimator</span></a>
+<a href="hq-estimator-rate-library.html" class="menu-collapsed"><i class="fa-solid fa-list-ul"></i><span>Rate Library</span></a>
+<a href="hq-estimator-register.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Estimate Register</span></a>
 <div class="nav-group-title collapsed">Budget Allocations</div>
 <a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
 <a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
 <a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
 <a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
 <a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Lower Office Requests</div>
+<a href="hq-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Fund Requests</span></a>
+<a href="hq-surrender-requests.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Requests</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
 <div class="nav-group-title collapsed">Finance Control</div>
 <a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
 <a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
@@ -51,7 +60,7 @@
   <h2>2. HQ APO Decision Flow</h2>
   <p>HQ receives submissions, approves/rejects, and converts approved APOs into Budget Estimate.</p>
   <div class="help-link-grid">
-<a class="help-link-card" href="hq-apo-submissions.html"><b>APO Submission Inbox</b><small>View, approve, reject or return APO submissions.</small></a><a class="help-link-card" href="budget-hq.html"><b>Budget Estimate</b><small>HQ-level Budget Estimate page.</small></a><a class="help-link-card" href="hq-apo-period.html"><b>APO Period Management</b><small>Control submission/approval date windows.</small></a><a class="help-link-card" href="hq-apo-approved.html"><b>Approved APOs</b><small>Approved register.</small></a><a class="help-link-card" href="hq-apo-rejected.html"><b>Rejected / Returned APOs</b><small>Returned/rejected register.</small></a>
+<a class="help-link-card" href="hq-apo-submissions.html"><b>APO Submission Inbox</b><small>View, approve, reject or return APO submissions.</small></a><a class="help-link-card" href="budget-hq.html"><b>Budget Estimate - HQ</b><small>HQ-level Budget Estimate page.</small></a><a class="help-link-card" href="hq-apo-period.html"><b>APO Period Management</b><small>Control submission/approval date windows.</small></a><a class="help-link-card" href="hq-apo-approved.html"><b>Approved APOs</b><small>Approved register.</small></a><a class="help-link-card" href="hq-apo-rejected.html"><b>Rejected / Returned APOs</b><small>Returned/rejected register.</small></a>
   </div>
 </section>
 
@@ -60,6 +69,17 @@
   <p>After approval, HQ controls allocation, allotment register, resumption and revenue.</p>
   <div class="help-link-grid">
 <a class="help-link-card" href="budget-heads.html"><b>Budget Heads</b><small>Budget head master and formats.</small></a><a class="help-link-card" href="hq-budget-allocations.html"><b>Budget Allocation</b><small>Allocate/release funds.</small></a><a class="help-link-card" href="hq-allotment-register.html"><b>Allotment Register</b><small>Track released funds, expenditure and balance.</small></a><a class="help-link-card" href="hq-resumption.html"><b>Direct Resumption</b><small>HQ pulls back available balance directly.</small></a><a class="help-link-card" href="hq-resumption-requests.html"><b>Resumption Requests</b><small>Register of pull-back actions.</small></a><a class="help-link-card" href="funds-bills.html"><b>Funds & Pending Bills</b><small>Pending bills and fund tracking.</small></a><a class="help-link-card" href="revenue.html"><b>Revenue / eTreasury</b><small>Revenue target and treasury view.</small></a>
+  </div>
+</section>
+
+
+<section class="help-category">
+  <h2>3A. HQ Estimator</h2>
+  <p>Estimator is the cost-estimation workspace for forest works. It supports multiple selections such as office, budget head, work category, unit, quantity, terrain difficulty, transport loading, labour/material split and contingency.</p>
+  <div class="help-link-grid">
+    <a class="help-link-card" href="hq-estimator.html"><b>Forest Work Estimator</b><small>Build a work estimate using selections, rate library values and adjustments.</small></a>
+    <a class="help-link-card" href="hq-estimator-rate-library.html"><b>Rate Library</b><small>Reference library for standard forest work rates and units.</small></a>
+    <a class="help-link-card" href="hq-estimator-register.html"><b>Estimate Register</b><small>Track draft, verified and returned estimates.</small></a>
   </div>
 </section>
 

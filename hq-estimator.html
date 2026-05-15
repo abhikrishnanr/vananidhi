@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Forest Work Estimator</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="hq-estimator.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<div class="nav-group-title collapsed">APO Submissions</div>
+<a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate - HQ</span></a>
+<a href="hq-action-plan-submissions.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Action Plan Submissions</span></a>
+<a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
+<a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
+<a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Estimator</div>
+<a href="hq-estimator.html" class="active menu-collapsed"><i class="fa-solid fa-calculator"></i><span>Forest Work Estimator</span></a>
+<a href="hq-estimator-rate-library.html" class="menu-collapsed"><i class="fa-solid fa-list-ul"></i><span>Rate Library</span></a>
+<a href="hq-estimator-register.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Estimate Register</span></a>
+<div class="nav-group-title collapsed">Budget Allocations</div>
+<a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
+<a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
+<a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Lower Office Requests</div>
+<a href="hq-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Fund Requests</span></a>
+<a href="hq-surrender-requests.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Requests</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
+<div class="nav-group-title collapsed">Finance Control</div>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
+<a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Monitoring & Reports</div>
+<a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-file-lines"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration & Masters</div>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
+<a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
+<a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Help</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-calculator"></i> Forest Work Estimator</h2><small>HQ cost estimator for forest works.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="estimator-page">
+<section class="estimator-hero">
+  <div class="estimator-hero-main">
+    <h1>Forest Work Estimator</h1>
+    <p>Build cost estimates for forest works using work category, terrain, location, unit, quantity, rate library, labour/material split, transport, contingency and supporting notes. The estimate can later be attached to Budget Estimate or allocation workflows.</p>
+    <div class="hq-hero-actions">
+      <a class="btn" href="hq-estimator-register.html"><i class="fa-solid fa-file-signature"></i> Estimate Register</a>
+      <a class="btn secondary" href="hq-estimator-rate-library.html"><i class="fa-solid fa-list-ul"></i> Rate Library</a>
+      <a class="btn secondary" href="hq-budget-allocations.html"><i class="fa-solid fa-wallet"></i> Budget Allocation</a>
+    </div>
+  </div>
+  <div class="estimator-flow-card">
+    <h3><i class="fa-solid fa-route"></i> Estimate Builder Flow</h3>
+    <ol>
+      <li>Select office, work type and budget head</li>
+      <li>Choose terrain/access difficulty and unit</li>
+      <li>Add quantity, base rate and adjustments</li>
+      <li>Review cost split and submit estimate</li>
+    </ol>
+  </div>
+</section>
+
+<section class="estimator-step-grid">
+  <div class="estimator-step"><b>1. Work Context</b><small>Circle, division, range, work type and head selection.</small></div>
+  <div class="estimator-step"><b>2. Rate Selection</b><small>Pick base rate from approved forest work rate library.</small></div>
+  <div class="estimator-step"><b>3. Adjustments</b><small>Terrain, transport, contingency and local conditions.</small></div>
+  <div class="estimator-step"><b>4. Estimate Output</b><small>BOQ-like preview with labour/material split and total.</small></div>
+</section>
+
+<section class="estimator-layout">
+  <div class="estimator-panel">
+    <h3>Estimate Inputs</h3>
+    <p>Selections used to build the work estimate.</p>
+    <div class="estimator-form-grid">
+      <div class="field"><label>Circle</label><select><option>Northern Circle</option><option>Olavakode Circle</option><option>Central Circle</option><option>High Range Circle</option><option>Southern Circle</option></select></div>
+      <div class="field"><label>Division</label><select><option>Kannur Division</option><option>Wayanad South Division</option><option>Malayattur Division</option><option>Ranni Division</option></select></div>
+      <div class="field"><label>Range</label><select><option>Kannur Range</option><option>Mannarkad Range</option><option>Thenmala Range</option><option>Ranni Range</option></select></div>
+      <div class="field"><label>Budget Head</label><select><option>2406-01-101-81 Forest Protection</option><option>4406-01-070-99 Forest Roads</option><option>2406-02-110-68 Habitat Support</option><option>2406-01-800-56 Conflict Mitigation</option></select></div>
+      <div class="field"><label>Work Category</label><select><option>Fire line maintenance</option><option>Forest road maintenance</option><option>Water hole renovation</option><option>Watch tower repair</option><option>Solar fencing repair</option><option>Nursery support</option></select></div>
+      <div class="field"><label>Estimate Type</label><select><option>New Work Estimate</option><option>Revised Estimate</option><option>Maintenance Estimate</option><option>Supplementary Estimate</option></select></div>
+      <div class="field"><label>Terrain / Difficulty</label><select id="estComplexity"><option value="0">Normal terrain - 0%</option><option value="8">Moderate terrain - 8%</option><option value="15">Difficult terrain - 15%</option><option value="22">Remote / wildlife sensitive - 22%</option></select></div>
+      <div class="field"><label>Transport / Access Loading</label><select id="estTransport"><option value="0">No additional loading - 0%</option><option value="5">Limited vehicle access - 5%</option><option value="10">Head-load / remote access - 10%</option><option value="18">Very remote access - 18%</option></select></div>
+      <div class="field"><label>Unit</label><select><option>Hectare</option><option>Kilometre</option><option>Number</option><option>Meter</option><option>Mandays</option></select></div>
+      <div class="field"><label>Quantity</label><input id="estQty" value="12"></div>
+      <div class="field"><label>Base Rate per Unit</label><input id="estRate" value="18500"></div>
+      <div class="field"><label>Contingency %</label><input id="estContingencyPct" value="3"></div>
+      <div class="field"><label>Labour %</label><input id="estLabourPct" value="45"></div>
+      <div class="field"><label>Material %</label><input id="estMaterialPct" value="38"></div>
+      <div class="field" style="grid-column:1/-1"><label>Technical Notes</label><textarea>Estimate prepared for forest field work considering terrain, access, labour, material and transport factors. Supporting site sketch, photographs and measurement sheet may be attached.</textarea></div>
+    </div>
+    <div class="estimator-tag-row">
+      <span class="estimator-tag">Draft estimate</span>
+      <span class="estimator-tag">Rate library linked</span>
+      <span class="estimator-tag">HQ verification required</span>
+    </div>
+  </div>
+
+  <div class="estimator-panel">
+    <h3>Estimate Preview</h3>
+    <p>Live calculation summary based on selected rate and adjustments.</p>
+    <div class="estimate-summary-grid">
+      <div class="estimate-summary-box"><b id="estBaseAmount">₹ 2,22,000</b><small>Base Amount</small></div>
+      <div class="estimate-summary-box"><b id="estAdditions">₹ 6,660</b><small>Adjustments</small></div>
+      <div class="estimate-summary-box"><b id="estTotalAmount">₹ 2,28,660</b><small>Total Estimate</small></div>
+    </div>
+    <div class="estimate-cost-bars">
+      <div class="estimate-cost-row"><small>Labour</small><div class="estimate-cost-track"><div class="estimate-cost-fill labour" id="barLabour" style="width:45%"></div></div><div class="estimate-cost-value" id="estLabourAmount">₹ 1,02,897</div></div>
+      <div class="estimate-cost-row"><small>Material</small><div class="estimate-cost-track"><div class="estimate-cost-fill material" id="barMaterial" style="width:38%"></div></div><div class="estimate-cost-value" id="estMaterialAmount">₹ 86,891</div></div>
+      <div class="estimate-cost-row"><small>Other</small><div class="estimate-cost-track"><div class="estimate-cost-fill other" id="barOther" style="width:17%"></div></div><div class="estimate-cost-value" id="estOtherAmount">₹ 38,872</div></div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:14px">
+      <table class="data-table">
+        <thead><tr><th>Item</th><th>Unit</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Base work item</td><td>Ha</td><td>12</td><td>₹ 18,500</td><td>₹ 2,22,000</td></tr>
+          <tr><td>Terrain / access loading</td><td>%</td><td>As selected</td><td>Auto</td><td>Auto</td></tr>
+          <tr><td>Contingency</td><td>%</td><td>3</td><td>Auto</td><td>Auto</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn" style="margin-top:12px"><i class="fa-solid fa-floppy-disk"></i> Save Estimate Draft</button>
+    <button class="btn secondary" style="margin-top:12px"><i class="fa-solid fa-paper-plane"></i> Submit for Verification</button>
+  </div>
+</section>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

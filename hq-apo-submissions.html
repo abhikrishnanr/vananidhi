@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | APO Submission Inbox</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="hq-apo-submissions.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<div class="nav-group-title collapsed">APO Submissions</div>
+<a href="hq-apo-submissions.html" class="active menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate - HQ</span></a>
+<a href="hq-action-plan-submissions.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Action Plan Submissions</span></a>
+<a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
+<a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
+<a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Estimator</div>
+<a href="hq-estimator.html" class="menu-collapsed"><i class="fa-solid fa-calculator"></i><span>Forest Work Estimator</span></a>
+<a href="hq-estimator-rate-library.html" class="menu-collapsed"><i class="fa-solid fa-list-ul"></i><span>Rate Library</span></a>
+<a href="hq-estimator-register.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Estimate Register</span></a>
+<div class="nav-group-title collapsed">Budget Allocations</div>
+<a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
+<a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
+<a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Lower Office Requests</div>
+<a href="hq-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-users-gear"></i><span>Wage Fund Requests</span></a>
+<a href="hq-surrender-requests.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Requests</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
+<div class="nav-group-title collapsed">Finance Control</div>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
+<a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Monitoring & Reports</div>
+<a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-file-lines"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration & Masters</div>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
+<a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
+<a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Help</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-inbox"></i> APO Submission Inbox</h2><small>Forwarded APOs and HQ-entered Budget Estimates.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="hq-page" data-workflow-tabs>
+<h1 class="serif page-title gold-text">APO Submission Inbox</h1>
+<p class="page-sub">HQ can browse APO submissions forwarded from Circles separately from Budget Estimate entries created directly at HQ. Approved lower-office APOs become Budget Estimate records at HQ.</p>
+
+<section class="workflow-review-grid">
+  <div class="workflow-review-card"><span class="icon"><i class="fa-solid fa-share-from-square"></i></span><b>42</b><small>Forwarded from Circles</small></div>
+  <div class="workflow-review-card"><span class="icon"><i class="fa-solid fa-landmark"></i></span><b>16</b><small>Entered directly at HQ</small></div>
+  <div class="workflow-review-card"><span class="icon"><i class="fa-solid fa-circle-check"></i></span><b>31</b><small>Ready for approval</small></div>
+  <div class="workflow-review-card"><span class="icon"><i class="fa-solid fa-rotate-left"></i></span><b>7</b><small>Returned / clarification</small></div>
+</section>
+
+<div class="workflow-tabs">
+  <button class="workflow-tab active" data-workflow-tab="circles"><i class="fa-solid fa-circle-nodes"></i> Forwarded from Circles</button>
+  <button class="workflow-tab" data-workflow-tab="hq"><i class="fa-solid fa-building-columns"></i> Entered from HQ</button>
+</div>
+
+<section class="workflow-tab-panel active" data-workflow-panel="circles">
+  <div class="hq-panel record-list-panel">
+    <div class="card-head"><h3>APOs Forwarded from Circles</h3><button class="expand-card">⛶</button></div>
+    <div class="record-toolbar">
+      <input class="record-search" placeholder="Search circle, division, range, head or amount">
+      <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+      <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+      <a class="btn secondary" href="budget-hq.html"><i class="fa-solid fa-landmark"></i> Budget Estimate - HQ</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>APO ID</th><th>Circle</th><th>Office Chain</th><th>Head</th><th>Amount</th><th>Status</th><th>HQ Action</th></tr></thead>
+        <tbody>
+          <tr data-status="Proposed"><td>APO-FC-001</td><td>Northern Circle</td><td>Kannur Range → Kannur Division</td><td>2406-01-101-81</td><td>₹ 2.45 Cr</td><td><span class="status proposed">For Approval</span></td><td><div class="approval-action-row"><a href="record-details.html?src=hq-apo-submissions.html&id=APO-FC-001">View</a><button class="approve">Approve as Budget Estimate</button><button class="return">Return</button><button class="reject">Reject</button></div></td></tr>
+          <tr data-status="Proposed"><td>APO-FC-002</td><td>Olavakode Circle</td><td>Mannarkad Range → Palakkad Division</td><td>2406-02-110-68</td><td>₹ 1.86 Cr</td><td><span class="status proposed">For Approval</span></td><td><div class="approval-action-row"><a href="record-details.html?src=hq-apo-submissions.html&id=APO-FC-002">View</a><button class="approve">Approve</button><button class="return">Return</button></div></td></tr>
+          <tr data-status="Returned"><td>APO-FC-003</td><td>Central Circle</td><td>Malayattur Division</td><td>4406-01-070-99</td><td>₹ 3.10 Cr</td><td><span class="status returned">Clarification</span></td><td><div class="approval-action-row"><a href="record-details.html?src=hq-apo-submissions.html&id=APO-FC-003">View</a><button class="return">Return Note</button></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-tab-panel" data-workflow-panel="hq">
+  <div class="hq-panel record-list-panel">
+    <div class="card-head"><h3>Budget Estimate Entries from HQ</h3><button class="expand-card">⛶</button></div>
+    <div class="record-toolbar">
+      <input class="record-search" placeholder="Search HQ entry, head, component or amount">
+      <select class="record-status-filter"><option>All</option><option>Approved</option><option>Proposed</option><option>Returned</option></select>
+      <select class="record-sort"><option>ID</option><option>Name</option><option>Date</option></select>
+      <a class="btn" href="budget-hq.html"><i class="fa-solid fa-plus"></i> New Budget Estimate - HQ</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Estimate ID</th><th>HQ Section</th><th>Head</th><th>Component</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr data-status="Proposed"><td>BE-HQ-001</td><td>Planning Cell</td><td>2406-01-101-81</td><td>State fire protection reserve</td><td>₹ 4.00 Cr</td><td><span class="status proposed">Draft</span></td><td><div class="approval-action-row"><a href="record-details.html?src=hq-apo-submissions.html&id=BE-HQ-001">View</a><button class="approve">Finalize</button></div></td></tr>
+          <tr data-status="Approved"><td>BE-HQ-002</td><td>Finance Cell</td><td>2406-02-110-68</td><td>State habitat restoration pool</td><td>₹ 3.50 Cr</td><td><span class="status approved">Finalized</span></td><td><div class="approval-action-row"><a href="record-details.html?src=hq-apo-submissions.html&id=BE-HQ-002">View</a></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
