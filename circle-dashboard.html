@@ -1,14 +1,73 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Circle Dashboard</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="circle-dashboard.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Circle Office User</p></div><nav class="nav"><a href="circle-dashboard.html" class="active"><i class="fa-solid fa-circle-nodes"></i><span>Circle Dashboard</span></a>
-<div class="nav-group-title collapsed">APO Review</div>
-<a href="circle-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Submissions</span></a>
-<a href="circle-budget.html" class="menu-collapsed"><i class="fa-solid fa-circle-nodes"></i><span>Circle APO</span></a>
-<a href="circle-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-check-double"></i><span>Action Plan Approval</span></a>
-<div class="nav-group-title collapsed">Post-Budget Tracking</div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Circle Office Dashboard</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="circle-dashboard.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">Circle Office User</p></div><nav class="nav"><a href="circle-dashboard.html" class="active"><i class="fa-solid fa-circle-nodes"></i><span>Circle Dashboard</span></a>
+<div class="nav-group-title collapsed">Own Circle Work</div>
+<a href="circle-budget.html" class="menu-collapsed"><i class="fa-solid fa-file-pen"></i><span>Circle APO Entry</span></a>
+<a href="circle-action-plan.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-check"></i><span>Submit Action Plan</span></a>
+<a href="circle-allotment.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Allotment Details</span></a>
+<a href="circle-progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Updation</span></a>
+<div class="nav-group-title collapsed">Lower Office Review</div>
+<a href="circle-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>Division APO Submissions</span></a>
+<a href="circle-forward-queue.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approval Queue</span></a>
+<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>Prior AS Requests</span></a>
+<div class="nav-group-title collapsed">Fund & Balance</div>
+<a href="circle-wages.html" class="menu-collapsed"><i class="fa-solid fa-file-excel"></i><span>Wage Distribution Fund Request</span></a>
+<a href="circle-wage-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Wage Requests Submitted</span></a>
+<a href="circle-surrender.html" class="menu-collapsed"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Surrender Entry</span></a>
+<a href="circle-surrender-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Surrender Requests</span></a>
 <a href="circle-revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue Consolidation</span></a>
+<div class="nav-group-title collapsed">Reports</div>
 <a href="circle-reports.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Circle Reports</span></a>
-<div class="nav-group-title collapsed">Prior AS Request</div>
-<a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
-<a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
-<div class="nav-group-title collapsed">Account</div>
-<a href="login-circle.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-gauge-high"></i> Circle Dashboard</h2><small>Circle APO consolidation dashboard.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Circle Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><label>Financial Year <select><option>2026-27</option><option>2025-26</option><option>2024-25</option></select></label></div>
-<h1 class="serif page-title gold-text">Circle Dashboard</h1><p class="page-sub">Circle users review Division APO submissions, consolidate Circle APO and approve action plans.</p><section class="grid grid-4"><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-inbox"></i></div><div><b>64</b><br><small>APO submissions</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-check-double"></i></div><div><b>28</b><br><small>Action plans pending</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-circle-nodes"></i></div><div><b>₹ 412.6 Cr</b><br><small>Circle APO value</small></div></div></div><div class="panel"><div class="kpi"><div class="icon"><i class="fa-solid fa-receipt"></i></div><div><b>₹ 31.4 Cr</b><br><small>Revenue reviewed</small></div></div></div></section><section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>APO Submissions</h3><button class="expand-card">⛶</button></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Division</th><th>APO</th><th>Amount</th><th>Action</th></tr></thead><tbody><tr><td>Kannur Division</td><td>Forest Protection</td><td>₹ 98.4 L</td><td>Approve</td></tr><tr><td>Kozhikode Division</td><td>Roads</td><td>₹ 87.6 L</td><td>Approve</td></tr><tr><td>Wayanad South</td><td>Wildlife Habitat</td><td>₹ 62.3 L</td><td>Approve</td></tr></tbody></table></div></section><section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Office Responsibility Note</h3><button class="expand-card">⛶</button></div><div class="info-note">This office reviews APO submissions and progress. PO Components and Subcomponents are handled by HQ and are not approval items for this office level.</div></section><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
+<a href="login-circle.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-circle-nodes"></i> Circle Office Dashboard</h2><small>Own Circle work and lower-office review dashboard.</small></div><span class="pill"><i class="fa-solid fa-user-shield"></i> Circle Office User</span><a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="office-command-page">
+<section class="office-hero">
+  <div class="office-hero-main">
+    <h1>Circle Office Dashboard</h1>
+    <p>A concise office command centre for tracking the circle office’s own APO submissions separately from requests received from Division Offices. Review, approve/forward, track allotment, update progress and manage wage/surrender workflows.</p>
+    <div class="office-actions">
+      <a class="btn" href="circle-budget.html"><i class="fa-solid fa-file-pen"></i> Own APO Entry</a>
+      <a class="btn secondary" href="circle-submissions.html"><i class="fa-solid fa-inbox"></i> Division Offices Submissions</a>
+      <a class="btn secondary" href="circle-forward-queue.html"><i class="fa-solid fa-paper-plane"></i> Review / Forward</a>
+      <a class="btn secondary" href="circle-allotment.html"><i class="fa-solid fa-wallet"></i> Allotment</a>
+    </div>
+  </div>
+  <div class="office-side">
+    <div class="office-note"><h3><i class="fa-solid fa-layer-group"></i> Separate tracking</h3><ul><li>Own Circle APO entries</li><li>Division Offices submissions and review queue</li><li>Forward/approval status visible separately</li></ul></div>
+    <div class="office-note"><h3><i class="fa-solid fa-circle-info"></i> Approval logic</h3><ul><li>Range requests are reviewed upwards</li><li>Division can forward reviewed items</li><li>Circle focuses on approval/return and consolidation</li></ul></div>
+  </div>
+</section>
+<div class="office-section-title"><div><h2>APO & Request Summary</h2><p>Own work and lower-office work kept separate</p></div></div>
+<section class="office-kpi-grid">
+  <div class="office-kpi"><div class="label">Own APOs</div><div class="value">22</div><div class="note">Prepared by this office.</div></div>
+  <div class="office-kpi"><div class="label">Division Offices Submissions</div><div class="value">84</div><div class="note">Received from lower offices.</div></div>
+  <div class="office-kpi"><div class="label">Forward / Approval Queue</div><div class="value">27</div><div class="note">Pending higher-level action.</div></div>
+  <div class="office-kpi"><div class="label">Returned Items</div><div class="value">8</div><div class="note">Needs correction and resubmission.</div></div>
+</section>
+<div class="office-section-title"><div><h2>Financial & Progress Snapshot</h2><p>Allotment, expenditure and physical progress</p></div><a class="action-link" href="circle-allotment.html">Open Allotment</a></div>
+<section class="office-graph-grid">
+  <div class="office-card"><h3>Financial Utilization</h3><p>Budget/allotment against expenditure and balance.</p><div class="simple-bars">
+    <div class="simple-row"><small>Allotment</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹265.7L</div></div>
+    <div class="simple-row"><small>Expenditure</small><div class="simple-track"><div class="simple-fill blue" style="width:57%"></div></div><div class="simple-value">₹152.8L</div></div>
+    <div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill violet" style="width:43%"></div></div><div class="simple-value">₹112.9L</div></div>
+  </div></div>
+  <div class="office-card"><h3>Progress Trend</h3><p>Physical and financial update trend for review meetings.</p><div class="dashboard-svg-chart"><svg viewBox="0 0 620 200" preserveAspectRatio="none">
+    <line x1="40" y1="160" x2="600" y2="160" stroke="rgba(247,237,207,.22)"/><line x1="40" y1="120" x2="600" y2="120" stroke="rgba(247,237,207,.12)"/><line x1="40" y1="80" x2="600" y2="80" stroke="rgba(247,237,207,.12)"/>
+    <polyline points="40,148 150,130 260,114 370,96 480,78 590,58" fill="none" stroke="#f1d37a" stroke-width="5" stroke-linecap="round"/>
+    <polyline points="40,154 150,144 260,130 370,112 480,92 590,80" fill="none" stroke="#64d2ff" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#ffe7a1" font-size="13"><text x="32" y="184">Apr</text><text x="142" y="184">May</text><text x="252" y="184">Jun</text><text x="362" y="184">Jul</text><text x="472" y="184">Aug</text><text x="582" y="184">Sep</text></g>
+  </svg></div></div>
+</section>
+<div class="office-section-title"><div><h2>Action Queues</h2><p>Direct paths to the main working pages</p></div></div>
+<section class="office-action-grid">
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-file-pen"></i></span><div><b>Own APO Entry</b><small>Create and track this office’s own APO submissions.</small></div><a class="action-link" href="circle-budget.html">Open</a></div>
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-inbox"></i></span><div><b>Division Offices APO Submissions</b><small>Review submissions received from lower offices.</small></div><a class="action-link" href="circle-submissions.html">Open</a></div>
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-paper-plane"></i></span><div><b>Forward / Approval Queue</b><small>Forward eligible items or record approval decisions.</small></div><a class="action-link" href="circle-forward-queue.html">Open</a></div>
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-chart-line"></i></span><div><b>Progress Updation</b><small>Track physical and financial progress.</small></div><a class="action-link" href="circle-progress.html">Open</a></div>
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-file-excel"></i></span><div><b>Wage Fund Request</b><small>Upload, preview and track wage request submissions.</small></div><a class="action-link" href="circle-wages.html">Open</a></div>
+  <div class="office-action"><span class="ico"><i class="fa-solid fa-arrow-up-from-bracket"></i></span><div><b>Surrender / Balance</b><small>Submit and track surrender requests separately.</small></div><a class="action-link" href="circle-surrender.html">Open</a></div>
+</section>
+<section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Recent Activity</h3><button class="expand-card">⛶</button></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Date</th><th>Module</th><th>Reference</th><th>Status</th><th>Action</th></tr></thead><tbody>
+<tr data-status="Proposed"><td>15-06-2026</td><td>Division Offices Submission</td><td>APO-CIRCLE-021</td><td><span class="status proposed">Under Review</span></td><td><a class="action-link" href="circle-submissions.html">View</a></td></tr>
+<tr data-status="Approved"><td>14-06-2026</td><td>Own APO</td><td>Circle APO Fire line support</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="circle-budget.html">View</a></td></tr>
+<tr data-status="Returned"><td>13-06-2026</td><td>Surrender</td><td>Balance surrender request</td><td><span class="status returned">Returned</span></td><td><a class="action-link" href="circle-surrender-list.html">Correct</a></td></tr>
+</tbody></table></div></section>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

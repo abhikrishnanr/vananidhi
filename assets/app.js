@@ -327,3 +327,25 @@
  document.querySelectorAll('[data-open-surrender-modal]').forEach(btn=>btn.addEventListener('click',()=>{const d=btn.dataset;if(title)title.textContent=d.component||'Component';if(head)head.textContent=d.head||'';if(balInput)balInput.value=d.balance||'0';if(surrenderInput)surrenderInput.value='';calc();modal.classList.add('open');}));
  surrenderInput?.addEventListener('input',calc); modal.querySelectorAll('[data-close-modal]').forEach(btn=>btn.addEventListener('click',()=>modal.classList.remove('open'))); modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
 })();
+
+
+// HQ master menu search and resumption sorting
+(function(){
+  const search=document.getElementById('hqMasterSearch');
+  if(search){
+    const tiles=Array.from(document.querySelectorAll('.hq-module-tile'));
+    search.addEventListener('input',()=>{const q=search.value.toLowerCase();tiles.forEach(t=>t.style.display=t.textContent.toLowerCase().includes(q)?'':'none')});
+  }
+  const resGrid=document.querySelector('[data-resumption-grid]');
+  if(resGrid){
+    const cards=Array.from(resGrid.querySelectorAll('[data-resumption-card]'));
+    const q=document.getElementById('resumptionSearch'), level=document.getElementById('resumptionLevel'), sort=document.getElementById('resumptionSort'), purpose=document.getElementById('resumptionPurpose');
+    function apply(){
+      const term=(q?.value||'').toLowerCase(), lv=level?.value||'All', pu=purpose?.value||'All', so=sort?.value||'balance_desc';
+      let visible=cards.filter(c=>c.textContent.toLowerCase().includes(term)&&(lv==='All'||c.dataset.level===lv)&&(pu==='All'||c.dataset.purpose===pu));
+      visible.sort((a,b)=>{const ba=+a.dataset.balance,bb=+b.dataset.balance,ua=+a.dataset.util,ub=+b.dataset.util;if(so==='balance_asc')return ba-bb;if(so==='util_desc')return ub-ua;if(so==='util_asc')return ua-ub;return bb-ba});
+      cards.forEach(c=>c.style.display='none');visible.forEach(c=>{c.style.display='';resGrid.appendChild(c)});
+    }
+    [q,level,sort,purpose].forEach(el=>el&&el.addEventListener('input',apply));apply();
+  }
+})();
