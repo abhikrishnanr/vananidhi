@@ -268,3 +268,13 @@ Full workflow recheck update:
 - Reworked budget-hq.html as Budget Estimate - HQ, the HQ direct budget estimate entry/register page.
 - Restored the Kerala district GeoJSON/Leaflet map in HQ Dashboard with district-wise financial demo data.
 - Added HQ menu items for lower-office requests and updated Master Menu / Help.
+
+
+Theme switcher update:
+- Added a top-bar theme switcher near Back to Login and fullscreen controls.
+- Themes included: Forest Dark, Projector Green, Light, and Earth Gold.
+- Projector Green uses brighter greens and lighter input backgrounds for large/darker displays.
+- Light theme uses dark text on light panels and inputs.
+- Earth Gold provides an alternate warm high-contrast display mode.
+- Sidebar overlay in the existing Forest Dark theme was made more transparent so the background image is visible.
+- Inputs, tables, cards, icons, map popups and text colors are theme-aware for better contrast.

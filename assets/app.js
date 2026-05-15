@@ -515,3 +515,30 @@
     });
   });
 })();
+
+
+// VanaNidhi theme switcher
+(function(){
+  const themes = ["forest","projector","light","earth"];
+  const labels = {
+    forest: "Forest Dark",
+    projector: "Projector Green",
+    light: "Light",
+    earth: "Earth Gold"
+  };
+  function applyTheme(value){
+    const theme = themes.includes(value) ? value : "forest";
+    document.body.setAttribute("data-theme", theme);
+    try{ localStorage.setItem("vananidhi-theme", theme); }catch(e){}
+    document.querySelectorAll("[data-theme-select]").forEach(sel=>{ sel.value = theme; });
+  }
+  function init(){
+    const saved = (()=>{ try{return localStorage.getItem("vananidhi-theme");}catch(e){return null;} })();
+    applyTheme(saved || "forest");
+    document.querySelectorAll("[data-theme-select]").forEach(sel=>{
+      sel.addEventListener("change", e=>applyTheme(e.target.value));
+    });
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
