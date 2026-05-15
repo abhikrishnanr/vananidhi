@@ -1,39 +1,172 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | HQ Dashboard</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="state-dashboard.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class="active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
-<div class="nav-group-title collapsed">Menu Explorer</div>
-<a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
-<div class="nav-group-title collapsed">Pre-Budget Activities</div>
-<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-route"></i><span>Workflow Sitemap</span></a>
-<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
-<a href="apo.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
-<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>HQ Budget Estimate</span></a>
-<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
-<div class="nav-group-title collapsed">Budget Allocation Activities</div>
+<div class="nav-group-title collapsed">APO Submissions</div>
+<a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate</span></a>
+<a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
+<a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
+<a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Budget Allocations</div>
 <a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
+<a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
 <a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
-<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
-<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Resumption</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Finance Control</div>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
 <a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
-<div class="nav-group-title collapsed">Post-Budget Tracking</div>
-<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Monitoring & Reports</div>
 <a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
-<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
-<div class="nav-group-title collapsed">Administration</div>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-file-lines"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration & Masters</div>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
 <a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
-<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-gauge-high"></i> HQ Dashboard</h2><small>State-level Budget & Finance Command Centre.</small></div>
+<a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Help</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-gauge-high"></i> HQ Dashboard</h2><small>State-level Budget & Finance Command Centre.</small></div>
 <a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
-<div class="hq-command-page">
+<div class="hq-page">
 <section class="hq-hero">
   <div class="hq-hero-main">
-    <h1>HQ Budget & Finance Command Centre</h1>
-    <p>State-level view for APO approval, Budget Estimate conversion, allocation, resumption, revenue, progress, maps and reports. Designed for quick review meetings without drowning the user in too many cards.</p>
-    <div class="office-actions"><a class="btn" href="apo.html"><i class="fa-solid fa-clipboard-check"></i> Approval Inbox</a><a class="btn secondary" href="budget-hq.html"><i class="fa-solid fa-landmark"></i> Budget Estimate</a><a class="btn secondary" href="hq-resumption.html"><i class="fa-solid fa-rotate-left"></i> Resumption</a><a class="btn secondary" href="master-menu.html"><i class="fa-solid fa-grip"></i> Master Menu</a></div>
+    <h1>Integrated Forest Budget & Finance Management System</h1>
+    <p>HQ command centre for APO approvals, Budget Estimate conversion, allocation control, direct resumption, revenue tracking and progress monitoring across Kerala Forest Department hierarchy.</p>
+    <div class="hq-hero-actions">
+      <a class="btn" href="hq-apo-submissions.html"><i class="fa-solid fa-inbox"></i> Review APO Submissions</a>
+      <a class="btn secondary" href="hq-budget-allocations.html"><i class="fa-solid fa-wallet"></i> Budget Allocation</a>
+      <a class="btn secondary" href="hq-resumption.html"><i class="fa-solid fa-rotate-left"></i> Direct Resumption</a>
+      <a class="btn secondary" href="master-menu.html"><i class="fa-solid fa-grip"></i> Master Menu</a>
+    </div>
   </div>
-  <div class="office-side"><div class="office-note"><h3>HQ Controls</h3><ul><li>APO period and approval governance</li><li>PO Components and Subcomponents</li><li>Budget Estimate and allotment control</li><li>Resumption and reallotment decisions</li></ul></div><div class="office-note"><h3>Current focus</h3><ul><li>42 approvals pending</li><li>₹36.8 Cr balance identified</li><li>9 resumption proposals under review</li></ul></div></div>
+  <div class="hq-hero-side">
+    <div class="hq-priority-card">
+      <h3><i class="fa-solid fa-bell"></i> Today’s Priority</h3>
+      <ul>
+        <li>42 APO submissions waiting for HQ decision</li>
+        <li>₹23.6 Cr remaining in allocation pool</li>
+        <li>5 resumption drafts require final confirmation</li>
+      </ul>
+    </div>
+    <div class="hq-priority-card">
+      <h3><i class="fa-solid fa-building-columns"></i> HQ Authority</h3>
+      <p>HQ approves APOs into Budget Estimates, releases allocations, manages periods, performs direct resumptions and consolidates state-level reports.</p>
+    </div>
+  </div>
 </section>
-<section class="hq-kpi-grid" style="margin-top:14px"><div class="office-kpi"><div class="label">APO Items</div><div class="value">1,284</div><div class="note">Received statewide.</div></div><div class="office-kpi"><div class="label">Approved APOs</div><div class="value">842</div><div class="note">Converted to Budget Estimate.</div></div><div class="office-kpi"><div class="label">Budget Estimate</div><div class="value">₹1,245.8Cr</div><div class="note">Current FY value.</div></div><div class="office-kpi"><div class="label">Revenue Receipts</div><div class="value">₹48.7Cr</div><div class="note">Recorded receipts.</div></div></section>
-<div class="hq-section-title"><div><h2>State Financial View</h2><p>Map, allocation, utilization and resumption signals</p></div></div>
-<section class="hq-map-grid"><div class="hq-card"><h3>Kerala Forest Budget Map</h3><p>District/circle-wise finance view for HQ review.</p><div id="keralaMap" class="map-box"></div></div><div class="hq-map-side"><div class="hq-detail-box"><b>₹1,098.45 Cr</b><small>Total allotment</small></div><div class="hq-detail-box"><b>₹786.32 Cr</b><small>Expenditure recorded</small></div><div class="hq-detail-box"><b>71.58%</b><small>Utilization</small></div><div class="hq-detail-box"><b>₹36.80 Cr</b><small>Balance flagged for resumption</small></div></div></section>
-<section class="hq-graph-grid" style="margin-top:14px"><div class="hq-card card-fullscreen"><div class="card-head"><h3>Budget Allocation by Level</h3><button class="expand-card">⛶</button></div><div class="chart-box"><canvas id="allocationChart"></canvas></div></div><div class="hq-card card-fullscreen"><div class="card-head"><h3>Fund Utilization</h3><button class="expand-card">⛶</button></div><div class="chart-box"><canvas id="fundChart"></canvas></div></div><div class="hq-card card-fullscreen"><div class="card-head"><h3>Revenue Target Achievement</h3><button class="expand-card">⛶</button></div><div class="chart-box"><canvas id="revenueChart"></canvas></div></div><div class="hq-card"><h3>APO Approval Split</h3><div class="simple-bars"><div class="simple-row"><small>Approved</small><div class="simple-track"><div class="simple-fill" style="width:66%"></div></div><div class="simple-value">842</div></div><div class="simple-row"><small>Proposed</small><div class="simple-track"><div class="simple-fill blue" style="width:25%"></div></div><div class="simple-value">318</div></div><div class="simple-row"><small>Returned</small><div class="simple-track"><div class="simple-fill red" style="width:9%"></div></div><div class="simple-value">124</div></div></div></div></section>
-<section class="grid grid-2" style="margin-top:14px"><div class="panel card-fullscreen"><div class="card-head"><h3>Approval Inbox</h3><button class="expand-card">⛶</button></div><div class="timeline"><div class="step"><div class="num">42</div><div><h4>APO items awaiting HQ approval</h4><p>Head validation and component mapping pending.</p></div></div><div class="step"><div class="num">18</div><div><h4>Budget Estimate items</h4><p>Supporting attachments and AS status to be verified.</p></div></div><div class="step"><div class="num">9</div><div><h4>Resumption proposals</h4><p>Balance pull-back decisions under review.</p></div></div></div></div><div class="panel card-fullscreen"><div class="card-head"><h3>Top Offices by Utilization</h3><button class="expand-card">⛶</button></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Rank</th><th>Office</th><th>Allotment</th><th>Expenditure</th><th>Utilization</th></tr></thead><tbody><tr><td>1</td><td>Northern Circle</td><td>₹362.45 Cr</td><td>₹263.23 Cr</td><td>72.48%</td></tr><tr><td>2</td><td>Central Circle</td><td>₹284.10 Cr</td><td>₹198.78 Cr</td><td>69.96%</td></tr><tr><td>3</td><td>Southern Circle</td><td>₹318.65 Cr</td><td>₹214.20 Cr</td><td>67.22%</td></tr></tbody></table></div></div></section>
+
+<section class="hq-kpi-grid">
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-clipboard-check"></i></span><span class="hq-kpi-value">428</span></div><h3>APO Items</h3><p>State-wide APO records in current FY.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="hq-kpi-value">₹86.4Cr</span></div><h3>Budget Pool</h3><p>Approved budget estimate value.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-wallet"></i></span><span class="hq-kpi-value">₹62.8Cr</span></div><h3>Allocated</h3><p>Funds released/allotted.</p></div>
+  <div class="hq-kpi"><div class="hq-kpi-top"><span class="hq-kpi-icon"><i class="fa-solid fa-chart-line"></i></span><span class="hq-kpi-value">72%</span></div><h3>Progress</h3><p>State-level financial progress.</p></div>
+</section>
+
+<div class="hq-section-title">
+  <div><h2>Decision Dashboard</h2><p>Approval, allocation and progress signals in one glance</p></div>
+  <a class="action-link" href="reports.html">Detailed reports</a>
+</div>
+
+<section class="hq-dashboard-grid">
+  <div class="hq-panel">
+    <h3>Budget Utilization</h3>
+    <p>Current state-level budget, allocation and expenditure.</p>
+    <div class="hq-donut-row">
+      <div class="hq-donut">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(247,237,207,.12)" stroke-width="14"></circle>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#f1d37a" stroke-width="14" stroke-linecap="round" stroke-dasharray="217 302"></circle>
+        </svg>
+        <div class="hq-donut-center"><b>72%</b><small>Financial Progress</small></div>
+      </div>
+      <div class="hq-chart-bars">
+        <div class="hq-chart-row"><small>Budget Pool</small><div class="hq-track"><div class="hq-fill" style="width:100%"></div></div><div class="hq-chart-value">₹86.4Cr</div></div>
+        <div class="hq-chart-row"><small>Allocated</small><div class="hq-track"><div class="hq-fill blue" style="width:73%"></div></div><div class="hq-chart-value">₹62.8Cr</div></div>
+        <div class="hq-chart-row"><small>Expenditure</small><div class="hq-track"><div class="hq-fill violet" style="width:44%"></div></div><div class="hq-chart-value">₹37.9Cr</div></div>
+        <div class="hq-chart-row"><small>Balance</small><div class="hq-track"><div class="hq-fill warn" style="width:29%"></div></div><div class="hq-chart-value">₹24.9Cr</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hq-panel">
+    <h3>APO Approval Status</h3>
+    <p>HQ review pipeline for submitted APOs.</p>
+    <div class="hq-chart-bars">
+      <div class="hq-chart-row"><small>Received</small><div class="hq-track"><div class="hq-fill" style="width:100%"></div></div><div class="hq-chart-value">42</div></div>
+      <div class="hq-chart-row"><small>Ready</small><div class="hq-track"><div class="hq-fill blue" style="width:67%"></div></div><div class="hq-chart-value">28</div></div>
+      <div class="hq-chart-row"><small>Clarify</small><div class="hq-track"><div class="hq-fill warn" style="width:21%"></div></div><div class="hq-chart-value">9</div></div>
+      <div class="hq-chart-row"><small>Urgent</small><div class="hq-track"><div class="hq-fill violet" style="width:12%"></div></div><div class="hq-chart-value">5</div></div>
+    </div>
+    <div class="hq-alert-grid" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-top:12px">
+      <div class="hq-alert"><b>Next action</b><p>Approve 28 clean submissions.</p></div>
+      <div class="hq-alert"><b>Watch</b><p>9 submissions need clarification.</p></div>
+    </div>
+  </div>
+
+  <div class="hq-panel">
+    <h3>Kerala Circle Overview</h3>
+    <p>Circle-wise budget signal and geographic monitoring view.</p>
+    <div class="hq-map-grid">
+      <div class="kerala-svg-box">
+        <svg viewBox="0 0 170 320" aria-label="Kerala map overview">
+          <path d="M78 12 C105 44 111 72 101 101 C92 126 113 143 104 171 C98 190 115 210 104 238 C95 264 95 292 78 309 C56 276 55 252 61 230 C68 205 47 188 56 162 C65 136 47 113 58 86 C66 63 55 36 78 12 Z" fill="rgba(121,166,77,.32)" stroke="#ffe7a1" stroke-width="2"/>
+          <circle cx="78" cy="55" r="9" fill="#f1d37a"/><text x="95" y="59" fill="#ffe7a1" font-size="10">Northern</text>
+          <circle cx="74" cy="112" r="9" fill="#64d2ff"/><text x="91" y="116" fill="#ffe7a1" font-size="10">Olavakode</text>
+          <circle cx="78" cy="165" r="9" fill="#c6a7ff"/><text x="96" y="169" fill="#ffe7a1" font-size="10">Central</text>
+          <circle cx="77" cy="221" r="9" fill="#79a64d"/><text x="95" y="225" fill="#ffe7a1" font-size="10">High Range</text>
+          <circle cx="75" cy="275" r="9" fill="#ff9a8a"/><text x="93" y="279" fill="#ffe7a1" font-size="10">Southern</text>
+        </svg>
+      </div>
+      <div class="circle-stat-list">
+        <div class="circle-stat"><div><b>Northern Circle</b><small>APO 86 • Allocation ₹18.4Cr</small></div><span class="status approved">74%</span></div>
+        <div class="circle-stat"><div><b>Olavakode Circle</b><small>APO 92 • Allocation ₹16.2Cr</small></div><span class="status approved">68%</span></div>
+        <div class="circle-stat"><div><b>Central Circle</b><small>APO 74 • Allocation ₹11.9Cr</small></div><span class="status proposed">58%</span></div>
+        <div class="circle-stat"><div><b>High Range Circle</b><small>APO 81 • Allocation ₹13.1Cr</small></div><span class="status approved">71%</span></div>
+        <div class="circle-stat"><div><b>Southern Circle</b><small>APO 95 • Allocation ₹10.6Cr</small></div><span class="status returned">49%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hq-panel">
+    <h3>Finance Control Signals</h3>
+    <p>Resumption, pending bills and revenue alerts for HQ action.</p>
+    <div class="hq-chart-bars">
+      <div class="hq-chart-row"><small>Resumable</small><div class="hq-track"><div class="hq-fill" style="width:65%"></div></div><div class="hq-chart-value">₹31.8Cr</div></div>
+      <div class="hq-chart-row"><small>Resumed</small><div class="hq-track"><div class="hq-fill blue" style="width:18%"></div></div><div class="hq-chart-value">₹8.7Cr</div></div>
+      <div class="hq-chart-row"><small>Pending Bills</small><div class="hq-track"><div class="hq-fill warn" style="width:28%"></div></div><div class="hq-chart-value">₹6.4Cr</div></div>
+      <div class="hq-chart-row"><small>Revenue</small><div class="hq-track"><div class="hq-fill violet" style="width:76%"></div></div><div class="hq-chart-value">76%</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="hq-section-title">
+  <div><h2>HQ Action Centre</h2><p>Fast paths for the most important decisions</p></div>
+</div>
+
+<section class="hq-action-grid">
+  <a class="hq-action-card" href="hq-apo-submissions.html"><span class="tile-icon"><i class="fa-solid fa-inbox"></i></span><b>APO Submission Inbox</b><small>View, approve, reject or return APO submissions.</small></a>
+  <a class="hq-action-card" href="hq-budget-allocations.html"><span class="tile-icon"><i class="fa-solid fa-wallet"></i></span><b>Budget Allocation</b><small>Release approved budget to target offices.</small></a>
+  <a class="hq-action-card" href="hq-resumption.html"><span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span><b>Direct Resumption</b><small>Pull back balance from ranges, divisions or circles.</small></a>
+  <a class="hq-action-card" href="progress.html"><span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span><b>Progress Monitoring</b><small>Track physical and financial progress.</small></a>
+  <a class="hq-action-card" href="reports.html"><span class="tile-icon"><i class="fa-solid fa-file-lines"></i></span><b>Reports & Annexures</b><small>View formats, annexures and summaries.</small></a>
+  <a class="hq-action-card" href="sitemap.html"><span class="tile-icon"><i class="fa-solid fa-circle-question"></i></span><b>Help</b><small>Understand every module and workflow.</small></a>
+</section>
+
+<div class="hq-section-title">
+  <div><h2>Recent HQ Activity</h2><p>Latest decision trail</p></div>
+</div>
+
+<section class="hq-panel record-list-panel">
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Date</th><th>Module</th><th>Reference</th><th>Status</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr data-status="Proposed"><td>15-06-2026</td><td>APO Inbox</td><td>APO-HQ-101 Fire Protection</td><td><span class="status proposed">For Approval</span></td><td><a class="action-link" href="hq-apo-submissions.html">Open</a></td></tr>
+        <tr data-status="Approved"><td>14-06-2026</td><td>Budget Allocation</td><td>ALLOC-HQ-001 Northern Circle</td><td><span class="status approved">Released</span></td><td><a class="action-link" href="hq-budget-allocations.html">View</a></td></tr>
+        <tr data-status="Approved"><td>13-06-2026</td><td>Direct Resumption</td><td>RES-001 Kannur Range</td><td><span class="status approved">Completed</span></td><td><a class="action-link" href="hq-resumption-requests.html">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 </div>
 <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

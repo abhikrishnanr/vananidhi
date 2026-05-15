@@ -241,3 +241,12 @@ HQ Direct Resumption correction:
 - Redesigned hq-resumption.html with tabs for From Ranges, From Divisions and From Circles.
 - Added pull-back modal with amount validation and remaining balance calculation.
 - Added read-only Resumption Details pages for Range, Division and Circle offices.
+
+
+HQ menu/dashboard/help rework:
+- Reorganized HQ menu into APO Submissions, Budget Allocations, Finance Control, Monitoring & Reports, Administration & Masters, and Help.
+- Added separate APO Submission Inbox with approve/reject/return actions and status registers.
+- Added separate Budget Allocation and Allotment Register modules.
+- Redesigned HQ dashboard into a richer but concise graph-led command centre with icons, KPI cards, Kerala circle overview and action centre.
+- Completely redesigned Master Menu by workflow category.
+- Redesigned sitemap as Help with project-wide categorized explanations for HQ, Range, Division and Circle modules.

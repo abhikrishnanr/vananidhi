@@ -1,28 +1,161 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Master Menu</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="master-menu.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
-<div class="nav-group-title collapsed">Menu Explorer</div>
-<a href="master-menu.html" class="active menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
-<div class="nav-group-title collapsed">Pre-Budget Activities</div>
-<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-route"></i><span>Workflow Sitemap</span></a>
-<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
-<a href="apo.html" class="menu-collapsed"><i class="fa-solid fa-clipboard-list"></i><span>APO Workspace</span></a>
-<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>HQ Budget Estimate</span></a>
-<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
-<div class="nav-group-title collapsed">Budget Allocation Activities</div>
+<div class="nav-group-title collapsed">APO Submissions</div>
+<a href="hq-apo-submissions.html" class="menu-collapsed"><i class="fa-solid fa-inbox"></i><span>APO Inbox</span></a>
+<a href="budget-hq.html" class="menu-collapsed"><i class="fa-solid fa-landmark"></i><span>Budget Estimate</span></a>
+<a href="hq-apo-period.html" class="menu-collapsed"><i class="fa-solid fa-calendar-days"></i><span>APO Period Management</span></a>
+<a href="hq-apo-approved.html" class="menu-collapsed"><i class="fa-solid fa-circle-check"></i><span>Approved APOs</span></a>
+<a href="hq-apo-rejected.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Rejected / Returned APOs</span></a>
+<div class="nav-group-title collapsed">Budget Allocations</div>
 <a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
+<a href="hq-budget-allocations.html" class="menu-collapsed"><i class="fa-solid fa-wallet"></i><span>Budget Allocation</span></a>
+<a href="hq-allotment-register.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Allotment Register</span></a>
 <a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
-<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
-<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Resumption</span></a>
+<a href="performance-budget.html" class="menu-collapsed"><i class="fa-solid fa-chart-pie"></i><span>Performance Budget</span></a>
+<div class="nav-group-title collapsed">Finance Control</div>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Direct Resumption</span></a>
 <a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
-<div class="nav-group-title collapsed">Post-Budget Tracking</div>
-<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
+<div class="nav-group-title collapsed">Monitoring & Reports</div>
 <a href="progress.html" class="menu-collapsed"><i class="fa-solid fa-chart-line"></i><span>Progress Monitoring</span></a>
-<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
-<div class="nav-group-title collapsed">Administration</div>
+<a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
+<a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-file-lines"></i><span>Reports & Annexures</span></a>
+<div class="nav-group-title collapsed">Administration & Masters</div>
+<a href="hierarchy.html" class="menu-collapsed"><i class="fa-solid fa-sitemap"></i><span>Hierarchy View</span></a>
 <a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
-<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-grip"></i> Master Menu</h2><small>Searchable HQ module control panel.</small></div>
-<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><div class="hq-menu-page"><section class="hq-menu-hero"><h1>Master Menu</h1><p>A redesigned HQ control panel grouping all major modules by how officers actually work: command, pre-budget, allocation, funds, monitoring, reports and role-specific dashboards.</p><div class="hq-menu-search"><input id="hqMasterSearch" placeholder="Search modules, APO, budget, resumption, reports, revenue, masters..."><a class="btn secondary" href="state-dashboard.html"><i class="fa-solid fa-gauge-high"></i> HQ Dashboard</a></div><a class="master-tile" href="hq-resumption.html">
-  <div><span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span><b>Direct Resumption</b><small>HQ Finance Control</small></div>
+<a href="master-menu.html" class="active menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a>
+<div class="nav-group-title collapsed">Help</div>
+<a href="sitemap.html" class="menu-collapsed"><i class="fa-solid fa-circle-question"></i><span>Help</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-grip"></i> Master Menu</h2><small>Searchable HQ module control panel.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="hq-page">
+<h1 class="serif page-title gold-text">Master Menu</h1>
+<p class="page-sub">A searchable module control panel for HQ and role-based demos. Modules are grouped by real workflow: APO decisions, allocation, finance control, monitoring, role dashboards and help.</p>
+
+<section class="master-search">
+  <input id="masterMenuSearch" placeholder="Search module, role, budget, APO, allotment, resumption, reports...">
+  <a href="state-dashboard.html" class="btn secondary"><i class="fa-solid fa-gauge-high"></i> HQ Dashboard</a>
+</section>
+
+<section class="hq-module-group">
+  <h2>HQ Dashboard & Decisions</h2>
+  <p>HQ landing and executive decision modules.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="state-dashboard.html">
+  <span class="tile-icon"><i class="fa-solid fa-gauge-high"></i></span>
+  <span><b>HQ Dashboard</b><small>State command centre with graphs and decision cards.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hq-apo-submissions.html">
+  <span class="tile-icon"><i class="fa-solid fa-inbox"></i></span>
+  <span><b>APO Inbox</b><small>Approve, reject or return APO submissions.</small></span>
+</a><a class="hq-menu-tile master-tile" href="budget-hq.html">
+  <span class="tile-icon"><i class="fa-solid fa-landmark"></i></span>
+  <span><b>Budget Estimate</b><small>Approved APOs become Budget Estimate at HQ.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hq-apo-period.html">
+  <span class="tile-icon"><i class="fa-solid fa-calendar-days"></i></span>
+  <span><b>APO Period Management</b><small>Manage submission and approval windows.</small></span>
 </a>
-<a class="master-tile" href="hq-resumption-requests.html">
-  <div><span class="tile-icon"><i class="fa-solid fa-list-check"></i></span><b>Resumption Requests</b><small>HQ Finance Control</small></div>
-</a></section><section class="hq-module-section"><h2>Command & Navigation</h2><div class="hq-module-grid"><a class="hq-module-tile" href="state-dashboard.html"><div><span class="tile-icon"><i class="fa-solid fa-gauge-high"></i></span><b>HQ Dashboard</b><small>State command centre</small></div></a><a class="hq-module-tile" href="sitemap.html"><div><span class="tile-icon"><i class="fa-solid fa-route"></i></span><b>Workflow Sitemap</b><small>Client story and workflow</small></div></a><a class="hq-module-tile" href="hierarchy.html"><div><span class="tile-icon"><i class="fa-solid fa-sitemap"></i></span><b>Hierarchy View</b><small>Forest office hierarchy</small></div></a><a class="hq-module-tile" href="role-login.html"><div><span class="tile-icon"><i class="fa-solid fa-right-to-bracket"></i></span><b>Office Login</b><small>Role-wise login screens</small></div></a></div></section><section class="hq-module-section"><h2>Pre-Budget</h2><div class="hq-module-grid"><a class="hq-module-tile" href="apo.html"><div><span class="tile-icon"><i class="fa-solid fa-clipboard-list"></i></span><b>APO Workspace</b><small>APO approval workspace</small></div></a><a class="hq-module-tile" href="budget-hq.html"><div><span class="tile-icon"><i class="fa-solid fa-landmark"></i></span><b>HQ Budget Estimate</b><small>Approved APO to Budget Estimate</small></div></a><a class="hq-module-tile" href="performance-budget.html"><div><span class="tile-icon"><i class="fa-solid fa-chart-pie"></i></span><b>Performance Budget</b><small>Formats and annexures</small></div></a><a class="hq-module-tile" href="budget-heads.html"><div><span class="tile-icon"><i class="fa-solid fa-book"></i></span><b>Budget Heads</b><small>Plan and Non-Plan heads</small></div></a></div></section><section class="hq-module-section"><h2>Allocation & Funds</h2><div class="hq-module-grid"><a class="hq-module-tile" href="funds-bills.html"><div><span class="tile-icon"><i class="fa-solid fa-vault"></i></span><b>Funds & Pending Bills</b><small>Funds and bills</small></div></a><a class="hq-module-tile" href="revenue.html"><div><span class="tile-icon"><i class="fa-solid fa-receipt"></i></span><b>Revenue / eTreasury</b><small>Revenue tracking</small></div></a><a class="hq-module-tile" href="hq-resumption.html"><div><span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span><b>Resumption</b><small>Pull back balances</small></div></a><a class="hq-module-tile" href="hq-resumption-requests.html"><div><span class="tile-icon"><i class="fa-solid fa-list-check"></i></span><b>Resumption Requests</b><small>Submitted resumption proposals</small></div></a></div></section><section class="hq-module-section"><h2>Monitoring & Reports</h2><div class="hq-module-grid"><a class="hq-module-tile" href="forestry-works.html"><div><span class="tile-icon"><i class="fa-solid fa-helmet-safety"></i></span><b>Forestry Works</b><small>Works monitoring</small></div></a><a class="hq-module-tile" href="progress.html"><div><span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span><b>Progress Monitoring</b><small>Physical and financial progress</small></div></a><a class="hq-module-tile" href="reports.html"><div><span class="tile-icon"><i class="fa-solid fa-table-list"></i></span><b>Reports & Annexures</b><small>Reports and annexures</small></div></a><a class="hq-module-tile" href="masters-admin.html"><div><span class="tile-icon"><i class="fa-solid fa-gears"></i></span><b>Masters & Admin</b><small>Master setup</small></div></a></div></section><section class="hq-module-section"><h2>Role Dashboards</h2><div class="hq-module-grid"><a class="hq-module-tile" href="range-dashboard.html"><div><span class="tile-icon"><i class="fa-solid fa-tree"></i></span><b>Range Dashboard</b><small>Range office UX</small></div></a><a class="hq-module-tile" href="division-dashboard.html"><div><span class="tile-icon"><i class="fa-solid fa-building"></i></span><b>Division Dashboard</b><small>Division office UX</small></div></a><a class="hq-module-tile" href="circle-dashboard.html"><div><span class="tile-icon"><i class="fa-solid fa-circle-nodes"></i></span><b>Circle Dashboard</b><small>Circle office UX</small></div></a><a class="hq-module-tile" href="master-menu.html"><div><span class="tile-icon"><i class="fa-solid fa-grip"></i></span><b>Master Menu</b><small>Current page</small></div></a></div></section></div><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
+  </div>
+</section>
+
+<section class="hq-module-group">
+  <h2>Budget Allocation</h2>
+  <p>Budget head, allocation and allotment controls.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="budget-heads.html">
+  <span class="tile-icon"><i class="fa-solid fa-book"></i></span>
+  <span><b>Budget Heads</b><small>Plan and Non-Plan head register.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hq-budget-allocations.html">
+  <span class="tile-icon"><i class="fa-solid fa-wallet"></i></span>
+  <span><b>Budget Allocation</b><small>Release funds to offices.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hq-allotment-register.html">
+  <span class="tile-icon"><i class="fa-solid fa-table-list"></i></span>
+  <span><b>Allotment Register</b><small>Track allotment, expenditure and balance.</small></span>
+</a><a class="hq-menu-tile master-tile" href="performance-budget.html">
+  <span class="tile-icon"><i class="fa-solid fa-chart-pie"></i></span>
+  <span><b>Performance Budget</b><small>Performance budget formats and reports.</small></span>
+</a><a class="hq-menu-tile master-tile" href="funds-bills.html">
+  <span class="tile-icon"><i class="fa-solid fa-vault"></i></span>
+  <span><b>Funds & Pending Bills</b><small>Fund and pending bill tracking.</small></span>
+</a>
+  </div>
+</section>
+
+<section class="hq-module-group">
+  <h2>Finance Control</h2>
+  <p>Revenue, resumption and financial controls.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="hq-resumption.html">
+  <span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span>
+  <span><b>Direct Resumption</b><small>HQ pull-back of available balances.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hq-resumption-requests.html">
+  <span class="tile-icon"><i class="fa-solid fa-list-check"></i></span>
+  <span><b>Resumption Requests</b><small>Register of HQ pull-back actions.</small></span>
+</a><a class="hq-menu-tile master-tile" href="revenue.html">
+  <span class="tile-icon"><i class="fa-solid fa-receipt"></i></span>
+  <span><b>Revenue / eTreasury</b><small>Revenue and treasury integration view.</small></span>
+</a>
+  </div>
+</section>
+
+<section class="hq-module-group">
+  <h2>Monitoring & Reports</h2>
+  <p>Progress, works, reports and geography.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="progress.html">
+  <span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span>
+  <span><b>Progress Monitoring</b><small>Physical and financial progress.</small></span>
+</a><a class="hq-menu-tile master-tile" href="forestry-works.html">
+  <span class="tile-icon"><i class="fa-solid fa-helmet-safety"></i></span>
+  <span><b>Forestry Works</b><small>Works and implementation tracking.</small></span>
+</a><a class="hq-menu-tile master-tile" href="reports.html">
+  <span class="tile-icon"><i class="fa-solid fa-file-lines"></i></span>
+  <span><b>Reports & Annexures</b><small>Reports, annexures and print views.</small></span>
+</a><a class="hq-menu-tile master-tile" href="hierarchy.html">
+  <span class="tile-icon"><i class="fa-solid fa-sitemap"></i></span>
+  <span><b>Hierarchy View</b><small>Kerala Forest hierarchy drill-down.</small></span>
+</a>
+  </div>
+</section>
+
+<section class="hq-module-group">
+  <h2>Office Role Dashboards</h2>
+  <p>Role-wise user experiences for lower offices.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="range-dashboard.html">
+  <span class="tile-icon"><i class="fa-solid fa-tree"></i></span>
+  <span><b>Range Dashboard</b><small>Range office command centre.</small></span>
+</a><a class="hq-menu-tile master-tile" href="division-dashboard.html">
+  <span class="tile-icon"><i class="fa-solid fa-building"></i></span>
+  <span><b>Division Dashboard</b><small>Division office review and own APO tracking.</small></span>
+</a><a class="hq-menu-tile master-tile" href="circle-dashboard.html">
+  <span class="tile-icon"><i class="fa-solid fa-circle-nodes"></i></span>
+  <span><b>Circle Dashboard</b><small>Circle review, approval and own APO tracking.</small></span>
+</a><a class="hq-menu-tile master-tile" href="range-resumption-details.html">
+  <span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span>
+  <span><b>Range Resumption Details</b><small>Read-only resumption details for Range.</small></span>
+</a><a class="hq-menu-tile master-tile" href="division-resumption-details.html">
+  <span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span>
+  <span><b>Division Resumption Details</b><small>Read-only resumption details for Division.</small></span>
+</a><a class="hq-menu-tile master-tile" href="circle-resumption-details.html">
+  <span class="tile-icon"><i class="fa-solid fa-rotate-left"></i></span>
+  <span><b>Circle Resumption Details</b><small>Read-only resumption details for Circle.</small></span>
+</a>
+  </div>
+</section>
+
+<section class="hq-module-group">
+  <h2>Administration & Help</h2>
+  <p>Masters, user access and guidance.</p>
+  <div class="hq-menu-grid">
+<a class="hq-menu-tile master-tile" href="masters-admin.html">
+  <span class="tile-icon"><i class="fa-solid fa-gears"></i></span>
+  <span><b>Masters & Admin</b><small>Master data and admin controls.</small></span>
+</a><a class="hq-menu-tile master-tile" href="role-login.html">
+  <span class="tile-icon"><i class="fa-solid fa-right-to-bracket"></i></span>
+  <span><b>Office Login</b><small>Role login switchboard.</small></span>
+</a><a class="hq-menu-tile master-tile" href="sitemap.html">
+  <span class="tile-icon"><i class="fa-solid fa-circle-question"></i></span>
+  <span><b>Help</b><small>Complete project help and page map.</small></span>
+</a>
+  </div>
+</section>
+</div><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
