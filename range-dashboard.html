@@ -100,92 +100,90 @@
   </div>
 </section>
 
-<div class="range-section-title">
-  <div><h2>Workflow Map</h2><p>Simple view of the Range Office journey</p></div>
-</div>
-
-<section class="workflow-ribbon">
-  <div class="workflow-step-card">
-    <div class="step-no">1</div>
-    <h4>Prepare APO</h4>
-    <p>Enter Plan/Non-Plan details, notes, AS status where applicable and attachments.</p>
-  </div>
-  <div class="workflow-step-card">
-    <div class="step-no">2</div>
-    <h4>Submit Action Plan</h4>
-    <p>Submit action plan request for review and downstream processing.</p>
-  </div>
-  <div class="workflow-step-card">
-    <div class="step-no">3</div>
-    <h4>Track Allotment</h4>
-    <p>Review head-wise allotment, component details, expenditure and balance.</p>
-  </div>
-  <div class="workflow-step-card">
-    <div class="step-no">4</div>
-    <h4>Progress Updation</h4>
-    <p>Update physical and financial progress against approved APO activities.</p>
-  </div>
-  <div class="workflow-step-card">
-    <div class="step-no">5</div>
-    <h4>Post-Budget Requests</h4>
-    <p>Submit wage fund request or surrender unutilized balance.</p>
-  </div>
-</section>
 
 <div class="range-section-title">
-  <div><h2>Operational Workbench</h2><p>Most-used Range modules</p></div>
+  <div><h2>Dashboard Analytics</h2><p>Graphs and details for quick reading</p></div>
+  <a class="action-link" href="reports.html">Open Reports</a>
 </div>
 
-<section class="range-two-col">
-  <div class="panel card-fullscreen">
-    <div class="card-head"><h3>Primary Actions</h3><button class="expand-card">⛶</button></div>
-    <div class="range-action-list">
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-file-pen"></i></span>
-        <div><b>APO Entry</b><small>Create or update Plan / Non-Plan APO entries.</small></div>
-        <a class="action-link" href="range-budget.html">Open</a>
+<section class="range-graph-grid">
+  <div class="range-graph-card">
+    <h3>Financial Utilization</h3>
+    <p>Shows how much of the current allotment has been spent and how much balance is still available.</p>
+    <div class="dashboard-chart-row">
+      <div class="donut-wrap">
+        <svg viewBox="0 0 120 120" aria-label="financial utilization donut">
+          <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(247,237,207,.12)" stroke-width="14"></circle>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#f1d37a" stroke-width="14" stroke-linecap="round" stroke-dasharray="176 302"></circle>
+        </svg>
+        <div class="donut-center"><b>58%</b><small>Utilized</small></div>
       </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-clipboard-check"></i></span>
-        <div><b>Submit Action Plan</b><small>Submit the Range action plan request.</small></div>
-        <a class="action-link" href="range-action-plan.html">Open</a>
-      </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-chart-line"></i></span>
-        <div><b>Progress Updation</b><small>Update physical and financial progress.</small></div>
-        <a class="action-link" href="range-progress.html">Open</a>
-      </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-bullseye"></i></span>
-        <div><b>Revenue Target</b><small>Review and update revenue target achievement.</small></div>
-        <a class="action-link" href="range-revenue.html">Open</a>
+      <div class="chart-bars">
+        <div class="chart-bar-row"><small>Allotment</small><div class="chart-track"><div class="chart-fill" style="width:100%"></div></div><div class="chart-value">₹67.45L</div></div>
+        <div class="chart-bar-row"><small>Expenditure</small><div class="chart-track"><div class="chart-fill blue" style="width:58%"></div></div><div class="chart-value">₹39.30L</div></div>
+        <div class="chart-bar-row"><small>Balance</small><div class="chart-track"><div class="chart-fill green" style="width:42%"></div></div><div class="chart-value">₹28.15L</div></div>
+        <div class="chart-bar-row"><small>Surrender</small><div class="chart-track"><div class="chart-fill violet" style="width:19%"></div></div><div class="chart-value">₹12.75L</div></div>
       </div>
     </div>
   </div>
 
-  <div class="panel card-fullscreen">
-    <div class="card-head"><h3>Fund & Balance Actions</h3><button class="expand-card">⛶</button></div>
-    <div class="range-action-list">
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-wallet"></i></span>
-        <div><b>Allotment Details</b><small>Head-wise allotment, component details and balance.</small></div>
-        <a class="action-link" href="range-allocation.html">Open</a>
-      </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-        <div><b>Surrender Entry</b><small>Review balance and submit surrender from components.</small></div>
-        <a class="action-link" href="range-surrender.html">Open</a>
-      </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-list-check"></i></span>
-        <div><b>Surrender Requests</b><small>View submitted surrender requests and status.</small></div>
-        <a class="action-link" href="range-surrender-list.html">Open</a>
-      </div>
-      <div class="range-action-item">
-        <span class="action-icon"><i class="fa-solid fa-file-excel"></i></span>
-        <div><b>Wage Distribution Fund Request</b><small>Upload Excel, preview and submit wage fund request.</small></div>
-        <a class="action-link" href="range-wages.html">Open</a>
-      </div>
+  <div class="range-graph-card">
+    <h3>APO Status Distribution</h3>
+    <p>Compact view of proposed, approved and returned APO records for the selected financial year.</p>
+    <div class="stacked-bar" aria-label="APO status stacked bar">
+      <div class="stack-proposed" style="width:56%"></div>
+      <div class="stack-approved" style="width:34%"></div>
+      <div class="stack-returned" style="width:10%"></div>
+    </div>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="stack-proposed"></span>Proposed<b>28</b></div>
+      <div class="legend-item"><span class="stack-approved"></span>Approved<b>17</b></div>
+      <div class="legend-item"><span class="stack-returned"></span>Returned<b>5</b></div>
+    </div>
+    <div class="range-detail-grid">
+      <div class="range-detail-box"><b>50</b><small>Total APO Items</small></div>
+      <div class="range-detail-box"><b>34%</b><small>Approval Share</small></div>
+      <div class="range-detail-box"><b>10%</b><small>Return Share</small></div>
+      <div class="range-detail-box"><b>3</b><small>Priority Corrections</small></div>
+    </div>
+  </div>
+
+  <div class="range-graph-card">
+    <h3>Monthly Physical & Financial Progress</h3>
+    <p>Six-month trend comparing physical progress with financial expenditure progress.</p>
+    <div class="dashboard-svg-chart">
+      <svg viewBox="0 0 620 200" preserveAspectRatio="none">
+        <line x1="40" y1="160" x2="600" y2="160" stroke="rgba(247,237,207,.22)" stroke-width="1"/>
+        <line x1="40" y1="120" x2="600" y2="120" stroke="rgba(247,237,207,.12)" stroke-width="1"/>
+        <line x1="40" y1="80" x2="600" y2="80" stroke="rgba(247,237,207,.12)" stroke-width="1"/>
+        <line x1="40" y1="40" x2="600" y2="40" stroke="rgba(247,237,207,.12)" stroke-width="1"/>
+        <polyline points="40,148 150,132 260,118 370,98 480,76 590,64" fill="none" stroke="#f1d37a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="40,154 150,145 260,132 370,112 480,92 590,84" fill="none" stroke="#64d2ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#ffe7a1" font-size="13">
+          <text x="32" y="184">Apr</text><text x="142" y="184">May</text><text x="252" y="184">Jun</text><text x="362" y="184">Jul</text><text x="472" y="184">Aug</text><text x="582" y="184">Sep</text>
+        </g>
+        <g fill="rgba(247,237,207,.72)" font-size="13">
+          <text x="410" y="28">Physical</text><text x="505" y="28">Financial</text>
+        </g>
+        <circle cx="395" cy="23" r="5" fill="#f1d37a"/><circle cx="490" cy="23" r="5" fill="#64d2ff"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="range-graph-card">
+    <h3>Revenue and Post-Budget Requests</h3>
+    <p>Quick comparison of revenue target achievement and pending fund/balance actions.</p>
+    <div class="chart-bars">
+      <div class="chart-bar-row"><small>Revenue</small><div class="chart-track"><div class="chart-fill" style="width:72%"></div></div><div class="chart-value">72%</div></div>
+      <div class="chart-bar-row"><small>Wage Fund</small><div class="chart-track"><div class="chart-fill blue" style="width:40%"></div></div><div class="chart-value">5 req.</div></div>
+      <div class="chart-bar-row"><small>Surrender</small><div class="chart-track"><div class="chart-fill violet" style="width:32%"></div></div><div class="chart-value">8 req.</div></div>
+      <div class="chart-bar-row"><small>Prior AS</small><div class="chart-track"><div class="chart-fill green" style="width:52%"></div></div><div class="chart-value">13</div></div>
+    </div>
+    <div class="range-detail-grid">
+      <div class="range-detail-box"><b>₹8.92L</b><small>Revenue Achieved</small></div>
+      <div class="range-detail-box"><b>₹1.29L</b><small>Latest Wage Request</small></div>
+      <div class="range-detail-box"><b>₹12.75L</b><small>Surrender Value</small></div>
+      <div class="range-detail-box"><b>3</b><small>Pending Prior AS</small></div>
     </div>
   </div>
 </section>

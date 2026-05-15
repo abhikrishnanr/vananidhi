@@ -228,3 +228,8 @@ Range Dashboard redesign:
 - Rebuilt range-dashboard.html into a concise command-centre layout.
 - Added clear hero summary, role responsibility notes, APO pipeline, financial snapshot, workflow map, operational workbench, attention alerts and recent activity.
 - Kept links to all major Range modules: APO Entry, Submit Action Plan, Progress Updation, Allotment, Surrender, Wage Fund Request and Revenue Target.
+
+
+Range Dashboard graph update:
+- Removed Workflow Map and Operational Workbench sections.
+- Added Dashboard Analytics with utilization donut, APO status distribution, monthly progress trend graph, revenue/request bars and detail boxes.
