@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | Resumption</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="hq-resumption.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class=""><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VanaNidhi | HQ Direct Resumption</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/d3@7"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700;800&family=Noto+Serif+Malayalam:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="stylesheet" href="assets/app.css"/><script src="assets/map-data.js"></script><script src="assets/budget-data.js"></script></head><body data-page="hq-resumption.html"><div class="scrim" id="scrim"></div><div class="layout"><aside class="sidebar" id="sidebar"><div class="sidebar-scroll"><div class="brand"><img src="assets/vananidhi-mark.svg" alt="VanaNidhi"><h1 class="serif gold-text">VanaNidhi</h1><p class="malayalam">വനനിധി</p><p style="font-size:12px;color:rgba(247,237,207,.72);margin-top:8px">HQ / State Level User</p></div><nav class="nav"><a href="state-dashboard.html" class="active"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
 <div class="nav-group-title collapsed">Menu Explorer</div>
 <a href="master-menu.html" class="menu-collapsed"><i class="fa-solid fa-grip"></i><span>Master Menu</span></a>
 <div class="nav-group-title collapsed">Pre-Budget Activities</div>
@@ -11,7 +11,7 @@
 <a href="budget-heads.html" class="menu-collapsed"><i class="fa-solid fa-book"></i><span>Budget Heads</span></a>
 <a href="funds-bills.html" class="menu-collapsed"><i class="fa-solid fa-vault"></i><span>Funds & Pending Bills</span></a>
 <a href="revenue.html" class="menu-collapsed"><i class="fa-solid fa-receipt"></i><span>Revenue / eTreasury</span></a>
-<a href="hq-resumption.html" class="active menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Resumption</span></a>
+<a href="hq-resumption.html" class="menu-collapsed"><i class="fa-solid fa-rotate-left"></i><span>Resumption</span></a>
 <a href="hq-resumption-requests.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Resumption Requests</span></a>
 <div class="nav-group-title collapsed">Post-Budget Tracking</div>
 <a href="forestry-works.html" class="menu-collapsed"><i class="fa-solid fa-helmet-safety"></i><span>Forestry Works</span></a>
@@ -19,11 +19,419 @@
 <a href="reports.html" class="menu-collapsed"><i class="fa-solid fa-table-list"></i><span>Reports & Annexures</span></a>
 <div class="nav-group-title collapsed">Administration</div>
 <a href="masters-admin.html" class="menu-collapsed"><i class="fa-solid fa-gears"></i><span>Masters & Admin</span></a>
-<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-rotate-left"></i> Resumption</h2><small>Pull back balances through Range-Division-Circle-HQ hierarchy.</small></div>
-<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><div class="resumption-page"><h1 class="serif page-title gold-text">Resumption</h1><p class="page-sub">HQ module to pull back unused balance from Range offices to Divisions, from Divisions to Circles, and if needed from Circles to HQ for reallotment or taking back.</p><section class="resumption-hierarchy"><div class="resumption-level"><h3>Range</h3><p>Unutilized component balance identified at Range level.</p></div><div class="resumption-level"><h3>Division</h3><p>Division verifies and pulls back from Range.</p></div><div class="resumption-level"><h3>Circle</h3><p>Circle consolidates division balances if required.</p></div><div class="resumption-level"><h3>HQ</h3><p>HQ resumes funds for reallotment or take-back.</p></div></section><section class="panel card-fullscreen" style="margin-top:14px"><div class="card-head"><h3>Balance Sources for Resumption</h3><button class="expand-card">⛶</button></div><div class="resumption-filter"><input id="resumptionSearch" placeholder="Search office, head or component"><select id="resumptionLevel"><option>All</option><option>Range</option><option>Division</option><option>Circle</option></select><select id="resumptionSort"><option value="balance_desc">Balance High to Low</option><option value="balance_asc">Balance Low to High</option><option value="util_desc">Utilization High to Low</option><option value="util_asc">Utilization Low to High</option></select><select id="resumptionPurpose"><option>All</option><option>Reallotment</option><option>Take Back</option></select><a class="btn secondary" href="hq-resumption-requests.html">Requests</a></div><div class="resumption-card-grid" data-resumption-grid><div class="resumption-card" data-resumption-card data-level="Range" data-purpose="Reallotment" data-balance="5.8" data-util="58">
-<h4>Kannur Range</h4><p>Range level balance identified under 2406-01-101-81 - Fire Protection.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹5.80L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:58%"></div></div><div class="simple-value">58%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Range</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Reallotment</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>2406-01-101-81</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Kannur%20Range">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div><div class="resumption-card" data-resumption-card data-level="Range" data-purpose="Take Back" data-balance="7.6" data-util="49">
-<h4>Mannarkad Range</h4><p>Range level balance identified under 4406-01-070-99 - Road Maintenance.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹7.60L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:49%"></div></div><div class="simple-value">49%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Range</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Take Back</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>4406-01-070-99</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Mannarkad%20Range">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div><div class="resumption-card" data-resumption-card data-level="Division" data-purpose="Reallotment" data-balance="12.4" data-util="42">
-<h4>Wayanad South Division</h4><p>Division level balance identified under 2406-01-800-56 - Conflict Mitigation.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹12.40L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:42%"></div></div><div class="simple-value">42%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Division</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Reallotment</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>2406-01-800-56</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Wayanad%20South%20Division">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div><div class="resumption-card" data-resumption-card data-level="Division" data-purpose="Take Back" data-balance="9.8" data-util="63">
-<h4>Nilambur North Division</h4><p>Division level balance identified under 2406-02-110-68 - Habitat Support.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹9.80L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:63%"></div></div><div class="simple-value">63%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Division</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Take Back</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>2406-02-110-68</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Nilambur%20North%20Division">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div><div class="resumption-card" data-resumption-card data-level="Circle" data-purpose="Reallotment" data-balance="18.25" data-util="35">
-<h4>Northern Circle</h4><p>Circle level balance identified under 2406-01-001-NP - Office Support.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹18.25L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:35%"></div></div><div class="simple-value">35%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Circle</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Reallotment</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>2406-01-001-NP</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Northern%20Circle">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div><div class="resumption-card" data-resumption-card data-level="Circle" data-purpose="Take Back" data-balance="22.1" data-util="55">
-<h4>Southern Circle</h4><p>Circle level balance identified under 4406-01-070-99 - Roads.</p><div class="simple-bars"><div class="simple-row"><small>Balance</small><div class="simple-track"><div class="simple-fill" style="width:100%"></div></div><div class="simple-value">₹22.10L</div></div><div class="simple-row"><small>Utilization</small><div class="simple-track"><div class="simple-fill blue" style="width:55%"></div></div><div class="simple-value">55%</div></div></div><div class="surrender-head-meta" style="margin-top:10px"><div class="surrender-mini-stat"><b>Circle</b><small>Source Level</small></div><div class="surrender-mini-stat"><b>Take Back</b><small>Purpose</small></div><div class="surrender-mini-stat"><b>4406-01-070-99</b><small>Head</small></div><div class="surrender-mini-stat"><b>Open</b><small>Status</small></div></div><div class="action-row" style="margin-top:12px"><a class="action-link" href="hq-resumption-chain.html?office=Southern%20Circle">Open Chain</a><a class="action-link" href="#">Pull Back</a></div></div></div></section></div><div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>
+<a href="role-login.html" class="menu-collapsed"><i class="fa-solid fa-right-to-bracket"></i><span>Office Login</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-rotate-left"></i> HQ Direct Resumption</h2><small>Direct pull-back of available balance by HQ.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="resumption-page">
+<h1 class="serif page-title gold-text">HQ Direct Resumption</h1>
+<p class="page-sub">HQ is the fund owner and can directly pull back available balances from Range, Division or Circle level. This is used to reallot funds to other components or take back unutilized balance. No chain workflow is required.</p>
+
+<section class="grid grid-4">
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-building-columns"></i></span><span class="kpi-count">HQ</span></div><h3>Resumption Power</h3><p>Direct pull-back by HQ only.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-wallet"></i></span><span class="kpi-count">₹ 568.40 L</span></div><h3>Total Allotment</h3><p>Across listed sources.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-invoice"></i></span><span class="kpi-count">₹ 413.40 L</span></div><h3>Expenditure</h3><p>Recorded expenditure.</p></div>
+  <div class="panel clean-kpi-card"><div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-rotate-left"></i></span><span class="kpi-count">₹ 155.00 L</span></div><h3>Available Balance</h3><p>Available for direct resumption.</p></div>
+</section>
+
+<section class="panel card-fullscreen" style="margin-top:14px">
+  <div class="card-head"><h3>Choose Source Level</h3><button class="expand-card">⛶</button></div>
+  <div class="resumption-tabs">
+    <button class="resumption-tab active" data-resumption-tab="ranges"><i class="fa-solid fa-tree"></i> From Ranges</button>
+    <button class="resumption-tab" data-resumption-tab="divisions"><i class="fa-solid fa-building"></i> From Divisions</button>
+    <button class="resumption-tab" data-resumption-tab="circles"><i class="fa-solid fa-circle-nodes"></i> From Circles</button>
+  </div>
+
+  <div class="resumption-tab-panel active" data-resumption-panel="ranges">
+    
+<div class="resumption-filter-bar">
+  <input data-resumption-search placeholder="Search range, head, component or amount">
+  <select data-resumption-type><option>All</option><option>Plan</option><option>Non Plan</option></select>
+  <select data-resumption-sort><option value="balance_desc">Balance High to Low</option><option value="balance_asc">Balance Low to High</option><option value="util_desc">Utilization High to Low</option><option value="util_asc">Utilization Low to High</option><option value="name">Name</option></select>
+  <select data-resumption-balance><option>All</option><option>High</option><option>Medium</option><option>Low</option></select>
+  <a class="btn secondary" href="hq-resumption-requests.html"><i class="fa-solid fa-list-check"></i> Requests</a>
+</div>
+    <div class="resumption-source-grid" data-resumption-grid>
+<div class="resumption-source-card" data-resumption-card data-name="Kannur Range Fire Protection" data-head-type="Plan" data-balance="5.80" data-util="71.00">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Kannur Range</h4>
+      <p>Northern Circle / Kannur Division<br>2406-01-101-81 • Fire Protection</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 24.50 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:81.6%"></div></div><div class="resumption-value">₹ 20.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:71.0%"></div></div><div class="resumption-value">₹ 14.20 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:29.0%"></div></div><div class="resumption-value">₹ 5.80 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 24.50 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 20.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 14.20 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 5.80 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Kannur Range" data-office="Kannur Range" data-head="2406-01-101-81 - Fire Protection" data-balance="₹ 5.80 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Kannur-Range"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Mannarkad Range Habitat Support" data-head-type="Plan" data-balance="7.80" data-util="53.01">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Mannarkad Range</h4>
+      <p>Olavakode Circle / Mannarkad Division<br>2406-02-110-68 • Habitat Support</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 19.70 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:84.3%"></div></div><div class="resumption-value">₹ 16.60 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:53.0%"></div></div><div class="resumption-value">₹ 8.80 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:47.0%"></div></div><div class="resumption-value">₹ 7.80 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 19.70 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 16.60 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 8.80 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 7.80 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Mannarkad Range" data-office="Mannarkad Range" data-head="2406-02-110-68 - Habitat Support" data-balance="₹ 7.80 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Mannarkad-Range"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Ranni Range Road Maintenance" data-head-type="Plan" data-balance="7.60" data-util="48.65">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Ranni Range</h4>
+      <p>Southern Circle / Ranni Division<br>4406-01-070-99 • Road Maintenance</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 18.60 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:79.6%"></div></div><div class="resumption-value">₹ 14.80 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:48.6%"></div></div><div class="resumption-value">₹ 7.20 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:51.4%"></div></div><div class="resumption-value">₹ 7.60 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 18.60 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 14.80 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 7.20 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 7.60 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Ranni Range" data-office="Ranni Range" data-head="4406-01-070-99 - Road Maintenance" data-balance="₹ 7.60 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Ranni-Range"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Nemmara Range Office Expenses" data-head-type="Non Plan" data-balance="2.90" data-util="57.35">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Nemmara Range</h4>
+      <p>Olavakode Circle / Nemmara Division<br>2406-01-001-NP • Office Expenses</p>
+    </div>
+    <span class="source-badge">Non Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 8.50 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:80.0%"></div></div><div class="resumption-value">₹ 6.80 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:57.4%"></div></div><div class="resumption-value">₹ 3.90 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:42.6%"></div></div><div class="resumption-value">₹ 2.90 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 8.50 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 6.80 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 3.90 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 2.90 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Nemmara Range" data-office="Nemmara Range" data-head="2406-01-001-NP - Office Expenses" data-balance="₹ 2.90 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Nemmara-Range"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div></div>
+  </div>
+  <div class="resumption-tab-panel" data-resumption-panel="divisions">
+    
+<div class="resumption-filter-bar">
+  <input data-resumption-search placeholder="Search division, head, component or amount">
+  <select data-resumption-type><option>All</option><option>Plan</option><option>Non Plan</option></select>
+  <select data-resumption-sort><option value="balance_desc">Balance High to Low</option><option value="balance_asc">Balance Low to High</option><option value="util_desc">Utilization High to Low</option><option value="util_asc">Utilization Low to High</option><option value="name">Name</option></select>
+  <select data-resumption-balance><option>All</option><option>High</option><option>Medium</option><option>Low</option></select>
+  <a class="btn secondary" href="hq-resumption-requests.html"><i class="fa-solid fa-list-check"></i> Requests</a>
+</div>
+    <div class="resumption-source-grid" data-resumption-grid>
+<div class="resumption-source-card" data-resumption-card data-name="Kannur Division Conflict Mitigation" data-head-type="Plan" data-balance="10.60" data-util="66.88">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Kannur Division</h4>
+      <p>Northern Circle<br>2406-01-800-56 • Conflict Mitigation</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 42.00 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:76.2%"></div></div><div class="resumption-value">₹ 32.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:66.9%"></div></div><div class="resumption-value">₹ 21.40 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:33.1%"></div></div><div class="resumption-value">₹ 10.60 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 42.00 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 32.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 21.40 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 10.60 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Kannur Division" data-office="Kannur Division" data-head="2406-01-800-56 - Conflict Mitigation" data-balance="₹ 10.60 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Kannur-Division"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Wayanad South Division Eco-restoration" data-head-type="Plan" data-balance="13.60" data-util="53.42">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Wayanad South Division</h4>
+      <p>Northern Circle<br>2406-02-110-68 • Eco-restoration</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 36.50 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:80.0%"></div></div><div class="resumption-value">₹ 29.20 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:53.4%"></div></div><div class="resumption-value">₹ 15.60 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:46.6%"></div></div><div class="resumption-value">₹ 13.60 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 36.50 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 29.20 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 15.60 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 13.60 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Wayanad South Division" data-office="Wayanad South Division" data-head="2406-02-110-68 - Eco-restoration" data-balance="₹ 13.60 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Wayanad-South-Division"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Malayattur Division Roads" data-head-type="Plan" data-balance="5.30" data-util="78.80">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Malayattur Division</h4>
+      <p>Central Circle<br>4406-01-070-99 • Roads</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 31.80 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:78.6%"></div></div><div class="resumption-value">₹ 25.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:78.8%"></div></div><div class="resumption-value">₹ 19.70 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:21.2%"></div></div><div class="resumption-value">₹ 5.30 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 31.80 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 25.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 19.70 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 5.30 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Malayattur Division" data-office="Malayattur Division" data-head="4406-01-070-99 - Roads" data-balance="₹ 5.30 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Malayattur-Division"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Thenmala Division Routine Support" data-head-type="Non Plan" data-balance="3.70" data-util="63.00">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Thenmala Division</h4>
+      <p>Southern Circle<br>2406-01-001-NP • Routine Support</p>
+    </div>
+    <span class="source-badge">Non Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 12.40 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:80.6%"></div></div><div class="resumption-value">₹ 10.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:63.0%"></div></div><div class="resumption-value">₹ 6.30 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:37.0%"></div></div><div class="resumption-value">₹ 3.70 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 12.40 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 10.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 6.30 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 3.70 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Thenmala Division" data-office="Thenmala Division" data-head="2406-01-001-NP - Routine Support" data-balance="₹ 3.70 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Thenmala-Division"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div></div>
+  </div>
+  <div class="resumption-tab-panel" data-resumption-panel="circles">
+    
+<div class="resumption-filter-bar">
+  <input data-resumption-search placeholder="Search circle, head, component or amount">
+  <select data-resumption-type><option>All</option><option>Plan</option><option>Non Plan</option></select>
+  <select data-resumption-sort><option value="balance_desc">Balance High to Low</option><option value="balance_asc">Balance Low to High</option><option value="util_desc">Utilization High to Low</option><option value="util_asc">Utilization Low to High</option><option value="name">Name</option></select>
+  <select data-resumption-balance><option>All</option><option>High</option><option>Medium</option><option>Low</option></select>
+  <a class="btn secondary" href="hq-resumption-requests.html"><i class="fa-solid fa-list-check"></i> Requests</a>
+</div>
+    <div class="resumption-source-grid" data-resumption-grid>
+<div class="resumption-source-card" data-resumption-card data-name="Northern Circle Forest Protection" data-head-type="Plan" data-balance="30.50" data-util="78.52">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Northern Circle</h4>
+      <p>State HQ<br>2406-01-101-81 • Forest Protection</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 180.00 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:78.9%"></div></div><div class="resumption-value">₹ 142.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:78.5%"></div></div><div class="resumption-value">₹ 111.50 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:21.5%"></div></div><div class="resumption-value">₹ 30.50 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 180.00 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 142.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 111.50 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 30.50 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Northern Circle" data-office="Northern Circle" data-head="2406-01-101-81 - Forest Protection" data-balance="₹ 30.50 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Northern-Circle"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Olavakode Circle Habitat Support" data-head-type="Plan" data-balance="31.70" data-util="75.23">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Olavakode Circle</h4>
+      <p>State HQ<br>2406-02-110-68 • Habitat Support</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 162.00 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:79.0%"></div></div><div class="resumption-value">₹ 128.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:75.2%"></div></div><div class="resumption-value">₹ 96.30 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:24.8%"></div></div><div class="resumption-value">₹ 31.70 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 162.00 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 128.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 96.30 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 31.70 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Olavakode Circle" data-office="Olavakode Circle" data-head="2406-02-110-68 - Habitat Support" data-balance="₹ 31.70 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Olavakode-Circle"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Central Circle Roads" data-head-type="Plan" data-balance="23.90" data-util="72.21">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Central Circle</h4>
+      <p>State HQ<br>4406-01-070-99 • Roads</p>
+    </div>
+    <span class="source-badge">Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 104.00 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:82.7%"></div></div><div class="resumption-value">₹ 86.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:72.2%"></div></div><div class="resumption-value">₹ 62.10 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:27.8%"></div></div><div class="resumption-value">₹ 23.90 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 104.00 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 86.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 62.10 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 23.90 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Central Circle" data-office="Central Circle" data-head="4406-01-070-99 - Roads" data-balance="₹ 23.90 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Central-Circle"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div>
+
+<div class="resumption-source-card" data-resumption-card data-name="Southern Circle Administrative Support" data-head-type="Non Plan" data-balance="11.60" data-util="80.00">
+  <div class="resumption-source-top">
+    <div>
+      <h4>Southern Circle</h4>
+      <p>State HQ<br>2406-01-001-NP • Administrative Support</p>
+    </div>
+    <span class="source-badge">Non Plan</span>
+  </div>
+  
+<div class="resumption-chart">
+  <div class="resumption-chart-row"><small>Budget</small><div class="resumption-track"><div class="resumption-fill" style="width:100%"></div></div><div class="resumption-value">₹ 72.00 L</div></div>
+  <div class="resumption-chart-row"><small>Allotment</small><div class="resumption-track"><div class="resumption-fill allotment" style="width:80.6%"></div></div><div class="resumption-value">₹ 58.00 L</div></div>
+  <div class="resumption-chart-row"><small>Expenditure</small><div class="resumption-track"><div class="resumption-fill exp" style="width:80.0%"></div></div><div class="resumption-value">₹ 46.40 L</div></div>
+  <div class="resumption-chart-row"><small>Balance</small><div class="resumption-track"><div class="resumption-fill balance" style="width:20.0%"></div></div><div class="resumption-value">₹ 11.60 L</div></div>
+</div>
+  <div class="resumption-meta-grid">
+    <div class="resumption-meta"><b>₹ 72.00 L</b><small>Budget</small></div>
+    <div class="resumption-meta"><b>₹ 58.00 L</b><small>Allotment</small></div>
+    <div class="resumption-meta"><b>₹ 46.40 L</b><small>Expenditure</small></div>
+    <div class="resumption-meta"><b>₹ 11.60 L</b><small>Available</small></div>
+  </div>
+  <div class="action-row">
+    <button class="action-link" data-open-resumption-modal data-title="Resume from Southern Circle" data-office="Southern Circle" data-head="2406-01-001-NP - Administrative Support" data-balance="₹ 11.60 L"><i class="fa-solid fa-rotate-left"></i> Pull Back</button>
+    <a class="action-link" href="record-details.html?src=hq-resumption.html&id=Southern-Circle"><i class="fa-solid fa-eye"></i> View</a>
+  </div>
+</div></div>
+  </div>
+</section>
+
+<section class="panel card-fullscreen record-list-panel" style="margin-top:14px">
+  <div class="card-head"><h3>Recent Direct Resumptions</h3><button class="expand-card">⛶</button></div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Request</th><th>Source</th><th>Head</th><th>Amount Pulled Back</th><th>Purpose</th><th>Status</th><th>View</th></tr></thead>
+      <tbody>
+        <tr data-status="Approved"><td>RES-001</td><td>Kannur Range</td><td>2406-01-101-81</td><td>₹ 1.20 L</td><td>Reallotment to fire protection component</td><td><span class="status approved">Completed</span></td><td><a class="action-link" href="hq-resumption-requests.html">View</a></td></tr>
+        <tr data-status="Proposed"><td>RES-002</td><td>Northern Circle</td><td>2406-01-101-81</td><td>₹ 8.00 L</td><td>HQ pool take-back</td><td><span class="status proposed">Draft</span></td><td><a class="action-link" href="hq-resumption-requests.html">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+
+<div class="resumption-modal-backdrop" id="resumptionModalBackdrop">
+  <div class="resumption-modal">
+    <div class="resumption-modal-header">
+      <div><h3 id="resumptionModalTitle">Direct Resumption</h3><p id="resumptionModalSource">Source</p></div>
+      <button class="modal-close" data-close-resumption-modal><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="form-grid">
+      <div class="field"><label>Available Balance</label><input id="resumptionAvailableBalance" value="₹ 0.00 L" readonly></div>
+      <div class="field"><label>Amount to Pull Back</label><input id="resumptionPullAmount" placeholder="Enter amount in lakhs"></div>
+      <div class="field"><label>Balance After Pull-back</label><input id="resumptionRemainingBalance" value="₹ 0.00 L" readonly></div>
+      <div class="field"><label>Resumption Purpose</label><select><option>Reallot to other component</option><option>Take back to HQ pool</option><option>Emergency reallocation</option><option>Administrative correction</option></select></div>
+      <div class="field" style="grid-column:1/-1"><label>Remarks</label><textarea>HQ direct resumption from available balance. This amount will be pulled back to upper office / HQ pool for reallotment or take-back.</textarea></div>
+    </div>
+    <div class="resumption-result-hero">
+      <div class="resumption-result-item"><b id="resumptionHeroAvailable">₹ 0.00 L</b><small>Available Balance</small></div>
+      <div class="resumption-result-item"><b id="resumptionHeroPull">₹ 0.00 L</b><small>Pull-back Amount</small></div>
+      <div class="resumption-result-item"><b id="resumptionHeroRemaining">₹ 0.00 L</b><small>Remaining at Source</small></div>
+      <div class="resumption-result-item"><b id="resumptionHeroTarget">HQ Pool</b><small>Upper Office</small></div>
+    </div>
+    <div class="calc-note" id="resumptionStatus" style="margin-top:12px"><b>Status:</b> Enter amount to pull back.</div>
+    <div class="calc-note" style="margin-top:8px"><b>Validation rule:</b> Pull-back amount cannot be greater than available balance.</div>
+    <button class="btn" id="resumptionSubmitBtn" style="margin-top:12px" disabled><i class="fa-solid fa-paper-plane"></i> Submit Direct Resumption</button>
+  </div>
+</div>
+<div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

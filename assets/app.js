@@ -349,3 +349,106 @@
     [q,level,sort,purpose].forEach(el=>el&&el.addEventListener('input',apply));apply();
   }
 })();
+
+
+// HQ direct resumption tabs, filters and modal
+(function(){
+  const tabs = Array.from(document.querySelectorAll('[data-resumption-tab]'));
+  if(tabs.length){
+    tabs.forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        const key = tab.dataset.resumptionTab;
+        tabs.forEach(t=>t.classList.toggle('active', t === tab));
+        document.querySelectorAll('[data-resumption-panel]').forEach(panel=>{
+          panel.classList.toggle('active', panel.dataset.resumptionPanel === key);
+        });
+      });
+    });
+  }
+
+  function setupGrid(panel){
+    const grid = panel.querySelector('[data-resumption-grid]');
+    if(!grid) return;
+    const search = panel.querySelector('[data-resumption-search]');
+    const sort = panel.querySelector('[data-resumption-sort]');
+    const type = panel.querySelector('[data-resumption-type]');
+    const balanceFilter = panel.querySelector('[data-resumption-balance]');
+    const cards = Array.from(grid.querySelectorAll('[data-resumption-card]'));
+    function apply(){
+      const q = (search?.value || '').toLowerCase();
+      const s = sort?.value || 'balance_desc';
+      const t = type?.value || 'All';
+      const bf = balanceFilter?.value || 'All';
+      let visible = cards.filter(card=>{
+        const bal = Number(card.dataset.balance || 0);
+        const okQ = card.textContent.toLowerCase().includes(q);
+        const okType = t === 'All' || card.dataset.headType === t;
+        const okBal = bf === 'All' || (bf === 'High' && bal >= 5) || (bf === 'Medium' && bal >= 2 && bal < 5) || (bf === 'Low' && bal < 2);
+        return okQ && okType && okBal;
+      });
+      visible.sort((a,b)=>{
+        const balA = Number(a.dataset.balance || 0), balB = Number(b.dataset.balance || 0);
+        const utilA = Number(a.dataset.util || 0), utilB = Number(b.dataset.util || 0);
+        if(s === 'balance_asc') return balA - balB;
+        if(s === 'util_desc') return utilB - utilA;
+        if(s === 'util_asc') return utilA - utilB;
+        if(s === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+        return balB - balA;
+      });
+      cards.forEach(c=>c.style.display='none');
+      visible.forEach(c=>{c.style.display='';grid.appendChild(c);});
+    }
+    [search,sort,type,balanceFilter].forEach(el=>el && el.addEventListener('input', apply));
+    apply();
+  }
+  document.querySelectorAll('[data-resumption-panel]').forEach(setupGrid);
+
+  const modal = document.getElementById('resumptionModalBackdrop');
+  if(!modal) return;
+  const title = document.getElementById('resumptionModalTitle');
+  const source = document.getElementById('resumptionModalSource');
+  const available = document.getElementById('resumptionAvailableBalance');
+  const pull = document.getElementById('resumptionPullAmount');
+  const remaining = document.getElementById('resumptionRemainingBalance');
+  const heroAvailable = document.getElementById('resumptionHeroAvailable');
+  const heroPull = document.getElementById('resumptionHeroPull');
+  const heroRemaining = document.getElementById('resumptionHeroRemaining');
+  const heroTarget = document.getElementById('resumptionHeroTarget');
+  const status = document.getElementById('resumptionStatus');
+  const submit = document.getElementById('resumptionSubmitBtn');
+
+  function parseVal(v){return Number(String(v||'').replace(/[^\d.]/g,'')||0);}
+  function fmt(n){return '₹ ' + n.toFixed(2) + ' L';}
+  function calc(){
+    const bal = parseVal(available?.value);
+    const amt = parseVal(pull?.value);
+    const rem = Math.max(bal - amt, 0);
+    if(remaining) remaining.value = fmt(rem);
+    if(heroAvailable) heroAvailable.textContent = fmt(bal);
+    if(heroPull) heroPull.textContent = fmt(amt);
+    if(heroRemaining) heroRemaining.textContent = fmt(rem);
+    if(heroTarget) heroTarget.textContent = 'HQ Pool';
+    const invalid = amt <= 0 || amt > bal;
+    if(status){
+      if(amt <= 0) status.innerHTML = '<b>Status:</b> Enter amount to pull back.';
+      else if(amt > bal) status.innerHTML = '<b>Status:</b> Pull-back amount cannot exceed available balance.';
+      else status.innerHTML = '<b>Status:</b> Valid pull-back amount. HQ can resume this balance directly.';
+    }
+    if(submit){submit.disabled = invalid; submit.style.opacity = invalid ? '.45' : '1'; submit.style.cursor = invalid ? 'not-allowed' : 'pointer';}
+    if(pull){pull.style.borderColor = amt > bal ? '#ff9a8a' : 'rgba(214,173,69,.35)';}
+  }
+  document.querySelectorAll('[data-open-resumption-modal]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const d = btn.dataset;
+      if(title) title.textContent = d.title || 'Direct Resumption';
+      if(source) source.textContent = (d.office || '') + ' • ' + (d.head || '');
+      if(available) available.value = d.balance || '₹ 0.00 L';
+      if(pull) pull.value = '';
+      calc();
+      modal.classList.add('open');
+    });
+  });
+  pull?.addEventListener('input', calc);
+  modal.querySelectorAll('[data-close-resumption-modal]').forEach(btn=>btn.addEventListener('click',()=>modal.classList.remove('open')));
+  modal.addEventListener('click',e=>{if(e.target===modal) modal.classList.remove('open');});
+})();

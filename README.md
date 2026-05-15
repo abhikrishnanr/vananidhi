@@ -233,3 +233,11 @@ Range Dashboard redesign:
 Range Dashboard graph update:
 - Removed Workflow Map and Operational Workbench sections.
 - Added Dashboard Analytics with utilization donut, APO status distribution, monthly progress trend graph, revenue/request bars and detail boxes.
+
+
+HQ Direct Resumption correction:
+- Removed chain workflow concept.
+- HQ resumption is now direct pull-back from Range, Division or Circle balances.
+- Redesigned hq-resumption.html with tabs for From Ranges, From Divisions and From Circles.
+- Added pull-back modal with amount validation and remaining balance calculation.
+- Added read-only Resumption Details pages for Range, Division and Circle offices.
