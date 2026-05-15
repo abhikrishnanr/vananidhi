@@ -304,3 +304,26 @@
   input.addEventListener('input', calc);
   calc();
 })();
+
+
+// Surrender heads sorting/filtering and component surrender modal
+(function(){
+ const grid=document.querySelector('[data-surrender-head-grid]');
+ const search=document.getElementById('surrenderHeadSearch'), typeFilter=document.getElementById('surrenderHeadTypeFilter'), sortSelect=document.getElementById('surrenderHeadSort'), utilFilter=document.getElementById('surrenderUtilFilter');
+ if(grid){
+  const cards=Array.from(grid.querySelectorAll('[data-head-card]'));
+  function apply(){
+   const q=(search?.value||'').toLowerCase(), type=typeFilter?.value||'All', util=utilFilter?.value||'All', sort=sortSelect?.value||'balance_desc';
+   let visible=cards.filter(c=>{const u=Number(c.dataset.utilization||0);return c.textContent.toLowerCase().includes(q)&&(type==='All'||c.dataset.headType===type)&&(util==='All'||(util==='High'&&u>=70)||(util==='Medium'&&u>=40&&u<70)||(util==='Low'&&u<40));});
+   visible.sort((a,b)=>{const ba=Number(a.dataset.balance||0),bb=Number(b.dataset.balance||0),ua=Number(a.dataset.utilization||0),ub=Number(b.dataset.utilization||0); if(sort==='balance_asc')return ba-bb; if(sort==='util_desc')return ub-ua; if(sort==='util_asc')return ua-ub; if(sort==='name')return a.dataset.name.localeCompare(b.dataset.name); return bb-ba;});
+   cards.forEach(c=>c.style.display='none'); visible.forEach(c=>{c.style.display='';grid.appendChild(c);});
+  }
+  [search,typeFilter,sortSelect,utilFilter].forEach(el=>el&&el.addEventListener('input',apply)); apply();
+ }
+ const modal=document.getElementById('surrenderModalBackdrop'); if(!modal)return;
+ const title=document.getElementById('modalComponentTitle'), head=document.getElementById('modalComponentHead'), balInput=document.getElementById('modalAvailableBalance'), surrenderInput=document.getElementById('modalSurrenderAmount'), remainingInput=document.getElementById('modalRemainingBalance'), heroAvailable=document.getElementById('heroAvailableBalance'), heroSurrender=document.getElementById('heroSurrenderAmount'), heroRemaining=document.getElementById('heroRemainingBalance'), status=document.getElementById('modalSurrenderStatus'), submitBtn=document.getElementById('modalSurrenderSubmit');
+ function parseVal(v){return Number(String(v||'').replace(/[^\d.]/g,'')||0)} function fmt(n){return '₹ '+n.toFixed(2)+' L'}
+ function calc(){const bal=parseVal(balInput?.value),sur=parseVal(surrenderInput?.value),rem=Math.max(bal-sur,0); if(remainingInput)remainingInput.value=fmt(rem); if(heroAvailable)heroAvailable.textContent=fmt(bal); if(heroSurrender)heroSurrender.textContent=fmt(sur); if(heroRemaining)heroRemaining.textContent=fmt(rem); if(status)status.innerHTML=sur<=0?'<b>Status:</b> Enter surrender amount.':(sur>bal?'<b>Status:</b> Surrender amount exceeds available balance. Please enter an amount within the available balance.':'<b>Status:</b> Remaining balance calculated. Ready to submit.'); if(submitBtn){const invalid=sur<=0||sur>bal; submitBtn.disabled=invalid; submitBtn.style.opacity=invalid?'.45':'1'; submitBtn.style.cursor=invalid?'not-allowed':'pointer';} if(surrenderInput){surrenderInput.style.borderColor=(sur>bal)?'#ff9a8a':'rgba(214,173,69,.35)';}}
+ document.querySelectorAll('[data-open-surrender-modal]').forEach(btn=>btn.addEventListener('click',()=>{const d=btn.dataset;if(title)title.textContent=d.component||'Component';if(head)head.textContent=d.head||'';if(balInput)balInput.value=d.balance||'0';if(surrenderInput)surrenderInput.value='';calc();modal.classList.add('open');}));
+ surrenderInput?.addEventListener('input',calc); modal.querySelectorAll('[data-close-modal]').forEach(btn=>btn.addEventListener('click',()=>modal.classList.remove('open'))); modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+})();

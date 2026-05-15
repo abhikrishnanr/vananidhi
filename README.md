@@ -200,3 +200,18 @@ Range Surrender Amount module:
 - Added surrender request form with balance to be surrendered and automatic remaining balance calculation.
 - Added Surrender Request Register with status and view/correct links.
 - Added Range menu and Master Menu links.
+
+
+Surrender workflow split update:
+- Split surrender module into Surrender Entry and Surrender Requests pages.
+- Surrender Requests page shows submitted-data infographics at top.
+- Surrender Entry page shows head cards with prominent search/filter/sort controls for balance and utilization.
+- Each head opens a separate component page.
+- Each component has a Surrender button opening a modal with amount-to-surrender entry and remaining balance calculation infographic.
+
+
+Surrender modal validation and global layout fix:
+- Added validation so surrender amount cannot be more than available balance.
+- Modal submit button remains disabled until a valid surrender amount is entered.
+- Rebuilt FY bar placement across all pages so content is not trapped inside the FY row.
+- Added global layout hardening so headings, page content and footer stay full-width and bottom-aligned.

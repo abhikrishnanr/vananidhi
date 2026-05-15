@@ -1537,3 +1537,64 @@ body[data-page^="range-allocation-component-"] .grid.grid-2{
   .surrender-chart-row{grid-template-columns:1fr}
   .surrender-value{text-align:left}
 }
+
+
+/* Surrender split workflow */
+.surrender-filter-bar{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:10px;margin-bottom:14px}
+.surrender-filter-bar input,.surrender-filter-bar select{width:100%;border:1px solid rgba(214,173,69,.35);border-radius:12px;background:rgba(4,18,12,.55);color:var(--cream);padding:10px 12px;outline:none}
+.surrender-head-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.surrender-head-card,.component-surrender-card{display:flex;flex-direction:column;gap:12px;border:1px solid rgba(214,173,69,.40);background:linear-gradient(145deg,rgba(13,60,41,.80),rgba(5,22,15,.94));border-radius:20px;padding:16px;min-width:0;transition:.18s ease}
+.surrender-head-card:hover,.component-surrender-card:hover{transform:translateY(-3px);border-color:rgba(255,231,161,.75)}
+.surrender-head-card h4{margin:0;color:#ffe7a1;font-size:17px}.surrender-head-card p{margin:4px 0 0;color:rgba(247,237,207,.68);font-size:12px;line-height:1.45}
+.surrender-head-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.surrender-mini-stat{border:1px solid rgba(214,173,69,.24);background:rgba(214,173,69,.08);border-radius:12px;padding:8px}.surrender-mini-stat b{display:block;color:#ffe7a1;font-size:13px}.surrender-mini-stat small{color:rgba(247,237,207,.58);font-size:10px}
+.surrender-util-badge{display:inline-flex;width:max-content;gap:6px;align-items:center;border:1px solid rgba(214,173,69,.36);background:rgba(214,173,69,.10);color:#ffe7a1;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900}
+.surrender-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);display:none;align-items:center;justify-content:center;padding:18px;z-index:999}.surrender-modal-backdrop.open{display:flex}.surrender-modal{width:min(760px,100%);max-height:90vh;overflow:auto;border:1px solid rgba(214,173,69,.58);border-radius:24px;background:linear-gradient(145deg,rgba(9,45,31,.98),rgba(4,18,12,.98));box-shadow:0 24px 80px rgba(0,0,0,.55);padding:18px}
+.surrender-modal-header{display:flex;justify-content:space-between;gap:14px;margin-bottom:14px}.surrender-modal-header h3{margin:0;color:#ffe7a1}.surrender-modal-header p{margin:4px 0 0;color:rgba(247,237,207,.66)}.modal-close{border:1px solid rgba(214,173,69,.38);background:rgba(214,173,69,.10);color:#ffe7a1;border-radius:12px;padding:8px 10px;cursor:pointer}
+.surrender-result-hero{border:1px solid rgba(241,211,122,.52);background:linear-gradient(135deg,rgba(214,173,69,.18),rgba(4,18,12,.48));border-radius:18px;padding:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.surrender-result-item{border:1px solid rgba(214,173,69,.28);border-radius:14px;padding:12px;background:rgba(4,18,12,.22)}.surrender-result-item b{display:block;color:#ffe7a1;font-size:22px;font-family:"Noto Serif",serif;line-height:1.1}.surrender-result-item small{color:rgba(247,237,207,.64);font-size:11px}
+.surrender-list-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:1100px){.surrender-filter-bar{grid-template-columns:1fr 1fr}.surrender-head-grid-2,.surrender-list-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.surrender-filter-bar,.surrender-head-grid-2,.surrender-list-kpis,.surrender-result-hero{grid-template-columns:1fr}.surrender-head-meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Global FY/header/footer alignment hardening */
+.main{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+}
+.main > .topbar,
+.main > .fy-bar,
+.main > .footer{
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+.main > .footer{
+  position:static!important;
+  float:none!important;
+  clear:both!important;
+  display:block!important;
+  text-align:center!important;
+  margin-top:22px!important;
+}
+.main > h1,
+.main > .surrender-page,
+.main > .range-allocation-page,
+.main > .allocation-page,
+.main > section,
+.main > .grid,
+.main > .panel{
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+.fy-bar{
+  flex-wrap:wrap;
+}
+@media(max-width:760px){
+  .main > .fy-bar{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+  }
+}
