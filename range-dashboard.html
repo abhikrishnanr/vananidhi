@@ -11,83 +11,217 @@
 <a href="prior-as-request.html" class="menu-collapsed"><i class="fa-solid fa-file-signature"></i><span>New Prior AS Request</span></a>
 <a href="prior-as-list.html" class="menu-collapsed"><i class="fa-solid fa-list-check"></i><span>Prior AS Request List</span></a>
 <div class="nav-group-title collapsed">Account</div>
-<a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-gauge-high"></i> Range Dashboard</h2><small>Range Office APO and tracking dashboard.</small></div>
-<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div><label>Financial Year <select><option>2026-27</option><option>2025-26</option><option>2024-25</option></select></label></div>
-<h1 class="serif page-title gold-text">Range Office Dashboard</h1>
-<p class="page-sub">Range Office dashboard for APO preparation, approved APO tracking, progress updation, allocation details and revenue target monitoring.</p>
-
-<section class="grid grid-3">
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>APO Proposed</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-file-circle-plus"></i></span><span class="kpi-count">28</span></div>
-    <p>Draft/submitted APOs waiting for review.</p>
-    <div class="story-links"><a href="range-apo-proposed.html">View Proposed</a></div>
-  </div>
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>APO Approved</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-circle-check"></i></span><span class="kpi-count">17</span></div>
-    <p>Approved APOs ready for allocation and progress tracking.</p>
-    <div class="story-links"><a href="range-apo-approved.html">View Approved</a></div>
-  </div>
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>APO Returned</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-rotate-left"></i></span><span class="kpi-count">5</span></div>
-    <p>Returned APOs requiring correction and resubmission.</p>
-    <div class="story-links"><a href="range-apo-returned.html">View Returned</a></div>
-  </div>
-</section>
-
-<section class="grid grid-4" style="margin-top:14px">
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>APO Queue</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-list-check"></i></span><span class="kpi-count">50</span></div>
-    <p>Total APO items in Range workflow.</p>
-  </div>
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>Physical Progress</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-chart-simple"></i></span><span class="kpi-count">68%</span></div>
-    <p>Physical achievement updated for approved APOs.</p>
-    <div class="story-links"><a href="range-progress.html">Update</a></div>
-  </div>
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>Financial Progress</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="kpi-count">₹48.6L</span></div>
-    <p>Expenditure entered by Range Office.</p>
-    <div class="story-links"><a href="range-progress.html">View</a></div>
-  </div>
-  <div class="panel clean-kpi-card card-fullscreen">
-    <div class="card-head"><h3>Revenue Target</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi-top"><span class="kpi-icon"><i class="fa-solid fa-bullseye"></i></span><span class="kpi-count">₹12.4L</span></div>
-    <p>Annual revenue target assigned to this Range.</p>
-    <div class="story-links"><a href="range-revenue.html">View</a></div>
-  </div>
-</section>
-
-<section class="grid grid-2" style="margin-top:14px">
-  <div class="panel card-fullscreen">
-    <div class="card-head"><h3>Approved APOs</h3><button class="expand-card">⛶</button></div>
-    <div class="table-wrap">
-      <table class="data-table">
-        <thead><tr><th>APO ID</th><th>Activity</th><th>Approval Date</th><th>Next Action</th></tr></thead>
-        <tbody>
-          <tr><td>APO-R-014</td><td>Anti-poaching camp support</td><td>12-06-2026</td><td><a class="action-link" href="range-progress.html">Progress Updation</a></td></tr>
-          <tr><td>APO-R-019</td><td>Fire watch tower repair</td><td>18-06-2026</td><td><a class="action-link" href="range-allocation.html">Allocation View</a></td></tr>
-          <tr><td>APO-R-021</td><td>Fire line maintenance</td><td>20-06-2026</td><td><a class="action-link" href="range-allocation.html">Allocation View</a></td></tr>
-        </tbody>
-      </table>
+<a href="login-range.html" class="menu-collapsed"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></nav></div></aside><main class="main"><div class="topbar"><button class="icon-btn menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button><div style="flex:1"><h2 class="serif gold-text"><i class="fa-solid fa-tree"></i> Range Dashboard</h2><small>Concise Range Office command centre.</small></div>
+<a href="index.html" class="top-login-btn"><i class="fa-solid fa-right-to-bracket"></i><span>Back to Login</span></a><button class="icon-btn" id="fullScreenBtn">⛶</button></div><div class="fy-bar"><div class="fy-chip"><i class="fa-solid fa-calendar-days"></i><span>Working Financial Year</span></div>
+<div class="range-command-page">
+<section class="range-hero">
+  <div class="range-hero-main">
+    <h1>Range Office Dashboard</h1>
+    <p>A compact working console for the Range Office: prepare APO entries, view approved APOs, track allotment and expenditure, update progress, request wage funds, surrender unutilized balance and monitor revenue target.</p>
+    <div class="range-quick-actions">
+      <a class="btn" href="range-budget.html"><i class="fa-solid fa-file-circle-plus"></i> Create APO Entry</a>
+      <a class="btn secondary" href="range-allocation.html"><i class="fa-solid fa-wallet"></i> View Allotment</a>
+      <a class="btn secondary" href="range-surrender.html"><i class="fa-solid fa-arrow-up-from-bracket"></i> Surrender Entry</a>
+      <a class="btn secondary" href="range-wages.html"><i class="fa-solid fa-file-excel"></i> Wage Fund Request</a>
     </div>
   </div>
+  <div class="range-hero-side">
+    <div class="range-role-card">
+      <h3><i class="fa-solid fa-circle-info"></i> What this office can do</h3>
+      <ul>
+        <li>Submit APO data and supporting documents</li>
+        <li>View approved APOs and allotment details</li>
+        <li>Update physical/financial progress</li>
+        <li>Submit wage fund and surrender requests</li>
+      </ul>
+    </div>
+    <div class="range-role-card">
+      <h3><i class="fa-solid fa-shield-halved"></i> Responsibility Note</h3>
+      <ul>
+        <li>PO Components and Subcomponents are handled by HQ</li>
+        <li>Range can submit/correct APOs, not approve them</li>
+        <li>Forwarding starts from Division level onwards</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="range-section-title">
+  <div><h2>APO Pipeline</h2><p>Current preparation and correction status</p></div>
+  <a class="action-link" href="range-apo-proposed.html">Open APO Lists</a>
+</div>
+
+<section class="range-status-grid">
+  <div class="range-status-card">
+    <div class="range-status-top"><span class="range-status-icon"><i class="fa-solid fa-file-circle-plus"></i></span><span class="range-status-value">28</span></div>
+    <h3>Proposed APOs</h3>
+    <p>Draft/submitted APOs waiting for higher-office review.</p>
+    <a class="action-link" href="range-apo-proposed.html"><i class="fa-solid fa-arrow-right"></i> View Proposed</a>
+  </div>
+  <div class="range-status-card">
+    <div class="range-status-top"><span class="range-status-icon"><i class="fa-solid fa-circle-check"></i></span><span class="range-status-value">17</span></div>
+    <h3>Approved APOs</h3>
+    <p>Approved APOs available for allotment and progress tracking.</p>
+    <a class="action-link" href="range-apo-approved.html"><i class="fa-solid fa-arrow-right"></i> View Approved</a>
+  </div>
+  <div class="range-status-card">
+    <div class="range-status-top"><span class="range-status-icon"><i class="fa-solid fa-rotate-left"></i></span><span class="range-status-value">5</span></div>
+    <h3>Returned APOs</h3>
+    <p>Returned APOs requiring correction and resubmission by Range.</p>
+    <a class="action-link" href="range-apo-returned.html"><i class="fa-solid fa-arrow-right"></i> Correct Returned</a>
+  </div>
+</section>
+
+<div class="range-section-title">
+  <div><h2>Financial Snapshot</h2><p>Allotment, expenditure, balance and operational requests</p></div>
+  <a class="action-link" href="range-allocation.html">Drill down</a>
+</div>
+
+<section class="range-mini-grid">
+  <div class="range-mini-card">
+    <div class="mini-label">Allotment</div>
+    <div class="mini-value">₹ 67.45 L</div>
+    <div class="mini-note">Released/disbursed fund available across heads.</div>
+  </div>
+  <div class="range-mini-card">
+    <div class="mini-label">Expenditure</div>
+    <div class="mini-value">₹ 39.30 L</div>
+    <div class="mini-note">Financial entries updated by Range.</div>
+  </div>
+  <div class="range-mini-card">
+    <div class="mini-label">Available Balance</div>
+    <div class="mini-value">₹ 28.15 L</div>
+    <div class="mini-note">Balance available for review or surrender.</div>
+  </div>
+  <div class="range-mini-card">
+    <div class="mini-label">Revenue Target</div>
+    <div class="mini-value">₹ 12.40 L</div>
+    <div class="mini-note">Annual revenue target assigned to this Range.</div>
+  </div>
+</section>
+
+<div class="range-section-title">
+  <div><h2>Workflow Map</h2><p>Simple view of the Range Office journey</p></div>
+</div>
+
+<section class="workflow-ribbon">
+  <div class="workflow-step-card">
+    <div class="step-no">1</div>
+    <h4>Prepare APO</h4>
+    <p>Enter Plan/Non-Plan details, notes, AS status where applicable and attachments.</p>
+  </div>
+  <div class="workflow-step-card">
+    <div class="step-no">2</div>
+    <h4>Submit Action Plan</h4>
+    <p>Submit action plan request for review and downstream processing.</p>
+  </div>
+  <div class="workflow-step-card">
+    <div class="step-no">3</div>
+    <h4>Track Allotment</h4>
+    <p>Review head-wise allotment, component details, expenditure and balance.</p>
+  </div>
+  <div class="workflow-step-card">
+    <div class="step-no">4</div>
+    <h4>Progress Updation</h4>
+    <p>Update physical and financial progress against approved APO activities.</p>
+  </div>
+  <div class="workflow-step-card">
+    <div class="step-no">5</div>
+    <h4>Post-Budget Requests</h4>
+    <p>Submit wage fund request or surrender unutilized balance.</p>
+  </div>
+</section>
+
+<div class="range-section-title">
+  <div><h2>Operational Workbench</h2><p>Most-used Range modules</p></div>
+</div>
+
+<section class="range-two-col">
   <div class="panel card-fullscreen">
-    <div class="card-head"><h3>Allotment Details</h3><button class="expand-card">⛶</button></div>
-    <div class="kpi"><div class="icon"><i class="fa-solid fa-sack-dollar"></i></div><div><b>₹ 74.20 L</b><br><small>Head-wise allocation received from higher office</small></div></div>
-    <p class="info-note" style="margin-top:12px">Open the drill-down page to see budget heads, components, officer timeline and expenditure entry status.</p>
-    <div class="story-links"><a href="range-allocation.html">Open Allocation Drill-down</a></div>
+    <div class="card-head"><h3>Primary Actions</h3><button class="expand-card">⛶</button></div>
+    <div class="range-action-list">
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-file-pen"></i></span>
+        <div><b>APO Entry</b><small>Create or update Plan / Non-Plan APO entries.</small></div>
+        <a class="action-link" href="range-budget.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+        <div><b>Submit Action Plan</b><small>Submit the Range action plan request.</small></div>
+        <a class="action-link" href="range-action-plan.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-chart-line"></i></span>
+        <div><b>Progress Updation</b><small>Update physical and financial progress.</small></div>
+        <a class="action-link" href="range-progress.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-bullseye"></i></span>
+        <div><b>Revenue Target</b><small>Review and update revenue target achievement.</small></div>
+        <a class="action-link" href="range-revenue.html">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel card-fullscreen">
+    <div class="card-head"><h3>Fund & Balance Actions</h3><button class="expand-card">⛶</button></div>
+    <div class="range-action-list">
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-wallet"></i></span>
+        <div><b>Allotment Details</b><small>Head-wise allotment, component details and balance.</small></div>
+        <a class="action-link" href="range-allocation.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+        <div><b>Surrender Entry</b><small>Review balance and submit surrender from components.</small></div>
+        <a class="action-link" href="range-surrender.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-list-check"></i></span>
+        <div><b>Surrender Requests</b><small>View submitted surrender requests and status.</small></div>
+        <a class="action-link" href="range-surrender-list.html">Open</a>
+      </div>
+      <div class="range-action-item">
+        <span class="action-icon"><i class="fa-solid fa-file-excel"></i></span>
+        <div><b>Wage Distribution Fund Request</b><small>Upload Excel, preview and submit wage fund request.</small></div>
+        <a class="action-link" href="range-wages.html">Open</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="range-section-title">
+  <div><h2>Attention Needed</h2><p>Small signals before the forest ledger growls</p></div>
+</div>
+
+<section class="range-alert-strip">
+  <div class="range-alert">
+    <b><i class="fa-solid fa-triangle-exclamation"></i> 5 APOs returned</b>
+    <p>Correct returned APOs before the submission window closes.</p>
+  </div>
+  <div class="range-alert">
+    <b><i class="fa-solid fa-clock"></i> 2 wage previews pending</b>
+    <p>Excel previews are not submitted until the final submit action is completed.</p>
+  </div>
+  <div class="range-alert">
+    <b><i class="fa-solid fa-scale-balanced"></i> ₹ 28.15 L balance</b>
+    <p>Review component balances before surrender or next progress update.</p>
   </div>
 </section>
 
 <section class="panel card-fullscreen" style="margin-top:14px">
-  <div class="card-head"><h3>Responsibility Note</h3><button class="expand-card">⛶</button></div>
-  <div class="info-note"><b>Range Office:</b> prepares APO, updates progress, views allocation and revenue targets. PO Components and Subcomponents are handled by HQ and are not approval items for Range level.</div>
+  <div class="card-head"><h3>Recent Range Activity</h3><button class="expand-card">⛶</button></div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Date</th><th>Module</th><th>Reference</th><th>Status</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr data-status="Approved"><td>15-06-2026</td><td>APO Entry</td><td>APO-R-021 Fire line maintenance</td><td><span class="status approved">Approved</span></td><td><a class="action-link" href="range-apo-approved.html">View</a></td></tr>
+        <tr data-status="Proposed"><td>14-06-2026</td><td>Wage Fund Request</td><td>WFR-2026-001 June wages</td><td><span class="status proposed">Submitted</span></td><td><a class="action-link" href="range-wage-requests.html">View</a></td></tr>
+        <tr data-status="Returned"><td>13-06-2026</td><td>Surrender Request</td><td>SUR-003 Solar fence maintenance</td><td><span class="status returned">Returned</span></td><td><a class="action-link" href="range-surrender-list.html">Correct</a></td></tr>
+        <tr data-status="Approved"><td>12-06-2026</td><td>Progress Updation</td><td>Financial progress updated</td><td><span class="status approved">Recorded</span></td><td><a class="action-link" href="range-progress.html">Open</a></td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
-
+</div>
 <div class="footer">Design concept prepared for Kerala Forest Department by <b>CDIPD, Digital University Kerala</b></div></main></div><script src="assets/app.js"></script></body></html>

@@ -222,3 +222,9 @@ Component card and label corrections:
 - Added a prominent New Surrender Entry CTA above the submitted surrender request list.
 - Renamed Action Plan Request to Submit Action Plan across page/menu labels.
 - Renamed Range Progress Update / Progress Update to Progress Updation across page/menu labels.
+
+
+Range Dashboard redesign:
+- Rebuilt range-dashboard.html into a concise command-centre layout.
+- Added clear hero summary, role responsibility notes, APO pipeline, financial snapshot, workflow map, operational workbench, attention alerts and recent activity.
+- Kept links to all major Range modules: APO Entry, Submit Action Plan, Progress Updation, Allotment, Surrender, Wage Fund Request and Revenue Target.
