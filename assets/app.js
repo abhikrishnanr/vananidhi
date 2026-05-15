@@ -542,3 +542,15 @@
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
+
+
+// Repaint maps after theme switching so leaflet tiles/vectors do not look stale.
+(function(){
+  document.addEventListener("change", function(e){
+    if(e.target && e.target.matches("[data-theme-select]")){
+      setTimeout(function(){
+        if(window._keralaMap && window._keralaMap.invalidateSize) window._keralaMap.invalidateSize();
+      }, 180);
+    }
+  });
+})();

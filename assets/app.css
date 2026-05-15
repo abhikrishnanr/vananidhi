@@ -3606,3 +3606,385 @@ body[data-theme="light"] .theme-switcher select{
   .theme-switcher select{flex:1}
   .topbar{flex-wrap:wrap}
 }
+
+
+/* =========================================================
+   Light theme contrast correction patch
+   Fixes card/graph/sidebar readability on projector displays
+   ========================================================= */
+body[data-theme="light"]{
+  --gold:#2f7d38;
+  --gold2:#164b25;
+  --cream:#172c1e;
+  --muted:#4f6255;
+  --vn-text:#172c1e;
+  --vn-muted:#4f6255;
+  --vn-panel:#ffffff;
+  --vn-panel-soft:#f5fbf2;
+  --vn-card:#ffffff;
+  --vn-card-solid:#f7fbf4;
+  --vn-topbar:linear-gradient(90deg,#ffffff,#eef8ea);
+  --vn-input-bg:#ffffff;
+  --vn-input-text:#10251a;
+  --vn-input-border:#8fb98e;
+  --vn-table-text:#172c1e;
+  --vn-table-border:rgba(23,44,30,.18);
+  --vn-table-head:#e5f2df;
+  --vn-border:#b1d0ad;
+  --vn-icon-bg:#e0f0dc;
+  --vn-btn-secondary:#e7f4e2;
+  --vn-nav-bg:rgba(255,255,255,.90);
+  --vn-nav-text:#122b1d;
+  --vn-map-bg:#edf7ed;
+  --vn-popup-bg:#ffffff;
+  --vn-sidebar-overlay-1:linear-gradient(180deg,rgba(250,255,247,.88),rgba(246,253,242,.80) 38%,rgba(235,247,229,.90));
+  --vn-sidebar-overlay-2:linear-gradient(90deg,rgba(255,255,255,.72),rgba(255,255,255,.56));
+  --vn-sidebar-before:linear-gradient(180deg,rgba(255,255,255,.58),rgba(235,247,229,.64));
+}
+body[data-theme="light"] .sidebar{
+  box-shadow:0 18px 45px rgba(52,92,59,.18)!important;
+}
+body[data-theme="light"] .brand{
+  background:rgba(255,255,255,.86)!important;
+  border-bottom-color:#a9c9a4!important;
+}
+body[data-theme="light"] .brand p,
+body[data-theme="light"] .brand h1{
+  color:#164b25!important;
+}
+body[data-theme="light"] .nav-group-title{
+  color:#2d5d38!important;
+  background:rgba(223,241,218,.82)!important;
+  border:1px solid #bfd9bb!important;
+  border-radius:12px!important;
+  padding:9px 12px!important;
+  margin:10px 0 6px!important;
+}
+body[data-theme="light"] .nav a{
+  background:rgba(255,255,255,.92)!important;
+  color:#153020!important;
+  border:1px solid rgba(31,91,43,.22)!important;
+  text-shadow:none!important;
+}
+body[data-theme="light"] .nav a:hover,
+body[data-theme="light"] .nav a.active{
+  background:linear-gradient(90deg,#d9efd3,#eef8ea)!important;
+  color:#0e2c19!important;
+  border-color:#5aa360!important;
+  box-shadow:0 8px 18px rgba(49,125,56,.12)!important;
+}
+body[data-theme="light"] .nav i{
+  color:#236f34!important;
+}
+body[data-theme="light"] .topbar,
+body[data-theme="light"] .fy-bar{
+  background:linear-gradient(90deg,#ffffff,#edf7e8)!important;
+  border-color:#a9c9a4!important;
+  box-shadow:0 14px 34px rgba(50,90,58,.12)!important;
+}
+body[data-theme="light"] .topbar h2,
+body[data-theme="light"] .topbar h2 i,
+body[data-theme="light"] .topbar small,
+body[data-theme="light"] .fy-chip,
+body[data-theme="light"] .fy-bar label{
+  color:#153020!important;
+  text-shadow:none!important;
+}
+body[data-theme="light"] .theme-switcher,
+body[data-theme="light"] .icon-btn,
+body[data-theme="light"] .expand-card,
+body[data-theme="light"] .top-login-btn{
+  background:#e5f2df!important;
+  color:#153020!important;
+  border-color:#91b98c!important;
+}
+body[data-theme="light"] .theme-switcher i,
+body[data-theme="light"] .icon-btn i,
+body[data-theme="light"] .top-login-btn i{
+  color:#236f34!important;
+}
+body[data-theme="light"] .panel,
+body[data-theme="light"] .hq-panel,
+body[data-theme="light"] .range-status-card,
+body[data-theme="light"] .range-graph-card,
+body[data-theme="light"] .range-role-card,
+body[data-theme="light"] .hq-priority-card,
+body[data-theme="light"] .hq-kpi,
+body[data-theme="light"] .hq-action-card,
+body[data-theme="light"] .hq-module-group,
+body[data-theme="light"] .help-category,
+body[data-theme="light"] .estimator-panel,
+body[data-theme="light"] .resumption-source-card,
+body[data-theme="light"] .surrender-head-card,
+body[data-theme="light"] .component-surrender-card,
+body[data-theme="light"] .budget-estimate-panel,
+body[data-theme="light"] .workflow-review-card,
+body[data-theme="light"] .clean-kpi-card,
+body[data-theme="light"] .range-hero-main,
+body[data-theme="light"] .hq-hero-main,
+body[data-theme="light"] .estimator-hero-main{
+  background:#ffffff!important;
+  color:#172c1e!important;
+  border-color:#b1d0ad!important;
+  box-shadow:0 14px 34px rgba(50,90,58,.12)!important;
+}
+body[data-theme="light"] .panel-soft,
+body[data-theme="light"] .range-mini-card,
+body[data-theme="light"] .range-alert,
+body[data-theme="light"] .hq-alert,
+body[data-theme="light"] .workflow-step-card,
+body[data-theme="light"] .legend-item,
+body[data-theme="light"] .district-summary-card,
+body[data-theme="light"] .surrender-mini-stat,
+body[data-theme="light"] .resumption-meta,
+body[data-theme="light"] .estimate-summary-box,
+body[data-theme="light"] .help-step,
+body[data-theme="light"] .help-link-card,
+body[data-theme="light"] .hq-menu-tile,
+body[data-theme="light"] .estimator-rate-card,
+body[data-theme="light"] .office-band-card,
+body[data-theme="light"] .detail-box,
+body[data-theme="light"] .dashboard-svg-chart,
+body[data-theme="light"] .kerala-svg-box{
+  background:#f7fbf4!important;
+  color:#172c1e!important;
+  border-color:#bfd9bb!important;
+}
+body[data-theme="light"] .gold-text,
+body[data-theme="light"] .page-title,
+body[data-theme="light"] .card-head h3,
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] h4,
+body[data-theme="light"] .kpi b,
+body[data-theme="light"] .mini-value,
+body[data-theme="light"] .hq-kpi-value,
+body[data-theme="light"] .range-status-value,
+body[data-theme="light"] .component-title,
+body[data-theme="light"] .graph-value,
+body[data-theme="light"] .surrender-value,
+body[data-theme="light"] .resumption-value,
+body[data-theme="light"] .estimate-cost-value,
+body[data-theme="light"] .range-detail-box b,
+body[data-theme="light"] .district-summary-card b,
+body[data-theme="light"] .circle-stat b,
+body[data-theme="light"] .legend-item b,
+body[data-theme="light"] .estimate-summary-box b,
+body[data-theme="light"] .workflow-review-card b,
+body[data-theme="light"] .office-band-card b,
+body[data-theme="light"] .help-link-card b,
+body[data-theme="light"] .hq-menu-tile b,
+body[data-theme="light"] .estimator-rate-card b,
+body[data-theme="light"] .estimator-rate-card .rate{
+  color:#164b25!important;
+  text-shadow:none!important;
+}
+body[data-theme="light"] .page-sub,
+body[data-theme="light"] .field label,
+body[data-theme="light"] .kpi small,
+body[data-theme="light"] .mini-note,
+body[data-theme="light"] .component-sub,
+body[data-theme="light"] .range-status-card p,
+body[data-theme="light"] .range-role-card li,
+body[data-theme="light"] .range-role-card p,
+body[data-theme="light"] .hq-panel p,
+body[data-theme="light"] .hq-priority-card p,
+body[data-theme="light"] .hq-priority-card li,
+body[data-theme="light"] .hq-kpi p,
+body[data-theme="light"] .help-link-card small,
+body[data-theme="light"] .hq-menu-tile small,
+body[data-theme="light"] .estimator-panel p,
+body[data-theme="light"] .resumption-source-card p,
+body[data-theme="light"] .surrender-head-card p,
+body[data-theme="light"] .range-detail-box small,
+body[data-theme="light"] .district-summary-card small,
+body[data-theme="light"] .circle-stat small,
+body[data-theme="light"] .legend-item,
+body[data-theme="light"] .footer,
+body[data-theme="light"] p,
+body[data-theme="light"] small,
+body[data-theme="light"] li{
+  color:#4f6255!important;
+}
+body[data-theme="light"] .field input,
+body[data-theme="light"] .field select,
+body[data-theme="light"] .field textarea,
+body[data-theme="light"] input,
+body[data-theme="light"] select,
+body[data-theme="light"] textarea,
+body[data-theme="light"] .record-search,
+body[data-theme="light"] .record-toolbar input,
+body[data-theme="light"] .record-toolbar select,
+body[data-theme="light"] .surrender-filter-bar input,
+body[data-theme="light"] .surrender-filter-bar select,
+body[data-theme="light"] .resumption-filter-bar input,
+body[data-theme="light"] .resumption-filter-bar select,
+body[data-theme="light"] .master-search input{
+  background:#ffffff!important;
+  color:#10251a!important;
+  border-color:#8fb98e!important;
+  box-shadow:inset 0 1px 0 rgba(30,92,42,.08)!important;
+}
+body[data-theme="light"] input::placeholder,
+body[data-theme="light"] textarea::placeholder{
+  color:#6a7b6f!important;
+}
+body[data-theme="light"] .data-table th{
+  background:#dcefd7!important;
+  color:#153020!important;
+  border-color:#bcd6b8!important;
+}
+body[data-theme="light"] .data-table td{
+  color:#172c1e!important;
+  border-color:#d5e5d2!important;
+}
+body[data-theme="light"] .data-table tr:nth-child(even) td{
+  background:#fbfdf9!important;
+}
+body[data-theme="light"] .status{
+  background:#e1f2dc!important;
+  color:#175326!important;
+  border-color:#85b982!important;
+}
+body[data-theme="light"] .status.approved,
+body[data-theme="light"] .status.success{
+  background:#dcefd7!important;
+  color:#175326!important;
+  border-color:#75ad72!important;
+}
+body[data-theme="light"] .status.proposed,
+body[data-theme="light"] .status.warn{
+  background:#fff1c9!important;
+  color:#6b4a00!important;
+  border-color:#d9b557!important;
+}
+body[data-theme="light"] .status.returned,
+body[data-theme="light"] .status.danger{
+  background:#ffe4de!important;
+  color:#8a2b19!important;
+  border-color:#e29a8b!important;
+}
+body[data-theme="light"] .btn.secondary,
+body[data-theme="light"] .action-link,
+body[data-theme="light"] .workflow-tab,
+body[data-theme="light"] .resumption-tab,
+body[data-theme="light"] .surrender-util-badge,
+body[data-theme="light"] .estimator-tag,
+body[data-theme="light"] .pill{
+  background:#e7f4e2!important;
+  color:#153020!important;
+  border-color:#91b98c!important;
+}
+body[data-theme="light"] .btn:not(.secondary){
+  background:linear-gradient(90deg,#2f7d38,#75ad72)!important;
+  color:#ffffff!important;
+  border-color:#2f7d38!important;
+}
+body[data-theme="light"] .icon-btn,
+body[data-theme="light"] .expand-card,
+body[data-theme="light"] .kpi .icon,
+body[data-theme="light"] .range-status-icon,
+body[data-theme="light"] .hq-kpi-icon,
+body[data-theme="light"] .tile-icon,
+body[data-theme="light"] .action-icon,
+body[data-theme="light"] .workflow-review-card .icon,
+body[data-theme="light"] .estimator-step .num,
+body[data-theme="light"] .help-step .num,
+body[data-theme="light"] .icon{
+  background:#e0f0dc!important;
+  color:#236f34!important;
+  border-color:#91b98c!important;
+}
+body[data-theme="light"] .chart-track,
+body[data-theme="light"] .graph-track,
+body[data-theme="light"] .hq-track,
+body[data-theme="light"] .surrender-track,
+body[data-theme="light"] .resumption-track,
+body[data-theme="light"] .estimate-cost-track{
+  background:#dcead9!important;
+  border:1px solid #c8ddc4!important;
+}
+body[data-theme="light"] .chart-fill,
+body[data-theme="light"] .graph-fill,
+body[data-theme="light"] .hq-fill,
+body[data-theme="light"] .surrender-fill,
+body[data-theme="light"] .resumption-fill,
+body[data-theme="light"] .estimate-cost-fill{
+  background:linear-gradient(90deg,#2f7d38,#75ad72)!important;
+}
+body[data-theme="light"] .chart-fill.blue,
+body[data-theme="light"] .hq-fill.blue,
+body[data-theme="light"] .surrender-fill.allotment,
+body[data-theme="light"] .resumption-fill.allotment,
+body[data-theme="light"] .estimate-cost-fill.labour{
+  background:linear-gradient(90deg,#226aa3,#45a3d8)!important;
+}
+body[data-theme="light"] .chart-fill.violet,
+body[data-theme="light"] .hq-fill.violet,
+body[data-theme="light"] .surrender-fill.expenditure,
+body[data-theme="light"] .resumption-fill.exp,
+body[data-theme="light"] .estimate-cost-fill.material{
+  background:linear-gradient(90deg,#6946a8,#9a74d4)!important;
+}
+body[data-theme="light"] .chart-fill.green,
+body[data-theme="light"] .graph-fill.balance,
+body[data-theme="light"] .surrender-fill.balance,
+body[data-theme="light"] .resumption-fill.balance{
+  background:linear-gradient(90deg,#608b24,#9cbd37)!important;
+}
+body[data-theme="light"] .chart-fill.warn,
+body[data-theme="light"] .hq-fill.warn,
+body[data-theme="light"] .estimate-cost-fill.other{
+  background:linear-gradient(90deg,#b75b19,#df9b2b)!important;
+}
+body[data-theme="light"] .chart-value,
+body[data-theme="light"] .hq-chart-value,
+body[data-theme="light"] .surrender-value,
+body[data-theme="light"] .resumption-value,
+body[data-theme="light"] .estimate-cost-value{
+  color:#153020!important;
+}
+body[data-theme="light"] svg text{
+  fill:#153020!important;
+}
+body[data-theme="light"] svg line{
+  stroke:rgba(21,48,32,.20)!important;
+}
+body[data-theme="light"] svg circle[stroke="rgba(247,237,207,.12)"],
+body[data-theme="light"] svg circle[stroke="rgba(247,237,207,.22)"]{
+  stroke:#d5e5d2!important;
+}
+body[data-theme="light"] .donut-center b,
+body[data-theme="light"] .hq-donut-center b{
+  color:#164b25!important;
+}
+body[data-theme="light"] .donut-center small,
+body[data-theme="light"] .hq-donut-center small{
+  color:#526457!important;
+}
+body[data-theme="light"] .map-box,
+body[data-theme="light"] .leaflet-container,
+body[data-theme="light"] .dashboard-svg-chart,
+body[data-theme="light"] .kerala-svg-box{
+  background:#edf7ed!important;
+  border-color:#b1d0ad!important;
+}
+body[data-theme="light"] .leaflet-popup-content-wrapper,
+body[data-theme="light"] .leaflet-popup-tip{
+  background:#ffffff!important;
+  color:#172c1e!important;
+  border-color:#91b98c!important;
+}
+body[data-theme="light"] .leaflet-control,
+body[data-theme="light"] .leaflet-control a{
+  background:#ffffff!important;
+  color:#153020!important;
+  border-color:#91b98c!important;
+}
+body[data-theme="light"] .footer b{
+  color:#164b25!important;
+}
+body[data-theme="light"] .theme-switcher select{
+  color:#153020!important;
+}

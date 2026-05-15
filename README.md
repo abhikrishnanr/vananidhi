@@ -278,3 +278,10 @@ Theme switcher update:
 - Earth Gold provides an alternate warm high-contrast display mode.
 - Sidebar overlay in the existing Forest Dark theme was made more transparent so the background image is visible.
 - Inputs, tables, cards, icons, map popups and text colors are theme-aware for better contrast.
+
+
+Light theme contrast fix:
+- Strengthened light theme foreground/background contrast across sidebar, cards, graphs, forms, tables and maps.
+- Sidebar now uses a clearer pale overlay with solid readable menu items.
+- Graph tracks/fills and SVG text are recolored for light mode.
+- Tables, badges, buttons, inputs and map popups now use darker text in light mode.
